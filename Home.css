@@ -1,5 +1,5 @@
  .u-section-1 {
-  background-image: url("images/-min.jpg");
+  background-image: url("images/Titelbild_home.jpg");
   background-position: 50% 50%;
 }
 
@@ -98,7 +98,7 @@
 .u-section-2 .u-image-1 {
   width: 465px;
   height: 465px;
-  background-image: url("images/drt.jpg");
+  background-image: url("images/Home1.jpg");
   background-position: 50% 50%;
   margin: 93px 0 0 auto;
 }
@@ -400,6 +400,16 @@
   background-position: 50% 50%;
 }
 
+.crop-left{
+  object-position: 0%;
+  position: absolute !important;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100% !important;
+  object-fit: cover;
+}
+
 .u-section-3 .u-back-image-3 {
   object-position: 50% 50%;
 }
@@ -576,7 +586,7 @@
     margin-left: initial;
   }
 } .u-section-4 {
-  background-image: url("images/-min2.jpg");
+  background-image: url("images/Code_banner.jpg");
   background-position: 50% 50%;
 }
 
@@ -771,7 +781,7 @@
 }
 
 .u-section-5 .u-image-1 {
-  background-image: url("images/4b9fa4a97b53ee957772524b2fbcd436.jpeg");
+  background-image: url("images/Gallerie/1.jpg");
   background-position: 50% 100%;
   min-height: 560px;
 }
@@ -781,7 +791,7 @@
 }
 
 .u-section-5 .u-image-2 {
-  background-image: url("images/fb7752cd44af6ad8f73c24a23180f289.jpeg");
+  background-image: url("images/Gallerie/23.jpg");
   background-position: 50% 0%;
   min-height: 560px;
 }
@@ -791,7 +801,7 @@
 }
 
 .u-section-5 .u-image-3 {
-  background-image: url("images/106cc2413131ab9cdedda51533252abd.jpeg");
+  background-image: url("images/Gallerie/5.jpg");
   background-position: 50% 50%;
   min-height: 373px;
 }
@@ -801,7 +811,7 @@
 }
 
 .u-section-5 .u-image-4 {
-  background-image: url("images/67206d9b607ebf77737759c734a354ba.jpeg");
+  background-image: url("images/Gallerie/21.jpg");
   background-position: 50% 50%;
   min-height: 374px;
 }
@@ -811,7 +821,7 @@
 }
 
 .u-section-5 .u-image-5 {
-  background-image: url("images/55f88bc82e74e5614c12d06055d44f87.jpeg");
+  background-image: url("images/Gallerie/9.jpg");
   background-position: 50% 50%;
   min-height: 373px;
 }
@@ -821,7 +831,7 @@
 }
 
 .u-section-5 .u-image-6 {
-  background-image: url("images/e8e663793470d08663babfebe964345c.jpeg");
+  background-image: url("images/Gallerie/18.jpg");
   background-position: 50% 50%;
   min-height: 560px;
 }
@@ -832,7 +842,7 @@
 
 .u-section-5 .u-image-7 {
   min-height: 560px;
-  background-image: url("images/4b62f6393509e9731483b9decbd42619.jpeg");
+  background-image: url("images/Gallerie/8.jpg");
   background-position: 50% 50%;
 }
 
@@ -1077,7 +1087,7 @@
 }
 
 .u-section-6 .u-text-1 {
-  font-size: 7.5rem;
+  font-size: 4rem;
   line-height: 1;
   font-weight: 400;
   margin: 306px 0 60px 462px;
@@ -1103,7 +1113,7 @@
   }
 
   .u-section-6 .u-text-1 {
-    font-size: 6rem;
+    font-size: 4rem;
     width: auto;
     margin-top: 246px;
     margin-left: 130px;
@@ -1116,7 +1126,7 @@
   }
 
   .u-section-6 .u-text-1 {
-    font-size: 4.5rem;
+    font-size: 4rem;
     margin-top: 204px;
     margin-left: 98px;
   }
@@ -1225,7 +1235,7 @@
 .u-section-7 .u-image-1 {
   width: 321px;
   height: 321px;
-  background-image: url("images/rtrtt-min.jpg");
+  background-image: url("images/Ich1.jpeg");
   background-position: 50% 50%;
   margin: 20px 0 0 auto;
 }
