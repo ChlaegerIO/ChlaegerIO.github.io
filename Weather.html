@@ -170,15 +170,39 @@
       </div>
     </header>
 
-    <p>Temperatur:</p>
+    <!-- mache bitte section mit den aktuellen Wetterdaten: 1. Temperatur, Wind, Regen, Barometer, Feuchtigkeit -->
+    <section class="u-clearfix u-white u-section-5" id="carousel_980b">
+      <div class="u-clearfix u-sheet u-valign-middle-xl u-valign-middle-xs u-sheet-1">
+        <p>Temperatur:</p>
+        <iframe src="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&from=1681301747181&to=1681606297607&refresh=5m&theme=light&panelId=6" style="width:95%; max-width:450px; height:auto;" frameborder="0"></iframe>
+        <br>
+        <p>Wind:</p>
+        <iframe src="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&theme=light&panelId=8" width="450" height="200" frameborder="0"></iframe>        <br>
+        <p>Regen:</p>
+        <iframe src="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&from=1681301747181&to=1681606297607&theme=light&panelId=8&edit=true" width="450" height="200" frameborder="0"></iframe>
+        <br>
+        <p>Barometer:</p>
+        <iframe src="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&from=1681301747181&to=1681606297607&theme=light&panelId=9&edit=true" width="450" height="200" frameborder="0"></iframe>
+        <br>
+        <p>Feuchtigkeit:</p>
+        <iframe src="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&from=1681301747181&to=1681606297607&theme=light&panelId=10&edit=true" width="450" height="200" frameborder="0"></iframe>
+        <br>
+      </div>
+    </section>
 
-    <iframe src="https://esling.vsos.ethz.ch/grafana/d-solo/_NtZdqwnk/garmin?orgId=1&from=1649574603228&to=1649577584845&panelId=15" width="450" height="200" frameborder="0"></iframe>
-    <br>
-    <img src="https://esling.vsos.ethz.ch/grafana/render/d-solo/_NtZdqwnk/garmin?orgId=1&from=1649574603228&to=1649577584845&panelId=15&width=1000&height=500&tz=Europe%2FZurich" alt="Test graphana">
 
-    <iframe src="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&from=1681301747181&to=1681606297607&theme=light&panelId=6" width="450" height="200" frameborder="0"></iframe>
-    <br>
+    
 
+    <!-- section mit Hintergrundinformationen über meine Wetterstation: Höhe über Meer 585 m  -->
+    <section class="u-align-center u-clearfix u-section-1" id="sec-1b1a">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-text u-text-1">Hintergrundinformationen zur Wetterstation</h2>
+        <p class="u-text u-text-2">
+          Die Wetterstation befindet sich in Niederhelfenschwil und ist auf 10 Meter über Boden auf dem Dach montiert. 
+          Sie befindet sich auf 585 m über Meer.
+        </p>
+      </div>
+    </section>
 
     <footer
       class="u-align-center u-clearfix u-footer u-grey-80 u-footer"
