@@ -178,15 +178,18 @@
     <!-- mache bitte section mit den aktuellen Wetterdaten: 1. Temperatur, Wind, Regen, Barometer, Feuchtigkeit -->
     <section class="u-clearfix u-white u-section-5" id="carousel_980b">
       <div class="u-clearfix u-sheet u-valign-middle-xl u-valign-middle-xs u-sheet-1">
-        <iframe src="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&refresh=1m&from=now-24h&to=now&theme=light&panelId=6" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></iframe>
+        <object class="grafana-iframe"
+            data="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&refresh=30s&from=now-24h&to=now&theme=light&panelId=6" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></object>
         <br>
-        <iframe src="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&refresh=1m&from=now-24h&to=now&theme=light&panelId=8&edit=true" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></iframe>
+        <object class="grafana-iframe"
+            data="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&refresh=30s&from=now-24h&to=now&theme=light&panelId=8" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></object>
         <br>
-        <iframe src="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&refresh=1m&from=now-24h&to=now&theme=light&panelId=14" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></iframe>
+        <object class="grafana-iframe"
+            data="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&refresh=30s&from=now-24h&to=now&theme=light&panelId=14" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></object>
         <br>
-        <iframe src="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&refresh=1mfrom=now-24h&to=now&theme=light&panelId=12" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></iframe>
+        <iframe src="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&refresh=30s&from=now-24h&to=now&theme=light&panelId=12" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></iframe>
         <br>
-        <iframe src="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&refresh=1m&from=now-24h&to=now&theme=light&panelId=10&edit=true" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></iframe>
+        <iframe src="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&refresh=30s&from=now-24h&to=now&theme=light&panelId=10" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></iframe>
         <br>
       </div>
     </section>
@@ -198,7 +201,11 @@
         <h2 class="u-text u-text-1">Hintergrundinformationen zur Wetterstation</h2>
         <p class="u-text u-text-2">
           Die Wetterstation befindet sich in Niederhelfenschwil und ist 10 Meter über Boden und 1.5 Meter über dem Dach montiert. 
-          Sie befindet sich auf 585 m über Meer.
+          Sie befindet sich auf 585 m über Meer. Es ist eine Davis Vantage Pro 2. Die Daten werden alle 10 Minuten aktualisiert.
+          <img
+              class="u-back-image u-back-image-1 crop-left"
+              src="images/Wetterstation1.jpg"
+            />
         </p>
       </div>
     </section>
