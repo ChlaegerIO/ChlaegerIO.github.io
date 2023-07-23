@@ -183,27 +183,28 @@
 
     <!-- mache bitte section mit den aktuellen Wetterdaten: 1. Temperatur, Wind, Regen, Barometer, Feuchtigkeit -->
     <!-- TODO: Knopf, um die Zeitperiode einzustellen 1 Tag, 1 Woche, 1 Monat, 1 Jahr -->
-    <form action="changePeriod()" method="post">
-      <input type="radio" name="period" value="day">Day
-      <input type="radio" name="period" value="week">Week
-      <input type="radio" name="period" value="month">Month
-      <input type="radio" name="period" value="year">Year
+    <form onsubmit="return changePeriod(this)">
+      <input type="radio" id="day_form" name="period" value="day">Day
+      <input type="radio" id="week_form" name="period" value="week">Week
+      <input type="radio" id="month_form" name="period" value="month">Month
+      <input type="radio" id="year_form" name="period" value="year">Year
+      <input type="submit" value="Set">
     </form>
     <section class="u-clearfix u-white u-section-5" id="carousel_980b">
       <div class="u-clearfix u-sheet u-valign-middle-xl u-valign-middle-xs u-sheet-1">
-        <object class="grafana-iframe"
+        <object class="grafana-iframe" id="temperatur_grafana"
             data="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&refresh=30s&from=now-24h&to=now&theme=light&panelId=6" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></object>
         <br>
-        <object class="grafana-iframe"
+        <object class="grafana-iframe"  id="wind_grafana"
             data="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&refresh=30s&from=now-24h&to=now&theme=light&panelId=8" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></object>
         <br>
-        <object class="grafana-iframe"
+        <object class="grafana-iframe" id="rain_grafana"
             data="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&refresh=30s&from=now-7d&to=now&theme=light&panelId=14" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></object>
         <br>
-        <object class="grafana-iframe"
+        <object class="grafana-iframe" id="pressure_grafana"
             data="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&refresh=30s&from=now-30d&to=now&theme=light&panelId=12" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></object>
         <br>
-        <object class="grafana-iframe"
+        <object class="grafana-iframe" id="windDir_grafana"
             data="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&refresh=30s&from=now-1y&to=now&theme=light&panelId=10" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></object>
         <br>
       </div>
