@@ -20,6 +20,12 @@
       src="nicepage.js"
       defer=""
     ></script>
+    <script
+      class="u-script"
+      type="text/javascript"
+      src="weather.js"
+      defer=""
+    ></script>
     <meta name="generator" content="Nicepage 4.12.21, nicepage.com" />
     <link
       id="u-theme-google-font"
@@ -176,6 +182,13 @@
     </div>
 
     <!-- mache bitte section mit den aktuellen Wetterdaten: 1. Temperatur, Wind, Regen, Barometer, Feuchtigkeit -->
+    <!-- TODO: Knopf, um die Zeitperiode einzustellen 1 Tag, 1 Woche, 1 Monat, 1 Jahr -->
+    <form action="changePeriod()" method="post">
+      <input type="radio" name="period" value="day">Day
+      <input type="radio" name="period" value="week">Week
+      <input type="radio" name="period" value="month">Month
+      <input type="radio" name="period" value="year">Year
+    </form>
     <section class="u-clearfix u-white u-section-5" id="carousel_980b">
       <div class="u-clearfix u-sheet u-valign-middle-xl u-valign-middle-xs u-sheet-1">
         <object class="grafana-iframe"
@@ -185,11 +198,13 @@
             data="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&refresh=30s&from=now-24h&to=now&theme=light&panelId=8" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></object>
         <br>
         <object class="grafana-iframe"
-            data="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&refresh=30s&from=now-24h&to=now&theme=light&panelId=14" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></object>
+            data="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&refresh=30s&from=now-7d&to=now&theme=light&panelId=14" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></object>
         <br>
-        <iframe src="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&refresh=30s&from=now-24h&to=now&theme=light&panelId=12" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></iframe>
+        <object class="grafana-iframe"
+            data="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&refresh=30s&from=now-30d&to=now&theme=light&panelId=12" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></object>
         <br>
-        <iframe src="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&refresh=30s&from=now-24h&to=now&theme=light&panelId=10" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></iframe>
+        <object class="grafana-iframe"
+            data="https://kleger.vsos.ethz.ch/d-solo/NKXNbOk4z/main-weather-parameters?orgId=1&refresh=30s&from=now-1y&to=now&theme=light&panelId=10" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></object>
         <br>
       </div>
     </section>
@@ -200,8 +215,11 @@
       <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-text u-text-1">Hintergrundinformationen zur Wetterstation</h2>
         <p class="u-text u-text-2">
-          Die Wetterstation befindet sich in Niederhelfenschwil und ist 10 Meter über Boden und 1.5 Meter über dem Dach montiert. 
-          Sie befindet sich auf 585 m über Meer. Es ist eine Davis Vantage Pro 2. Die Daten werden alle 10 Minuten aktualisiert.
+          Die Wetterstation befindet sich in Niederhelfenschwil und ist 8.5 Meter über Boden, wovon die Station 1.5 Meter über den Dachrand steht.
+          Der Temperaturfühler ist auf der Dachabgewandten Seite der Halterung montiert, damit die Temperatur so wenig wie möglich durch Wärme des Daches verfälscht wird.
+          Erfahrungsgemäss ist die Temperatur nicht signifikant höher als an vergleichbaren Stationen der Region, höchstens an windschwachen Sommertagen
+          könnte es 0.5 bis 1 Grad Celsius höher sein.
+          Die Davis Vantage Pro 2 befindet sich auf 593 M.ü.M. Die Daten werden alle 10 Minuten aktualisiert.
           <img
               class="u-back-image u-back-image-1 crop-left"
               src="images/Wetterstation1.jpg"
