@@ -46,3 +46,19 @@
     font-size: 1.3em;
     font-weight: bolder;
 }
+
+.u-section-1 .u-text-1 {
+    margin-top: -1em;
+    margin-left: 1em;
+    font-size: 1.4em;
+    font-weight: 200;
+    text-align: left;
+    margin-bottom: 2em;
+}
+
+.u-section-1 .u-btn-1 {
+    background-image: none;
+    border-style: none none solid;
+    font-weight: 500;
+    padding: 0;
+}
