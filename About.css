@@ -1,0 +1,33 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+ul {
+    list-style-type: circle;
+    padding: 1;
+}
+
+ul li {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+ul li ul {
+    list-style-type: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
