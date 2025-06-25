@@ -23,6 +23,12 @@
       src="nicepage.js"
       defer=""
     ></script>
+    <script
+      class="u-script"
+      type="text/javascript"
+      src="language-toggle.js"
+      defer=""
+    ></script>
     <meta name="generator" content="Nicepage 4.12.21, nicepage.com" />
     <link
       id="u-theme-google-font"
@@ -98,6 +104,7 @@
                   class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                   href="index.html"
                   style="padding: 10px 20px"
+                  data-de="Home" data-en="Home"
                   >Home</a
                 >
               </li>
@@ -106,6 +113,7 @@
                   class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                   href="Weather.html"
                   style="padding: 10px 20px"
+                  data-de="Wetter" data-en="Weather"
                   >Wetter</a
                 >
               </li>
@@ -114,6 +122,7 @@
                   class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                   href="Photography.html"
                   style="padding: 10px 20px"
+                  data-de="Fotografie" data-en="Photography"
                   >Fotografie</a
                 >
               </li>
@@ -122,6 +131,7 @@
                   class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                   href="About.html"
                   style="padding: 10px 20px"
+                  data-de="Über mich" data-en="About me"
                   >Über mich</a
                 >
               </li>
@@ -130,8 +140,13 @@
                   class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                   href="Contact.html"
                   style="padding: 10px 20px"
-                  >Kontakt</a
+                  data-de="Kontakt" data-en="Contact">Kontakt</a
                 >
+              </li>
+              <li class="u-nav-item">
+                <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()" title="Language / Sprache">
+                  <span class="language-text" id="currentLanguage">Deutsch</span>
+                </button>
               </li>
             </ul>
           </div>
@@ -147,28 +162,33 @@
                 >
                   <li class="u-nav-item">
                     <a class="u-button-style u-nav-link" href="index.html"
-                      >Home</a
+                      data-de="Home" data-en="Home">Home</a
                     >
                   </li>
                   <li class="u-nav-item">
                     <a class="u-button-style u-nav-link" href="Weather.html"
-                      >Wetter</a
+                      data-de="Wetter" data-en="Weather">Wetter</a
                     >
                   </li>
                   <li class="u-nav-item">
                     <a class="u-button-style u-nav-link" href="Photography.html"
-                      >Fotografie</a
+                      data-de="Fotografie" data-en="Photography">Fotografie</a
                     >
                   </li>
                   <li class="u-nav-item">
                     <a class="u-button-style u-nav-link" href="About.html"
-                      >Über mich</a
+                      data-de="Über mich" data-en="About me">Über mich</a
                     >
                   </li>
                   <li class="u-nav-item">
                     <a class="u-button-style u-nav-link" href="Contact.html"
-                      >Kontakt</a
+                      data-de="Kontakt" data-en="Contact">Kontakt</a
                     >
+                  </li>
+                  <li class="u-nav-item">
+                    <button id="languageToggleMobile" class="language-toggle-mobile" onclick="toggleLanguage()" title="Language / Sprache">
+                      <span class="language-text" id="currentLanguageMobile">Deutsch</span>
+                    </button>
                   </li>
                 </ul>
               </div>
@@ -180,11 +200,15 @@
     </header>
     <section class="u-clearfix u-image u-section-1" id="carousel_2e66">
       <div class="u-clearfix u-sheet u-valign-bottom u-sheet-1">
-        <h2 class="u-custom-font u-font-playfair-display u-text u-text-body-alt-color u-text-1">
+        <h2 class="u-custom-font u-font-playfair-display u-text u-text-body-alt-color u-text-1"
+            data-de="Wetter,<br/>Bilder<br/>und vieles mehr<br/>" 
+            data-en="Weather,<br/>Photos<br/>and much more<br/>">
           Wetter, <br/>
           Bilder <br/>
           und vieles mehr <br/>
-          <h4 class="u-text u-text-body-alt-color u-text-2">von Timo Kleger</h4>
+          <h4 class="u-text u-text-body-alt-color u-text-2" 
+              data-de="von Timo Kleger" 
+              data-en="by Timo Kleger">von Timo Kleger</h4>
         </h2>
         <p class="u-text u-text-body-alt-color u-text-2">    <!-- Leerzeichen, für grösseres Bild -->
         </p>
@@ -192,8 +216,10 @@
     </section>
     <section class="u-align-right u-clearfix u-section-2" id="carousel_6c27">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <h4 class="u-text u-text-1">Timo Kleger</h4>
-        <p class="u-text u-text-2">
+        <h4 class="u-text u-text-1" data-de="Timo Kleger" data-en="Timo Kleger">Timo Kleger</h4>
+        <p class="u-text u-text-2" 
+           data-de="Seit meiner Kindheit bin ich fasziniert von der Dynamik der Atmosphäre und der Natur,<br/> welche ich fotografisch festhalte." 
+           data-en="Since my childhood, I have been fascinated by the dynamics of the atmosphere and nature,<br/> which I capture photographically.">
           Seit meiner Kindheit bin ich fasziniert von der Dynamik der Atmosphäre und der Natur,<br/> welche ich fotografisch festhalte.
         </p>
         <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
@@ -219,7 +245,9 @@
                 <div
                   class="u-container-layout u-valign-middle u-container-layout-2"
                 >
-                  <h1 class="u-text u-text-4">Wetter, Fotografie und Technik</h1>
+                  <h1 class="u-text u-text-4" 
+                      data-de="Wetter, Fotografie und Technik" 
+                      data-en="Weather, Photography and Technology">Wetter, Fotografie und Technik</h1>
                 </div>
               </div>
             </div>
@@ -240,9 +268,11 @@
                       <div
                         class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-container-layout-1">
                         <h2
-                          class="u-custom-font u-font-playfair-display u-text u-text-1"
+                          class="u-custom-font u-font-playfair-display u-text u-text-1" 
+                          data-de="Meine <span style='font-weight: 700'>Wetterstation</span> in Niederhelfenschwil<br/>" 
+                          data-en="My <span style='font-weight: 700'>Weather Station</span> in Niederhelfenschwil<br/>"
                         >
-                          Meine <span style="font-weight: 700">Wetterstation</span> in Niederhelfenschwil<br />
+                          Meine <span style="font-weight: 700">Wetterstation</span> in Niederhelfenschwil<br/>
                         </h2>
                       </div>
                     </div>
@@ -254,7 +284,12 @@
                       class="u-align-left u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-2"
                     >
                       <div class="u-container-layout u-container-layout-2">
-                        <p class="u-text u-text-2">
+                        <p class="u-text u-text-2"
+                          data-de="Ich habe seit meiner Oberstufenzeit im Jahr 2014 eine eigene Wetterstation auf dem Hausdach meiner 
+                          Eltern. In der Zwischenzeit haben sich einige Wetterdaten angesammelt, welche ich der Öffentlichkeit zur
+                            Verfügung stellen möchte."
+                          data-en="Since my high school days in 2014, I have had my own weather station on the roof of my parents' house. 
+                          In the meantime, some weather data has accumulated, which I would like to make available to the public.">
                           Ich habe seit meiner Oberstufenzeit im Jahr 2014 eine eigene Wetterstation auf dem Hausdach meiner
                           Eltern. In der Zwischenzeit haben sich einige Wetterdaten angesammelt, welche ich der Öffentlichkeit zur 
                           Verfügung stellen möchte.
@@ -265,13 +300,18 @@
                       class="u-align-left u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-3"
                     >
                       <div class="u-container-layout u-container-layout-3">
-                        <p class="u-text u-text-4">
+                        <p class="u-text u-text-4"
+                          data-de="Auf meiner Wetterseite sind alle Daten grafisch ansprechend dargestellt. Zudem gibt es ein paar
+                          ausführliche Erklärungen zum Standort und der Messreihe sowie meinen Erfahrungen."
+                          data-en="On my weather page, all data is presented in a visually appealing way. In addition, there are some
+                          detailed explanations about the location and the measurement series as well as my experiences.">
                           Auf meiner Wetterseite sind alle Daten grafisch ansprechend dargestellt. Zudem gibt es ein paar 
                           ausführliche Erklärungen zum Standort und der Messreihe sowie meinen Erfahrungen. 
                         </p>
                         <a
                           href="Weather.html"
                           class="u-active-none u-border-2 u-border-active-palette-3-base u-border-black u-border-hover-palette-3-base u-btn u-btn-rectangle u-button-style u-hover-none u-none u-btn-2"
+                          data-de="Zu den Wetterdaten" data-en="To Weather Data"
                           >Zu den Wetterdaten</a
                         >
                       </div>
@@ -351,8 +391,9 @@
                     <div
                       class="u-container-layout u-valign-top u-container-layout-1"
                     >
-                      <h5 class="u-text u-text-1">Projekte</h5>
-                      <h2 class="u-text u-text-2">Elektro- technik</h2>
+                      <h5 class="u-text u-text-1"
+                      data-de="Projekte" data-en="Projects">Projekte</h5>
+                      <h2 class="u-text u-text-2" data-de="Elektro- technik" data-en="Electrical Engineering">Elektro- technik</h2>
                     </div>
                   </div>
                 </div>
@@ -365,7 +406,7 @@
                     <div
                       class="u-container-layout u-valign-bottom u-container-layout-2"
                     >
-                      <p class="u-text u-text-3">
+                      <p class="u-text u-text-3" data-de="Webseite von Timo Kleger" data-en="Website by Timo Kleger">
                         Webseite von Timo Kleger<br />
                       </p>
                       <div class="u-social-icons u-spacing-23 u-social-icons-1">
@@ -473,10 +514,18 @@
     <section class="u-clearfix u-white u-section-5" id="carousel_980b">
       <div class="u-clearfix u-sheet u-valign-middle-xl u-valign-middle-xs u-sheet-1">
         <div class="u-palette-3-light-2 u-shape u-shape-circle u-shape-1"></div>
-        <h1 class="u-text u-text-1">
+        <h1 class="u-text u-text-1"
+          data-de="<span style='font-weight: 700'>Die schönsten</span> Orte <br/>" 
+          data-en="<span style='font-weight: 700'>The most beautiful</span> places <br/>">
           <span style="font-weight: 700">Die schönsten</span> Orte
         </h1>
-        <p class="u-text u-text-font u-text-2">
+        <p class="u-text u-text-font u-text-2"
+           data-de="Hier sind meine Geheimtipps, der schönsten Orte in der Schweiz und von meinen Reisedestinationen, 
+           dargestellt durch meine eigenen Bilder. <br/>Wie schön und unberechenbar ist die Landschaft und Natur. 
+           <br/>Also lasst uns Sorge tragen zu IHR!"
+           data-en="Here are my insider tips for the most beautiful places in Switzerland and from my travel destinations, 
+           presented through my own photos. <br/>How beautiful and unpredictable the landscape and nature are. 
+           <br/>So let's take care of HER!">
           Hier sind meine Geheimtipps, der schönsten Orte in der Schweiz und von meinen Reisedestinationen, dargestellt 
           durch meine eigenen Bilder. <br/>
           Wie schön und unberechenbar ist die Landschaft und Natur. <br/>
@@ -572,6 +621,7 @@
           <a
             href="Photography.html"
             class="u-active-none u-border-2 u-border-active-palette-3-base u-border-black u-border-hover-palette-3-base u-btn u-btn-rectangle u-button-style u-hover-none u-none u-btn-1"
+            data-de="Mehr Bilder" data-en="More Photos"
             >Mehr Bilder</a
           >
         </div>
@@ -585,6 +635,7 @@
           <a
             href="Photography.html"
             class="u-active-none u-border-2 u-border-active-palette-3-base u-border-black u-border-hover-palette-3-base u-btn u-btn-rectangle u-button-style u-hover-none u-none u-btn-1"
+            data-de="Mehr Bilder" data-en="More Photos"
             >Mehr Bilder</a
           >
         </h2>
@@ -599,14 +650,25 @@
                 <div class="u-layout-col">
                   <div class="u-align-left u-container-style u-layout-cell u-left-cell u-shape-rectangle u-size-60 u-layout-cell-1">
                     <div class="u-container-layout u-valign-bottom u-container-layout-1">
-                      <h5 class="u-custom-font u-text u-text-font u-text-1">
+                      <h5 class="u-custom-font u-text u-text-font u-text-1"
+                      data-de="Über mich" data-en="About me">
                         Über mich
                       </h5>
-                      <h2 class="u-text u-text-2">
+                      <h2 class="u-text u-text-2"
+                        data-de="<span style='font-weight: 700'>Wetter</span>
+                        Fotografie&nbsp;<br/>&amp; Technik Projekte"
+                        data-en="<span style='font-weight: 700'>Weather</span>
+                        Photography&nbsp;<br/>&amp; Technology Projects">
                         <span style="font-weight: 700">Wetter</span>
                         Fotografie&nbsp;<br />&amp; Technik Projekte
                       </h2>
-                      <p class="u-text u-text-3">
+                      <p class="u-text u-text-3"
+                      data-de="Ich bin ein junger aufgeschlossener Typ, der mehr über Gott und die Welt erfahren möchte.
+                        Deshalb studiere ich an der ETH Zürich Elektrotechnik und Informationstechnologie und möchte
+                        weiterhint interessante Projekte umsetzen."
+                        data-en="I am a young open-minded guy who wants to learn more about God and the world.
+                        That's why I study Electrical Engineering and Information Technology at ETH Zurich and want to
+                        implement interesting projects in the future.">
                         Ich bin ein junger aufgeschlossener Typ, der mehr über Gott und die Welt erfahren möchte. 
                         Deshalb studiere ich an der ETH Zürich Elektrotechnik und Informationstechnologie und möchte
                         weiterhint interessante Projekte umsetzen. <br />
@@ -614,6 +676,7 @@
                       <a
                         href="About.html"
                         class="u-active-none u-border-2 u-border-active-palette-3-base u-border-black u-border-hover-palette-3-base u-btn u-btn-rectangle u-button-style u-hover-none u-none u-btn-1"
+                        data-de="Erfahre mehr" data-en="Learn more"
                         >Erfahre mehr</a
                       >
                       <div
@@ -799,7 +862,9 @@
       id="sec-7782"
     >
       <div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-small-text u-text u-text-variant u-text-1">
+        <p class="u-small-text u-text u-text-variant u-text-1"
+        data-de="Alle Bilder sind Eigentum von Timo Kleger und dürfen nicht ohne meine Erlaubnis verwendet werden."
+        data-en="All images are the property of Timo Kleger and may not be used without my permission.">
           Alle Bilder sind Eigentum von Timo Kleger und dürfen nicht ohne meine Erlaubnis verwendet werden.
         </p>
       </div>
