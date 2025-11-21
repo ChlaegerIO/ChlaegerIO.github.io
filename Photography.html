@@ -7,9 +7,11 @@
     <meta name="description" content="" />
     <title data-de="Fotografie" data-en="Photography">Fotografie</title>
     <link rel="stylesheet" href="nicepage.css" media="screen" />
+    <link rel="stylesheet" href="ui-library/styles.css" media="screen" />
+    <link rel="stylesheet" href="ui-library/animations.css" media="screen" />
+    <link rel="stylesheet" href="ui-library/buttons.css" media="screen" />
     <link rel="stylesheet" href="About.css" media="screen" />
     <link rel="stylesheet" href="Photography.css" />
-    <link rel="stylesheet" href="lightbox.css" />
     <script
       class="u-script"
       type="text/javascript"
@@ -147,7 +149,7 @@
                 >
               </li>
               <li class="u-nav-item">
-                <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()" title="Language / Sprache">
+                <button id="languageToggle" class="btn btn-icon btn-ghost language-toggle" onclick="toggleLanguage()" title="Language / Sprache">
                   <span class="material-icons language-icon" aria-hidden="true">compare_arrows</span>
                   <span class="language-text" id="currentLanguage">Deutsch</span>
                 </button>
@@ -229,45 +231,45 @@
         <div class="gallery">
           <!-- Images of 1. column -->
           <div class="gallery_column" >
-            <a href="images/Gallerie/1.jpg" data-lightbox="mygallery" data-title="Spitzmeilen aus der Luft">
-              <img src="images/Gallerie/1.jpg" />
-            </a>
-            <a href="images/Gallerie/2.jpg" data-lightbox="mygallery" data-title="Gletscher im Hochland von Norwegen">
-              <img src="images/Gallerie/2.jpg" />
-            </a>
-            <a href="images/Gallerie/16.jpg" data-lightbox="mygallery" data-title="Trolltunga">
-              <img src="images/Gallerie/16.jpg" />
-            </a>
+            <div class="gallery_item">
+              <img src="images/Gallerie/1.jpg" alt="Spitzmeilen aus der Luft" />
+            </div>
+            <div class="gallery_item">
+              <img src="images/Gallerie/2.jpg" alt="Gletscher im Hochland von Norwegen" />
+            </div>
+            <div class="gallery_item">
+              <img src="images/Gallerie/16.jpg" alt="Trolltunga" />
+            </div>
           </div>
           <!-- Images of 2. column -->
           <div class="gallery_column" >
-            <a href="images/Gallerie/5.jpg" data-lightbox="mygallery" data-title="Sonnenuntergangsstimmung in Breiborg">
-              <img src="images/Gallerie/5.jpg" />
-            </a>
-            <a href="images/Gallerie/6.jpg" data-lightbox="mygallery" data-title="Prekestolen (Predigtstuhul)">
-              <img src="images/Gallerie/6.jpg" />
-            </a>
-            <a href="images/Gallerie/7.jpg" data-lightbox="mygallery" data-title="Spitzmeilen">
-              <img src="images/Gallerie/7.jpg" />
-            </a>
-            <a href="images/Gallerie/4.jpg" data-lightbox="mygallery" data-title="Seerauchen bei Sonnenaufgang">
-              <img src="images/Gallerie/4.jpg" />
-            </a>
+            <div class="gallery_item">
+              <img src="images/Gallerie/5.jpg" alt="Sonnenuntergangsstimmung in Breiborg" />
+            </div>
+            <div class="gallery_item">
+              <img src="images/Gallerie/6.jpg" alt="Prekestolen (Predigtstuhul)" />
+            </div>
+            <div class="gallery_item">
+              <img src="images/Gallerie/7.jpg" alt="Spitzmeilen" />
+            </div>
+            <div class="gallery_item">
+              <img src="images/Gallerie/4.jpg" alt="Seerauchen bei Sonnenaufgang" />
+            </div>
           </div>
           <!-- Images of 3. column -->
           <div class="gallery_column" >
-            <a href="images/Gallerie/8.jpg" data-lightbox="mygallery" data-title="Atlantische Küste in Norwegen bei Sonnenaufgang">
-              <img src="images/Gallerie/8.jpg" />
-            </a>
-            <a href="images/Gallerie/3.jpg" data-lightbox="mygallery" data-title="Klippen eines Fjordes am Kjerakbolten">
-              <img src="images/Gallerie/3.jpg" />
-            </a>
-            <a href="images/Gallerie/9.jpg" data-lightbox="mygallery" data-title="Hochebene in den schweizer Bergen">
-              <img src="images/Gallerie/9.jpg" />
-            </a>
-            <a href="images/Gallerie/10.jpg" data-lightbox="mygallery" data-title="Kleiner Bergbach">
-              <img src="images/Gallerie/10.jpg" />
-            </a>
+            <div class="gallery_item">
+              <img src="images/Gallerie/8.jpg" alt="Atlantische Küste in Norwegen bei Sonnenaufgang" />
+            </div>
+            <div class="gallery_item">
+              <img src="images/Gallerie/3.jpg" alt="Klippen eines Fjordes am Kjerakbolten" />
+            </div>
+            <div class="gallery_item">
+              <img src="images/Gallerie/9.jpg" alt="Hochebene in den schweizer Bergen" />
+            </div>
+            <div class="gallery_item">
+              <img src="images/Gallerie/10.jpg" alt="Kleiner Bergbach" />
+            </div>
           </div>
         </div>
       </div>
@@ -285,9 +287,6 @@
         </p>
       </div>
     </footer>
-
-    <!-- script for the gallery (lightbox2: https://github.com/lokesh/lightbox2)-->
-    <script src="lightbox-plus-jquery.js"></script>
 
   </body>
 </html>

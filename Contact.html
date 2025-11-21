@@ -7,6 +7,9 @@
     <meta name="description" content="" />
     <title data-de="Kontakt" data-en="Contact">Kontakt</title>
     <link rel="stylesheet" href="nicepage.css" media="screen" />
+    <link rel="stylesheet" href="ui-library/styles.css" media="screen" />
+    <link rel="stylesheet" href="ui-library/animations.css" media="screen" />
+    <link rel="stylesheet" href="ui-library/buttons.css" media="screen" />
     <link rel="stylesheet" href="Contact.css" media="screen" />
     <script
       class="u-script"
@@ -145,7 +148,7 @@
                 >
               </li>
               <li class="u-nav-item">
-                <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()" title="Language / Sprache">
+                <button id="languageToggle" class="btn btn-icon btn-ghost language-toggle" onclick="toggleLanguage()" title="Language / Sprache">
                   <span class="material-icons language-icon" aria-hidden="true">compare_arrows</span>
                   <span class="language-text" id="currentLanguage">Deutsch</span>
                 </button>
@@ -202,7 +205,7 @@
       </div>
     </header>
 
-    <section id="contact-form">
+    <section id="contact-form" class="section-offset-large animate-fade-up">
       <form action="https://form.taxi/s/e1rpdiv1" method="POST">
         <h2 data-de="Gerne antworte ich auf Anfragen" data-en="I am happy to reply to inquiries">Gerne antworte ich auf Anfragen</h2>
         <form id="contact" name="contact" accept-charset="utf-8">
