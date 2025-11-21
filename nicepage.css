@@ -36627,8 +36627,13 @@ a.u-link.u-text-hover-grey-90:hover {
 
 
 /*end-variables sitestylecss*/
- .u-header {
+.u-header {
   background-image: none;
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .u-header .u-sheet-1 {
@@ -36706,3 +36711,71 @@ a.u-link.u-text-hover-grey-90:hover {
  /*begin-variables base-font-size*/ 
  html { font-size: 16px; }
  /*end-variables base-font-size*/
+
+/* Language Toggle Styles */
+.language-toggle {
+  background: none;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9em;
+  color: #333;
+  gap: 6px;
+}
+
+.language-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color: #999;
+}
+
+.language-toggle-mobile {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  text-align: left;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.language-toggle-mobile:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.language-text {
+  font-size: 1em;
+  transition: transform 0.3s ease;
+  font-weight: 500;
+}
+
+.language-toggle:hover .language-text,
+.language-toggle-mobile:hover .language-text {
+  transform: scale(1.05);
+}
+
+.u-nav-2 .language-toggle-mobile {
+  border: none;
+  outline: none;
+}
+
+@media (max-width: 767px) {
+  .language-toggle {
+    padding: 6px 10px;
+    font-size: 0.8em;
+  }
+}
+
+.language-icon {
+  font-size: 1.2em;
+  line-height: 1;
+}

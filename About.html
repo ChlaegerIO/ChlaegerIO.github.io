@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <title>About</title>
+    <title data-de="Über mich" data-en="About">Über mich</title>
     <link rel="stylesheet" href="nicepage.css" media="screen" />
     <link rel="stylesheet" href="About.css" media="screen" />
     <script
@@ -20,11 +20,21 @@
       src="nicepage.js"
       defer=""
     ></script>
+    <script
+      class="u-script"
+      type="text/javascript"
+      src="language-toggle.js"
+      defer=""
+    ></script>
     <meta name="generator" content="Nicepage 4.12.21, nicepage.com" />
     <link
       id="u-theme-google-font"
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
 
     <script type="application/ld+json">
@@ -89,6 +99,8 @@
                   class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                   href="index.html"
                   style="padding: 10px 20px"
+                  data-de="Home"
+                  data-en="Home"
                   >Home</a
                 >
               </li>
@@ -97,6 +109,8 @@
                   class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                   href="Weather.html"
                   style="padding: 10px 20px"
+                  data-de="Wetter"
+                  data-en="Weather"
                   >Wetter</a
                 >
               </li>
@@ -105,6 +119,8 @@
                   class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                   href="Photography.html"
                   style="padding: 10px 20px"
+                  data-de="Fotografie"
+                  data-en="Photography"
                   >Fotografie</a
                 >
               </li>
@@ -113,6 +129,8 @@
                   class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                   href="About.html"
                   style="padding: 10px 20px"
+                  data-de="Über mich"
+                  data-en="About me"
                   >Über mich</a
                 >
               </li>
@@ -121,8 +139,16 @@
                   class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                   href="Contact.html"
                   style="padding: 10px 20px"
+                  data-de="Kontakt"
+                  data-en="Contact"
                   >Kontakt</a
                 >
+              </li>
+              <li class="u-nav-item">
+                <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()" title="Language / Sprache">
+                  <span class="material-icons language-icon" aria-hidden="true">compare_arrows</span>
+                  <span class="language-text" id="currentLanguage">Deutsch</span>
+                </button>
               </li>
             </ul>
           </div>
@@ -138,28 +164,34 @@
                 >
                   <li class="u-nav-item">
                     <a class="u-button-style u-nav-link" href="index.html"
-                      >Home</a
+                      data-de="Home" data-en="Home">Home</a
                     >
                   </li>
                   <li class="u-nav-item">
                     <a class="u-button-style u-nav-link" href="Weather.html"
-                      >Wetter</a
+                      data-de="Wetter" data-en="Weather">Wetter</a
                     >
                   </li>
                   <li class="u-nav-item">
                     <a class="u-button-style u-nav-link" href="Photography.html"
-                      >Fotografie</a
+                      data-de="Fotografie" data-en="Photography">Fotografie</a
                     >
                   </li>
                   <li class="u-nav-item">
                     <a class="u-button-style u-nav-link" href="About.html"
-                      >Über mich</a
+                      data-de="Über mich" data-en="About me">Über mich</a
                     >
                   </li>
                   <li class="u-nav-item">
                     <a class="u-button-style u-nav-link" href="Contact.html"
-                      >Kontakt</a
+                      data-de="Kontakt" data-en="Contact">Kontakt</a
                     >
+                  </li>
+                  <li class="u-nav-item">
+                    <button id="languageToggleMobile" class="language-toggle-mobile" onclick="toggleLanguage()" title="Language / Sprache">
+                      <span class="material-icons language-icon" aria-hidden="true">compare_arrows</span>
+                      <span class="language-text" id="currentLanguageMobile">Deutsch</span>
+                    </button>
                   </li>
                 </ul>
               </div>
@@ -173,74 +205,113 @@
     <section class="u-clearfix u-section-1">
       <div class="container">
         <div class="section">
-            <h2>Bildung</h2>
-            <p>
-              <strong>2018-2024</strong> Universität, ETH Zürich, Bachelor und Master in Information Technology and Electrical Engineering mit der Spezialisierung Machine Learning, 
-              </br>Bachelor thesis: Vision based inference of non-linear dynamical cloud timelapse
+            <h2 data-de="Bildung" data-en="Education">Bildung</h2>
+            <p
+              data-de='<strong>2018–2024</strong> Universität, ETH Zürich, Bachelor und Master in Information Technology and Electrical Engineering mit der Spezialisierung Machine Learning.<br/>Bachelor thesis: Vision based inference of non-linear dynamical cloud timelapse.'
+              data-en='<strong>2018–2024</strong> University, ETH Zurich, Bachelor&rsquo;s and Master&rsquo;s in Information Technology and Electrical Engineering with a specialization in Machine Learning.<br/>Bachelor thesis: Vision based inference of non-linear dynamical cloud timelapse.'>
+              <strong>2018–2024</strong> Universität, ETH Zürich, Bachelor und Master in Information Technology and Electrical Engineering mit der Spezialisierung Machine Learning.<br/>Bachelor thesis: Vision based inference of non-linear dynamical cloud timelapse.
             </p>
-            <p>
-              <strong>2014–2018</strong> Gymnasium, Kantiwil, Zusätzliche Lektionen: Science Club
+            <p
+              data-de='<strong>2014–2018</strong> Gymnasium, Kantiwil, zusätzliche Lektionen: Science Club'
+              data-en='<strong>2014–2018</strong> Grammar school, Kanti Wil, additional lessons: Science Club'>
+              <strong>2014–2018</strong> Gymnasium, Kantiwil, zusätzliche Lektionen: Science Club
             </p>
-            <p>
-              <strong>2012–2014</strong> Oberstufe, OZ Sproochbrugg, Zusätzliche Lektionen: Mathematisch-Naturwissenschaftlicher Unterricht
+            <p
+              data-de='<strong>2012–2014</strong> Oberstufe, OZ Sproochbrugg, zusätzliche Lektionen: Mathematisch-naturwissenschaftlicher Unterricht'
+              data-en='<strong>2012–2014</strong> Lower secondary school, OZ Sproochbrugg, additional lessons: mathematics and science program'>
+              <strong>2012–2014</strong> Oberstufe, OZ Sproochbrugg, zusätzliche Lektionen: Mathematisch-naturwissenschaftlicher Unterricht
             </p>
-            <p>
+            <p
+              data-de='<strong>2006–2012</strong> Primarschule, PSNLZ Niederhelfenschwil mit Klavierlektionen'
+              data-en='<strong>2006–2012</strong> Primary school, PSNLZ Niederhelfenschwil with piano lessons'>
               <strong>2006–2012</strong> Primarschule, PSNLZ Niederhelfenschwil mit Klavierlektionen
             </p>
         </div>
         <div class="section">
-          <h2>Erfahrung</h2>
-          <p>
-              <strong>April 2022 - heute</strong> Swisca AG, Automations Ingenieur im R&D Team (Embedded Systems und Mensch-Maschine Schnittstelle), Teilzeit (20-100%)
+          <h2 data-de="Erfahrung" data-en="Experience">Erfahrung</h2>
+          <p
+            data-de='<strong>April 2022 – heute</strong> Swisca AG, Automationsingenieur im R&amp;D-Team (Embedded Systems und Mensch-Maschine-Schnittstelle), Teilzeit (20–100%)'
+            data-en='<strong>April 2022 – today</strong> Swisca AG, automation engineer in the R&amp;D team (embedded systems and human-machine interface), part-time (20–100%)'>
+            <strong>April 2022 – heute</strong> Swisca AG, Automationsingenieur im R&amp;D-Team (Embedded Systems und Mensch-Maschine-Schnittstelle), Teilzeit (20–100%)
           </p>
-          <p>
-              <strong>Nov. 2021 - Sep. 2022</strong> ETH Assistenz für e-Sling, Technische Beratung und Einführung für die neuen Fokusprojektstudenten
+          <p
+            data-de='<strong>Nov. 2021 – Sep. 2022</strong> ETH Assistenz für e-Sling, technische Beratung und Einführung für die neuen Fokusprojekt-Studierenden'
+            data-en='<strong>Nov. 2021 – Sep. 2022</strong> ETH teaching assistant for e-Sling, providing technical guidance and onboarding for the new focus-project students'>
+            <strong>Nov. 2021 – Sep. 2022</strong> ETH Assistenz für e-Sling, technische Beratung und Einführung für die neuen Fokusprojekt-Studierenden
           </p>
-          <p>
-              <strong>Sep. 2020 - Oct. 2021</strong> e-Sling, eines der ersten vier plätzigen Elektroflugzeugen
-              <ul>
-                  <li>Fokusstudent im Softwareteam beim Studentenprojekt e-Sling</li>
-                  <li>Embedded System Code (C and C++) für das Battery Management System (BMS), Electrical Control Unit (ECU) und Human-Machine interface (HMI)</li>
-                  <li>Team Management mit zwei Freelancern</li>
-              </ul>
+          <p
+            data-de='<strong>Sep. 2020 – Oct. 2021</strong> e-Sling, eines der ersten viersitzigen Elektroflugzeuge'
+            data-en='<strong>Sep. 2020 – Oct. 2021</strong> e-Sling, one of the first four-seat electric aircraft projects'>
+            <strong>Sep. 2020 – Oct. 2021</strong> e-Sling, eines der ersten viersitzigen Elektroflugzeuge
           </p>
-          <p>
-              <strong>Vor 2020</strong> Verschiedene Ferienjobs darunter als Landschafsgärtner, auf dem Bauernhof oder Gillmontage bei einem Onkel.
+          <ul>
+            <li data-de="Fokusstudent im Softwareteam beim Studentenprojekt e-Sling" data-en="Focus student in the software team of the e-Sling student project">Fokusstudent im Softwareteam beim Studentenprojekt e-Sling</li>
+            <li data-de="Embedded-Systems-Code (C und C++) für das Battery Management System (BMS), die Electrical Control Unit (ECU) und das Human-Machine Interface (HMI)" data-en="Embedded-systems code (C and C++) for the Battery Management System (BMS), Electrical Control Unit (ECU), and Human-Machine Interface (HMI)">Embedded-Systems-Code (C und C++) für das Battery Management System (BMS), die Electrical Control Unit (ECU) und das Human-Machine Interface (HMI)</li>
+            <li data-de="Teamleitung mit zwei Freelancern" data-en="Team management with two freelancers">Teamleitung mit zwei Freelancern</li>
+          </ul>
+          <p
+            data-de='<strong>Vor 2020</strong> Verschiedene Ferienjobs, darunter als Landschaftsgärtner, auf dem Bauernhof oder bei Gittermontagen mit meinem Onkel'
+            data-en='<strong>Before 2020</strong> Various vacation jobs including landscaping, farm work, and railing installations with an uncle'>
+            <strong>Vor 2020</strong> Verschiedene Ferienjobs, darunter als Landschaftsgärtner, auf dem Bauernhof oder bei Gittermontagen mit meinem Onkel
+          </p>
         </div>
         <div class="section">
-          <h2>IT Wissen</h2>
+          <h2 data-de="IT Wissen" data-en="IT Skills">IT Wissen</h2>
           <ul>
-              <li>Kurse an der ETH und zusätzliche Erfahrung</li>
-              C und C++, Python (pyTorch, numpy, matplotlib, ...), Matlab</p>
-              <li>Viel Erfahrung</li>
-              Lightroom, STM32 Software Umgebungen, IAR Entwicklungsumgebung</p>
-              <li>Gute Erfahrung</li>
-              Photoshop, COMSOL, Arduino, Raspberry Pi, MS office Programme, Linux, Windows</p>
-              <li>Ein wenig Erfahrung</li>
-              Java, HTML, CSS, JavaScript, NX (Bastelprojekte), KiCad (PCB Entwicklung), Simulink, LaTeX, ESP32</p>
+              <li
+                data-de="<strong>Kurse an der ETH und zusätzliche Erfahrung:</strong> C und C++, Python (PyTorch, NumPy, Matplotlib, ...), Matlab"
+                data-en="<strong>Courses at ETH and additional experience:</strong> C and C++, Python (PyTorch, NumPy, Matplotlib, ...), Matlab">
+                <strong>Kurse an der ETH und zusätzliche Erfahrung:</strong> C und C++, Python (PyTorch, NumPy, Matplotlib, ...), Matlab
+              </li>
+              <li
+                data-de="<strong>Viel Erfahrung:</strong> Lightroom, STM32 Software-Umgebungen, IAR Entwicklungsumgebung"
+                data-en="<strong>Extensive experience:</strong> Lightroom, STM32 software environments, IAR development suite">
+                <strong>Viel Erfahrung:</strong> Lightroom, STM32 Software-Umgebungen, IAR Entwicklungsumgebung
+              </li>
+              <li
+                data-de="<strong>Gute Erfahrung:</strong> Photoshop, COMSOL, Arduino, Raspberry Pi, MS Office Programme, Linux, Windows"
+                data-en="<strong>Good experience:</strong> Photoshop, COMSOL, Arduino, Raspberry Pi, MS Office applications, Linux, Windows">
+                <strong>Gute Erfahrung:</strong> Photoshop, COMSOL, Arduino, Raspberry Pi, MS Office Programme, Linux, Windows
+              </li>
+              <li
+                data-de="<strong>Ein wenig Erfahrung:</strong> Java, HTML, CSS, JavaScript, NX (Bastelprojekte), KiCad (PCB-Entwicklung), Simulink, LaTeX, ESP32"
+                data-en="<strong>Some experience:</strong> Java, HTML, CSS, JavaScript, NX (hobby projects), KiCad (PCB design), Simulink, LaTeX, ESP32">
+                <strong>Ein wenig Erfahrung:</strong> Java, HTML, CSS, JavaScript, NX (Bastelprojekte), KiCad (PCB-Entwicklung), Simulink, LaTeX, ESP32
+              </li>
           </ul>
         </div>
         <div class="section">
-            <h2>Arbeiten und Preise</h2>
+            <h2 data-de="Arbeiten und Preise" data-en="Publications and Awards">Arbeiten und Preise</h2>
             <ul>
-                <li>Vision based inference of non-linear dynamical cloud timelapse: Timo Kleger begleitet durch Dr. Suryansh Kumar und Prof. Dr. Luc Van Gool, ETH Zürich, Januar 2022</li>
-                <li>Endbericht e-Sling Softwareteam: T. Kleger, E. Pytlik begleitet durch Prof. Dr. Konrad Wegener, ETH Zürich, June 2021</li>
-                <li>Maturaarbeit: Energieautarkes Wohnen durch saisonale Speicherung, Wil, 2017
+                <li
+                  data-de="Vision based inference of non-linear dynamical cloud timelapse: Timo Kleger, begleitet durch Dr. Suryansh Kumar und Prof. Dr. Luc Van Gool, ETH Zürich, Januar 2022"
+                  data-en="Vision based inference of non-linear dynamical cloud timelapse: Timo Kleger, supervised by Dr. Suryansh Kumar and Prof. Dr. Luc Van Gool, ETH Zurich, January 2022">
+                  Vision based inference of non-linear dynamical cloud timelapse: Timo Kleger, begleitet durch Dr. Suryansh Kumar und Prof. Dr. Luc Van Gool, ETH Zürich, Januar 2022
+                </li>
+                <li
+                  data-de="Endbericht e-Sling Softwareteam: T. Kleger, E. Pytlik, begleitet durch Prof. Dr. Konrad Wegener, ETH Zürich, Juni 2021"
+                  data-en="Final report e-Sling software team: T. Kleger, E. Pytlik, supervised by Prof. Dr. Konrad Wegener, ETH Zurich, June 2021">
+                  Endbericht e-Sling Softwareteam: T. Kleger, E. Pytlik, begleitet durch Prof. Dr. Konrad Wegener, ETH Zürich, Juni 2021
+                </li>
+                <li
+                  data-de="Maturaarbeit: Energieautarkes Wohnen durch saisonale Speicherung, Wil, 2017"
+                  data-en="High-school thesis: Energy self-sufficient living through seasonal storage, Wil, 2017">
+                  Maturaarbeit: Energieautarkes Wohnen durch saisonale Speicherung, Wil, 2017
                     <ul>
-                        <li>1. place Sustainability Award from WIFONA, Wil, 4. July 2018</li>
-                        <li>2. place WWF reward for extraordinary scientific papers, St.Gallen, 23. April 2018</li>
-                        <li>2. place in the Swiss Geography Olympiad, Solothurn, 18. November 2017</li>
+                        <li data-de="1. Platz Sustainability Award von WIFONA, Wil, 4. Juli 2018" data-en="1st place Sustainability Award from WIFONA, Wil, 4 July 2018">1. Platz Sustainability Award von WIFONA, Wil, 4. Juli 2018</li>
+                        <li data-de="2. Platz WWF-Preis für ausserordentliche wissenschaftliche Arbeiten, St. Gallen, 23. April 2018" data-en="2nd place WWF award for outstanding scientific papers, St. Gallen, 23 April 2018">2. Platz WWF-Preis für ausserordentliche wissenschaftliche Arbeiten, St. Gallen, 23. April 2018</li>
+                        <li data-de="2. Platz an der Schweizer Geographie-Olympiade, Solothurn, 18. November 2017" data-en="2nd place in the Swiss Geography Olympiad, Solothurn, 18 November 2017">2. Platz an der Schweizer Geographie-Olympiade, Solothurn, 18. November 2017</li>
                     </ul>
                 </li>
             </ul>
         </div>
         <div class="section">
-            <h2>Sprachen</h2>
+            <h2 data-de="Sprachen" data-en="Languages">Sprachen</h2>
             <ul>
-                <li>Deutsch, Muttersprache</li>
-                <li>Englisch, fliessend</li>
-                <li>Französisch, gut</li>
-                <li>Schwedisch, ein wenig</li>
+                <li data-de="Deutsch, Muttersprache" data-en="German, native">Deutsch, Muttersprache</li>
+                <li data-de="Englisch, fliessend" data-en="English, fluent">Englisch, fliessend</li>
+                <li data-de="Französisch, gut" data-en="French, good">Französisch, gut</li>
+                <li data-de="Schwedisch, ein wenig" data-en="Swedish, basic">Schwedisch, ein wenig</li>
             </ul>
         </div>
     </div>
@@ -251,7 +322,9 @@
       id="sec-7782"
     >
       <div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-small-text u-text u-text-variant u-text-1">
+        <p class="u-small-text u-text u-text-variant u-text-1"
+        data-de="Alle Bilder sind Eigentum von Timo Kleger und dürfen nicht ohne meine Erlaubnis verwendet werden."
+        data-en="All images are the property of Timo Kleger and may not be used without my permission.">
           Alle Bilder sind Eigentum von Timo Kleger und dürfen nicht ohne meine Erlaubnis verwendet werden.
         </p>
       </div>

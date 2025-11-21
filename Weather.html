@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <title>Weather</title>
+    <title data-de="Wetter" data-en="Weather">Wetter</title>
     <link rel="stylesheet" href="nicepage.css" media="screen" />
     <link rel="stylesheet" href="Weather.css" media="screen" />
     <script
@@ -26,11 +26,21 @@
       src="weather.js"
       defer=""
     ></script>
+    <script
+      class="u-script"
+      type="text/javascript"
+      src="language-toggle.js"
+      defer=""
+    ></script>
     <meta name="generator" content="Nicepage 4.12.21, nicepage.com" />
     <link
       id="u-theme-google-font"
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
 
     <script type="application/ld+json">
@@ -42,7 +52,7 @@
       }
     </script>
     <meta name="theme-color" content="#478ac9" />
-    <meta property="og:title" content="About" />
+    <meta property="og:title" content="Weather" />
     <meta property="og:type" content="website" />
   </head>
   <body class="u-body u-xl-mode">
@@ -95,6 +105,8 @@
                   class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                   href="index.html"
                   style="padding: 10px 20px"
+                  data-de="Home"
+                  data-en="Home"
                   >Home</a
                 >
               </li>
@@ -103,6 +115,8 @@
                   class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                   href="Weather.html"
                   style="padding: 10px 20px"
+                  data-de="Wetter"
+                  data-en="Weather"
                   >Wetter</a
                 >
               </li>
@@ -111,6 +125,8 @@
                   class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                   href="Photography.html"
                   style="padding: 10px 20px"
+                  data-de="Fotografie"
+                  data-en="Photography"
                   >Fotografie</a
                 >
               </li>
@@ -119,6 +135,8 @@
                   class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                   href="About.html"
                   style="padding: 10px 20px"
+                  data-de="Über mich"
+                  data-en="About me"
                   >Über mich</a
                 >
               </li>
@@ -127,8 +145,16 @@
                   class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                   href="Contact.html"
                   style="padding: 10px 20px"
+                  data-de="Kontakt"
+                  data-en="Contact"
                   >Kontakt</a
                 >
+              </li>
+              <li class="u-nav-item">
+                <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()" title="Language / Sprache">
+                  <span class="material-icons language-icon" aria-hidden="true">compare_arrows</span>
+                  <span class="language-text" id="currentLanguage">Deutsch</span>
+                </button>
               </li>
             </ul>
           </div>
@@ -144,28 +170,34 @@
                 >
                   <li class="u-nav-item">
                     <a class="u-button-style u-nav-link" href="index.html"
-                      >Home</a
+                      data-de="Home" data-en="Home">Home</a
                     >
                   </li>
                   <li class="u-nav-item">
                     <a class="u-button-style u-nav-link" href="Weather.html"
-                      >Wetter</a
+                      data-de="Wetter" data-en="Weather">Wetter</a
                     >
                   </li>
                   <li class="u-nav-item">
                     <a class="u-button-style u-nav-link" href="Photography.html"
-                      >Fotografie</a
+                      data-de="Fotografie" data-en="Photography">Fotografie</a
                     >
                   </li>
                   <li class="u-nav-item">
                     <a class="u-button-style u-nav-link" href="About.html"
-                      >Über mich</a
+                      data-de="Über mich" data-en="About me">Über mich</a
                     >
                   </li>
                   <li class="u-nav-item">
                     <a class="u-button-style u-nav-link" href="Contact.html"
-                      >Kontakt</a
+                      data-de="Kontakt" data-en="Contact">Kontakt</a
                     >
+                  </li>
+                  <li class="u-nav-item">
+                    <button id="languageToggleMobile" class="language-toggle-mobile" onclick="toggleLanguage()" title="Language / Sprache">
+                      <span class="material-icons language-icon" aria-hidden="true">compare_arrows</span>
+                      <span class="language-text" id="currentLanguageMobile">Deutsch</span>
+                    </button>
                   </li>
                 </ul>
               </div>
@@ -178,21 +210,35 @@
 
     <!-- Titel -->
     <div class="title">
-      <h2>Wetter <span>Niederhelfenschwil</span></h2>
+      <h2 data-de="Wetter <span>Niederhelfenschwil</span>" data-en="Weather <span>Niederhelfenschwil</span>">
+        Wetter <span>Niederhelfenschwil</span>
+      </h2>
     </div>
 
     <!-- mache bitte section mit den aktuellen Wetterdaten: 1. Temperatur, Wind, Regen, Barometer, Feuchtigkeit -->
     <!-- TODO: Knopf, um die Zeitperiode einzustellen 1 Tag, 1 Woche, 1 Monat, 1 Jahr -->
     <form onsubmit="return changePeriod(this)">
-      <input type="radio" id="day_form" name="period" value="day">Day
-      <input type="radio" id="week_form" name="period" value="week">Week
-      <input type="radio" id="month_form" name="period" value="month">Month
-      <input type="radio" id="year_form" name="period" value="year">Year
-      <input type="submit" value="Set">
+      <label class="period-option" for="day_form">
+        <input type="radio" id="day_form" name="period" value="day" />
+        <span data-de="Tag" data-en="Day">Tag</span>
+      </label>
+      <label class="period-option" for="week_form">
+        <input type="radio" id="week_form" name="period" value="week" />
+        <span data-de="Woche" data-en="Week">Woche</span>
+      </label>
+      <label class="period-option" for="month_form">
+        <input type="radio" id="month_form" name="period" value="month" />
+        <span data-de="Monat" data-en="Month">Monat</span>
+      </label>
+      <label class="period-option" for="year_form">
+        <input type="radio" id="year_form" name="period" value="year" />
+        <span data-de="Jahr" data-en="Year">Jahr</span>
+      </label>
+      <input type="submit" value="Übernehmen" data-value-de="Übernehmen" data-value-en="Apply" />
     </form>
     <section class="u-clearfix u-white u-section-5" id="carousel_980b">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h2 class="u-text u-text-1">Aktuelle Messwerte</h2>
+        <h2 class="u-text u-text-1" data-de="Aktuelle Messwerte" data-en="Current Measurements">Aktuelle Messwerte</h2>
         <!-- TODO: grid 2x2 -->
         <object class="grafana-iframe" id="current_grafana_temp"
             data="https://wetter.timokleger.com/d-solo/adk6z49/wetter?orgId=1&refresh=30s&from=now-24h&to=now&timezone=browser&theme=light&panelId=panel-11&__feature.dashboardSceneSolo=true" style="width:100%; max-width:2000px; max-height:100px;" frameborder="0"></object>
@@ -204,7 +250,7 @@
             data="https://wetter.timokleger.com/d-solo/adk6z49/wetter?orgId=1&refresh=30s&from=now-24h&to=now&timezone=browser&theme=light&panelId=panel-15&__feature.dashboardSceneSolo=true" style="width:100%; max-width:2000px; max-height:100px;" frameborder="0"></object>
       </div>
       <div class="u-clearfix u-sheet u-valign-middle-xl u-valign-middle-xs u-sheet-1">
-        <h2 class="u-text u-text-1">Historische Messwerte</h2>
+        <h2 class="u-text u-text-1" data-de="Historische Messwerte" data-en="Historical Measurements">Historische Messwerte</h2>
         <object class="grafana-iframe" id="temperatur_grafana"
             data="https://wetter.timokleger.com/d-solo/adk6z49/wetter?orgId=1&refresh=30s&from=now-7d&to=now&timezone=browser&theme=light&panelId=panel-1&__feature.dashboardSceneSolo=true" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></object>
         <br>
@@ -227,13 +273,16 @@
     <!-- section mit Hintergrundinformationen über meine Wetterstation: Höhe über Meer 585 m  -->
     <section class="u-align-center u-clearfix u-section-1" id="sec-1b1a">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h2 class="u-text u-text-1">Hintergrundinformationen zur Wetterstation</h2>
+        <h2 class="u-text u-text-1" data-de="Hintergrundinformationen zur Wetterstation" data-en="Background Information About The Weather Station">Hintergrundinformationen zur Wetterstation</h2>
         <p class="u-text u-text-2">
-          Die Wetterstation befindet sich in Niederhelfenschwil und ist 8.5 Meter über Boden, wovon die Station 1.5 Meter über den Dachrand steht.
-          Der Temperaturfühler ist auf der Dachabgewandten Seite der Halterung montiert, damit die Temperatur so wenig wie möglich durch Wärme des Daches verfälscht wird.
-          Erfahrungsgemäss ist die Temperatur nicht signifikant höher als an vergleichbaren Stationen der Region, höchstens an windschwachen Sommertagen
-          könnte es 0.5 bis 1 Grad Celsius höher sein.
-          Die Davis Vantage Pro 2 befindet sich auf 593 M.ü.M. Die Daten werden alle 10 Minuten aktualisiert.
+          <span
+            data-de="Die Wetterstation befindet sich in Niederhelfenschwil und ist 8.5 Meter über Boden, wovon die Station 1.5 Meter über den Dachrand steht.<br/>Der Temperaturfühler ist auf der dachabgewandten Seite der Halterung montiert, damit die Temperatur so wenig wie möglich durch Wärme des Daches verfälscht wird.<br/>Erfahrungsgemäss ist die Temperatur nicht signifikant höher als an vergleichbaren Stationen der Region, höchstens an windschwachen Sommertagen könnte es 0.5 bis 1 Grad Celsius höher sein.<br/>Die Davis Vantage Pro 2 befindet sich auf 593 M.ü.M. Die Daten werden alle 10 Minuten aktualisiert."
+            data-en="The weather station is located in Niederhelfenschwil and sits 8.5 meters above ground, with the instruments extending 1.5 meters above the roofline.<br/>The temperature sensor is mounted on the side facing away from the roof so that the readings are influenced as little as possible by residual heat.<br/>Experience shows that the temperature is not significantly higher than comparable stations in the region; only on calm summer days can it be 0.5 to 1°C warmer.<br/>The Davis Vantage Pro 2 is positioned at 593 meters above sea level and the data is updated every 10 minutes.">
+            Die Wetterstation befindet sich in Niederhelfenschwil und ist 8.5 Meter über Boden, wovon die Station 1.5 Meter über den Dachrand steht.<br/>
+            Der Temperaturfühler ist auf der dachabgewandten Seite der Halterung montiert, damit die Temperatur so wenig wie möglich durch Wärme des Daches verfälscht wird.<br/>
+            Erfahrungsgemäss ist die Temperatur nicht signifikant höher als an vergleichbaren Stationen der Region, höchstens an windschwachen Sommertagen könnte es 0.5 bis 1 Grad Celsius höher sein.<br/>
+            Die Davis Vantage Pro 2 befindet sich auf 593 M.ü.M. Die Daten werden alle 10 Minuten aktualisiert.
+          </span>
           <img
               class="u-back-image u-back-image-1 crop-left"
               src="images/Wetterstation1.jpg"
@@ -247,7 +296,9 @@
       id="sec-7782"
     >
       <div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-small-text u-text u-text-variant u-text-1">
+        <p class="u-small-text u-text u-text-variant u-text-1"
+        data-de="Alle Bilder sind Eigentum von Timo Kleger und dürfen nicht ohne meine Erlaubnis verwendet werden."
+        data-en="All images are the property of Timo Kleger and may not be used without my permission.">
           Alle Bilder sind Eigentum von Timo Kleger und dürfen nicht ohne meine Erlaubnis verwendet werden.
         </p>
       </div>

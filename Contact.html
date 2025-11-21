@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <title>Contact</title>
+    <title data-de="Kontakt" data-en="Contact">Kontakt</title>
     <link rel="stylesheet" href="nicepage.css" media="screen" />
     <link rel="stylesheet" href="Contact.css" media="screen" />
     <script
@@ -20,11 +20,21 @@
       src="nicepage.js"
       defer=""
     ></script>
+    <script
+      class="u-script"
+      type="text/javascript"
+      src="language-toggle.js"
+      defer=""
+    ></script>
     <meta name="generator" content="Nicepage 4.12.21, nicepage.com" />
     <link
       id="u-theme-google-font"
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
 
     <script type="application/ld+json">
@@ -89,6 +99,8 @@
                   class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                   href="index.html"
                   style="padding: 10px 20px"
+                  data-de="Home"
+                  data-en="Home"
                   >Home</a
                 >
               </li>
@@ -97,6 +109,8 @@
                   class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                   href="Weather.html"
                   style="padding: 10px 20px"
+                  data-de="Wetter"
+                  data-en="Weather"
                   >Wetter</a
                 >
               </li>
@@ -105,6 +119,8 @@
                   class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                   href="Photography.html"
                   style="padding: 10px 20px"
+                  data-de="Fotografie"
+                  data-en="Photography"
                   >Fotografie</a
                 >
               </li>
@@ -113,6 +129,8 @@
                   class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                   href="About.html"
                   style="padding: 10px 20px"
+                  data-de="Über mich"
+                  data-en="About me"
                   >Über mich</a
                 >
               </li>
@@ -121,8 +139,16 @@
                   class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                   href="Contact.html"
                   style="padding: 10px 20px"
+                  data-de="Kontakt"
+                  data-en="Contact"
                   >Kontakt</a
                 >
+              </li>
+              <li class="u-nav-item">
+                <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()" title="Language / Sprache">
+                  <span class="material-icons language-icon" aria-hidden="true">compare_arrows</span>
+                  <span class="language-text" id="currentLanguage">Deutsch</span>
+                </button>
               </li>
             </ul>
           </div>
@@ -138,28 +164,34 @@
                 >
                   <li class="u-nav-item">
                     <a class="u-button-style u-nav-link" href="index.html"
-                      >Home</a
+                      data-de="Home" data-en="Home">Home</a
                     >
                   </li>
                   <li class="u-nav-item">
                     <a class="u-button-style u-nav-link" href="Weather.html"
-                      >Wetter</a
+                      data-de="Wetter" data-en="Weather">Wetter</a
                     >
                   </li>
                   <li class="u-nav-item">
                     <a class="u-button-style u-nav-link" href="Photography.html"
-                      >Fotografie</a
+                      data-de="Fotografie" data-en="Photography">Fotografie</a
                     >
                   </li>
                   <li class="u-nav-item">
                     <a class="u-button-style u-nav-link" href="About.html"
-                      >Über mich</a
+                      data-de="Über mich" data-en="About me">Über mich</a
                     >
                   </li>
                   <li class="u-nav-item">
                     <a class="u-button-style u-nav-link" href="Contact.html"
-                      >Kontakt</a
+                      data-de="Kontakt" data-en="Contact">Kontakt</a
                     >
+                  </li>
+                  <li class="u-nav-item">
+                    <button id="languageToggleMobile" class="language-toggle-mobile" onclick="toggleLanguage()" title="Language / Sprache">
+                      <span class="material-icons language-icon" aria-hidden="true">compare_arrows</span>
+                      <span class="language-text" id="currentLanguageMobile">Deutsch</span>
+                    </button>
                   </li>
                 </ul>
               </div>
@@ -172,12 +204,12 @@
 
     <section id="contact-form">
       <form action="https://form.taxi/s/e1rpdiv1" method="POST">
-        <h2>Gerne antworte ich auf Anfragen</h2>
+        <h2 data-de="Gerne antworte ich auf Anfragen" data-en="I am happy to reply to inquiries">Gerne antworte ich auf Anfragen</h2>
         <form id="contact" name="contact" accept-charset="utf-8">
-          <label><span></span><input name="name" type="text" placeholder="Name"/></label>
-          <label><span></span><input name="email" type="email" placeholder="Ihre Email Adresse"/></label>
-          <label><span></span><textarea name="message" placeholder="Nachricht"></textarea></label>
-          <input name="submit" type="submit" value="Send"/>
+          <label><span></span><input name="name" type="text" placeholder="Name" data-placeholder-de="Name" data-placeholder-en="Name"/></label>
+          <label><span></span><input name="email" type="email" placeholder="Ihre Email Adresse" data-placeholder-de="Ihre E-Mail-Adresse" data-placeholder-en="Your email address"/></label>
+          <label><span></span><textarea name="message" placeholder="Nachricht" data-placeholder-de="Nachricht" data-placeholder-en="Message"></textarea></label>
+          <input name="submit" type="submit" value="Senden" data-value-de="Senden" data-value-en="Send"/>
         </form>
         <!-- <aside>
           <p>Just hit Send on an empty form to see the invalid input animation</p>
@@ -191,7 +223,9 @@
       id="sec-7782"
     >
       <div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-small-text u-text u-text-variant u-text-1">
+        <p class="u-small-text u-text u-text-variant u-text-1"
+        data-de="Alle Bilder sind Eigentum von Timo Kleger und dürfen nicht ohne meine Erlaubnis verwendet werden."
+        data-en="All images are the property of Timo Kleger and may not be used without my permission.">
           Alle Bilder sind Eigentum von Timo Kleger und dürfen nicht ohne meine Erlaubnis verwendet werden.
         </p>
       </div>

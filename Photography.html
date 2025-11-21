@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <title>About</title>
+    <title data-de="Fotografie" data-en="Photography">Fotografie</title>
     <link rel="stylesheet" href="nicepage.css" media="screen" />
     <link rel="stylesheet" href="About.css" media="screen" />
     <link rel="stylesheet" href="Photography.css" />
@@ -22,11 +22,21 @@
       src="nicepage.js"
       defer=""
     ></script>
+    <script
+      class="u-script"
+      type="text/javascript"
+      src="language-toggle.js"
+      defer=""
+    ></script>
     <meta name="generator" content="Nicepage 4.12.21, nicepage.com" />
     <link
       id="u-theme-google-font"
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
 
     <script type="application/ld+json">
@@ -38,7 +48,7 @@
       }
     </script>
     <meta name="theme-color" content="#478ac9" />
-    <meta property="og:title" content="About" />
+    <meta property="og:title" content="Photography" />
     <meta property="og:type" content="website" />
   </head>
   <body class="u-body u-xl-mode">
@@ -91,6 +101,8 @@
                   class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                   href="index.html"
                   style="padding: 10px 20px"
+                  data-de="Home"
+                  data-en="Home"
                   >Home</a
                 >
               </li>
@@ -99,6 +111,8 @@
                   class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                   href="Weather.html"
                   style="padding: 10px 20px"
+                  data-de="Wetter"
+                  data-en="Weather"
                   >Wetter</a
                 >
               </li>
@@ -107,6 +121,8 @@
                   class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                   href="Photography.html"
                   style="padding: 10px 20px"
+                  data-de="Fotografie"
+                  data-en="Photography"
                   >Fotografie</a
                 >
               </li>
@@ -115,6 +131,8 @@
                   class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                   href="About.html"
                   style="padding: 10px 20px"
+                  data-de="Über mich"
+                  data-en="About me"
                   >Über mich</a
                 >
               </li>
@@ -123,8 +141,16 @@
                   class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
                   href="Contact.html"
                   style="padding: 10px 20px"
+                  data-de="Kontakt"
+                  data-en="Contact"
                   >Kontakt</a
                 >
+              </li>
+              <li class="u-nav-item">
+                <button id="languageToggle" class="language-toggle" onclick="toggleLanguage()" title="Language / Sprache">
+                  <span class="material-icons language-icon" aria-hidden="true">compare_arrows</span>
+                  <span class="language-text" id="currentLanguage">Deutsch</span>
+                </button>
               </li>
             </ul>
           </div>
@@ -140,28 +166,34 @@
                 >
                   <li class="u-nav-item">
                     <a class="u-button-style u-nav-link" href="index.html"
-                      >Home</a
+                      data-de="Home" data-en="Home">Home</a
                     >
                   </li>
                   <li class="u-nav-item">
                     <a class="u-button-style u-nav-link" href="Weather.html"
-                      >Wetter</a
+                      data-de="Wetter" data-en="Weather">Wetter</a
                     >
                   </li>
                   <li class="u-nav-item">
                     <a class="u-button-style u-nav-link" href="Photography.html"
-                      >Fotografie</a
+                      data-de="Fotografie" data-en="Photography">Fotografie</a
                     >
                   </li>
                   <li class="u-nav-item">
                     <a class="u-button-style u-nav-link" href="About.html"
-                      >Über mich</a
+                      data-de="Über mich" data-en="About me">Über mich</a
                     >
                   </li>
                   <li class="u-nav-item">
                     <a class="u-button-style u-nav-link" href="Contact.html"
-                      >Kontakt</a
+                      data-de="Kontakt" data-en="Contact">Kontakt</a
                     >
+                  </li>
+                  <li class="u-nav-item">
+                    <button id="languageToggleMobile" class="language-toggle-mobile" onclick="toggleLanguage()" title="Language / Sprache">
+                      <span class="material-icons language-icon" aria-hidden="true">compare_arrows</span>
+                      <span class="language-text" id="currentLanguageMobile">Deutsch</span>
+                    </button>
                   </li>
                 </ul>
               </div>
@@ -175,22 +207,24 @@
     <section class="u-clearfix u-section-1">
       <div class="container_gallery">
         <div class="gallery_title">
-          <h2>Meine <span>Gallerie</span></h2>
+          <h2 data-de="Meine <span>Gallerie</span>" data-en="My <span>Gallery</span>">Meine <span>Gallerie</span></h2>
         </div>
         <div class="u-text u-text-font u-text-1">
-          Die Fotografie ist eine Leidenschaft von mir. Ich liebe es, die Schönheit der Natur und farbenfrohe Landschaften festzuhalten. Ob Sonnenschein, Nebel 
-          oder einen schönen Sonnenuntergang, die Natur bietet immer wieder faszinierend neue Motive.
-          <br/>
-          Meine besten Bilder präsentiere ich auf meiner Webseite. Weitere Bilder können über meine 
-          <a 
-            class="u-active-none u-border-2 u-border-active-palette-3-base u-border-black u-border-hover-palette-3-base u-btn u-btn-rectangle u-button-style u-hover-none u-none u-btn-1" 
-            href="https://stock.adobe.com/de/contributor/210079993/Kleger%20photography"> Adobe Stock
-          </a> 
-          Seite gekauft oder auf meiner 
-          <a 
-            class="u-active-none u-border-2 u-border-active-palette-3-base u-border-black u-border-hover-palette-3-base u-btn u-btn-rectangle u-button-style u-hover-none u-none u-btn-1" 
-            href="https://www.instagram.com/tk_naturegallery/">Instagram-Seite</a>  
-          angeschaut werden.
+          <span
+            data-de='Die Fotografie ist eine Leidenschaft von mir. Ich liebe es, die Schönheit der Natur und farbenfrohe Landschaften festzuhalten. Ob Sonnenschein, Nebel oder einen schönen Sonnenuntergang, die Natur bietet immer wieder faszinierend neue Motive.<br/>Meine besten Bilder präsentiere ich auf meiner Webseite. Weitere Bilder können über meine <a class="u-active-none u-border-2 u-border-active-palette-3-base u-border-black u-border-hover-palette-3-base u-btn u-btn-rectangle u-button-style u-hover-none u-none u-btn-1" href="https://stock.adobe.com/de/contributor/210079993/Kleger%20photography">Adobe Stock</a> Seite gekauft oder auf meiner <a class="u-active-none u-border-2 u-border-active-palette-3-base u-border-black u-border-hover-palette-3-base u-btn u-btn-rectangle u-button-style u-hover-none u-none u-btn-1" href="https://www.instagram.com/tk_naturegallery/">Instagram-Seite</a> angeschaut werden.'
+            data-en='Photography is one of my passions. I love capturing the beauty of nature and colorful landscapes. Whether sunshine, fog, or a glowing sunset, nature always offers fascinating new subjects.<br/>I showcase my favorite photos on this website. Additional images can be purchased via my <a class="u-active-none u-border-2 u-border-active-palette-3-base u-border-black u-border-hover-palette-3-base u-btn u-btn-rectangle u-button-style u-hover-none u-none u-btn-1" href="https://stock.adobe.com/de/contributor/210079993/Kleger%20photography">Adobe Stock</a> page or viewed on my <a class="u-active-none u-border-2 u-border-active-palette-3-base u-border-black u-border-hover-palette-3-base u-btn u-btn-rectangle u-button-style u-hover-none u-none u-btn-1" href="https://www.instagram.com/tk_naturegallery/">Instagram page</a>.'>
+            Die Fotografie ist eine Leidenschaft von mir. Ich liebe es, die Schönheit der Natur und farbenfrohe Landschaften festzuhalten. Ob Sonnenschein, Nebel oder einen schönen Sonnenuntergang, die Natur bietet immer wieder faszinierend neue Motive.<br/>
+            Meine besten Bilder präsentiere ich auf meiner Webseite. Weitere Bilder können über meine 
+            <a 
+              class="u-active-none u-border-2 u-border-active-palette-3-base u-border-black u-border-hover-palette-3-base u-btn u-btn-rectangle u-button-style u-hover-none u-none u-btn-1" 
+              href="https://stock.adobe.com/de/contributor/210079993/Kleger%20photography">Adobe Stock
+            </a> 
+            Seite gekauft oder auf meiner 
+            <a 
+              class="u-active-none u-border-2 u-border-active-palette-3-base u-border-black u-border-hover-palette-3-base u-btn u-btn-rectangle u-button-style u-hover-none u-none u-btn-1" 
+              href="https://www.instagram.com/tk_naturegallery/">Instagram-Seite</a>  
+            angeschaut werden.
+          </span>
         </div> 
         <div class="gallery">
           <!-- Images of 1. column -->
@@ -244,7 +278,9 @@
       id="sec-7782"
     >
       <div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-small-text u-text u-text-variant u-text-1">
+        <p class="u-small-text u-text u-text-variant u-text-1"
+        data-de="Alle Bilder sind Eigentum von Timo Kleger und dürfen nicht ohne meine Erlaubnis verwendet werden."
+        data-en="All images are the property of Timo Kleger and may not be used without my permission.">
           Alle Bilder sind Eigentum von Timo Kleger und dürfen nicht ohne meine Erlaubnis verwendet werden.
         </p>
       </div>

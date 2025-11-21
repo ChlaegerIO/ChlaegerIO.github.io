@@ -13,3 +13,16 @@
     font-size: 1.3em;
     font-weight: bolder;
 }
+
+/* Period selector language labels */
+.period-option {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-right: 12px;
+    font-weight: 500;
+}
+
+.period-option input {
+    margin: 0;
+}

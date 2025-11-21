@@ -38,15 +38,15 @@ function toggleLanguage() {
 
 // Apply language to all elements with data-de and data-en attributes
 function applyLanguage(language) {
-    // Update language text
-    const currentLanguage = document.getElementById('currentLanguage');
-    const currentLanguageMobile = document.getElementById('currentLanguageMobile');
+    // Update language button labels
+    const currentLanguageLabel = document.getElementById('currentLanguage');
+    const currentLanguageMobileLabel = document.getElementById('currentLanguageMobile');
     
-    if (currentLanguage) {
-        currentLanguage.textContent = translations[language].text;
+    if (currentLanguageLabel) {
+        currentLanguageLabel.textContent = translations[language].text;
     }
-    if (currentLanguageMobile) {
-        currentLanguageMobile.textContent = translations[language].text;
+    if (currentLanguageMobileLabel) {
+        currentLanguageMobileLabel.textContent = translations[language].text;
     }
     
     // Update all elements with translation attributes
@@ -55,21 +55,37 @@ function applyLanguage(language) {
     elementsToTranslate.forEach(element => {
         const germanText = element.getAttribute('data-de');
         const englishText = element.getAttribute('data-en');
-        
-        if (language === 'de' && germanText) {
-            // Handle HTML content in data attributes
-            if (germanText.includes('<br/>') || germanText.includes('<br>')) {
-                element.innerHTML = germanText;
+        const targetText = language === 'de' ? germanText : englishText;
+
+        if (typeof targetText === 'string') {
+            const containsHtml = /<[^>]+>/.test(targetText);
+            if (containsHtml) {
+                element.innerHTML = targetText;
             } else {
-                element.textContent = germanText;
+                element.textContent = targetText;
             }
-        } else if (language === 'en' && englishText) {
-            // Handle HTML content in data attributes
-            if (englishText.includes('<br/>') || englishText.includes('<br>')) {
-                element.innerHTML = englishText;
-            } else {
-                element.textContent = englishText;
-            }
+        }
+    });
+
+    // Update placeholders
+    const placeholderElements = document.querySelectorAll('[data-placeholder-de][data-placeholder-en]');
+    placeholderElements.forEach(element => {
+        const placeholderValue = language === 'de'
+            ? element.getAttribute('data-placeholder-de')
+            : element.getAttribute('data-placeholder-en');
+        if (placeholderValue !== null) {
+            element.setAttribute('placeholder', placeholderValue);
+        }
+    });
+
+    // Update input/button values
+    const valueElements = document.querySelectorAll('[data-value-de][data-value-en]');
+    valueElements.forEach(element => {
+        const valueText = language === 'de'
+            ? element.getAttribute('data-value-de')
+            : element.getAttribute('data-value-en');
+        if (valueText !== null) {
+            element.value = valueText;
         }
     });
     
@@ -87,7 +103,14 @@ function applyLanguage(language) {
     // Update page title if needed
     const pageTitle = document.querySelector('title');
     if (pageTitle) {
-        pageTitle.textContent = language === 'de' ? 'Home' : 'Home';
+        const titleDe = pageTitle.getAttribute('data-de');
+        const titleEn = pageTitle.getAttribute('data-en');
+
+        if (language === 'de' && titleDe) {
+            pageTitle.textContent = titleDe;
+        } else if (language === 'en' && titleEn) {
+            pageTitle.textContent = titleEn;
+        }
     }
     
     // Update HTML lang attribute
