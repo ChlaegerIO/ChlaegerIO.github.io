@@ -205,7 +205,7 @@
 
     <!-- mache bitte section mit den aktuellen Wetterdaten: 1. Temperatur, Wind, Regen, Barometer, Feuchtigkeit -->
     <!-- TODO: Knopf, um die Zeitperiode einzustellen 1 Tag, 1 Woche, 1 Monat, 1 Jahr -->
-    <form onsubmit="return changePeriod(this)">
+    <form class="period-selector" onsubmit="return changePeriod(this)">
       <label class="period-option" for="day_form">
         <input type="radio" id="day_form" name="period" value="day" />
         <span data-de="Tag" data-en="Day">Tag</span>
@@ -222,7 +222,13 @@
         <input type="radio" id="year_form" name="period" value="year" />
         <span data-de="Jahr" data-en="Year">Jahr</span>
       </label>
-      <input type="submit" value="Übernehmen" data-value-de="Übernehmen" data-value-en="Apply" />
+      <input
+        type="submit"
+        class="btn btn-ghost period-apply"
+        value="Übernehmen"
+        data-value-de="Übernehmen"
+        data-value-en="Apply"
+      />
     </form>
     <section class="u-clearfix u-white u-section-5" id="carousel_980b">
       <div class="u-clearfix u-sheet u-sheet-1">

@@ -18,11 +18,34 @@
 .period-option {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
     margin-right: 12px;
     font-weight: 500;
+    padding: 0.35rem 0.85rem;
+    border: 1px solid #dcdcdc;
+    border-radius: 0.65rem;
+    background-color: rgba(0, 0, 0, 0.02);
 }
 
 .period-option input {
     margin: 0;
+    accent-color: #478ac9;
+}
+
+.period-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem auto 2.5rem;
+}
+
+.period-apply {
+    border-radius: 0.65rem;
+}
+
+.period-option input:checked + span {
+    color: #222;
+    font-weight: 600;
 }
