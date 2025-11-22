@@ -58,11 +58,12 @@ function applyLanguage(language) {
         const targetText = language === 'de' ? germanText : englishText;
 
         if (typeof targetText === 'string') {
-            const containsHtml = /<[^>]+>/.test(targetText);
+            const decodedText = decodeHtmlEntities(targetText);
+            const containsHtml = /<[^>]+>/.test(decodedText);
             if (containsHtml) {
-                element.innerHTML = targetText;
+                element.innerHTML = decodedText;
             } else {
-                element.textContent = targetText;
+                element.textContent = decodedText;
             }
         }
     });
@@ -115,6 +116,13 @@ function applyLanguage(language) {
     
     // Update HTML lang attribute
     document.documentElement.lang = language;
+}
+
+// Simple HTML-entity decoder for translation strings
+function decodeHtmlEntities(value) {
+    const textarea = document.createElement('textarea');
+    textarea.innerHTML = value;
+    return textarea.value;
 }
 
 // Export for use in other files if needed

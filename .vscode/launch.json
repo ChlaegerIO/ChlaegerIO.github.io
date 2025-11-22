@@ -16,6 +16,21 @@
       "url": "http://localhost:5500/index.html",
       "webRoot": "${workspaceFolder}",
       "preLaunchTask": "Start Static Server"
+    },
+    {
+      "name": "Launch Chrome (mobile viewport)",
+      "type": "pwa-chrome",
+      "request": "launch",
+      "url": "http://localhost:5500/index.html",
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "Start Static Server",
+      "userDataDir": true,
+      "runtimeArgs": [
+        "--auto-open-devtools-for-tabs",
+        "--window-size=414,896",
+        "--force-device-scale-factor=2",
+        "--user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1"
+      ]
     }
   ]
 }
