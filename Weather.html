@@ -7,9 +7,11 @@
     <meta name="description" content="" />
     <title data-de="Wetter" data-en="Weather">Wetter</title>
     <link rel="stylesheet" href="nicepage.css" media="screen" />
-    <link rel="stylesheet" href="ui-library/styles.css" media="screen" />
-    <link rel="stylesheet" href="ui-library/animations.css" media="screen" />
-    <link rel="stylesheet" href="ui-library/buttons.css" media="screen" />
+    <link rel="stylesheet" href="library/ui/styles.css" media="screen" />
+    <link rel="stylesheet" href="library/ui/animations.css" media="screen" />
+    <link rel="stylesheet" href="library/ui/buttons.css" media="screen" />
+    <link rel="stylesheet" href="library/timeline/timeline-core.css" media="screen" />
+    <link rel="stylesheet" href="library/timeline/timeline-horizontal.css" media="screen" />
     <link rel="stylesheet" href="Weather.css" media="screen" />
     <script
       class="u-script"
@@ -263,6 +265,19 @@
       </div>
     </section>
 
+    <section class="weather-timeline" id="sec-timeline">
+      <div class="weather-timeline__intro">
+        <h2 data-de="Meilensteine der Wetterstation" data-en="Weather Station Milestones">
+          Meilensteine der Wetterstation
+        </h2>
+        <p data-de="Eine Zeitleiste mit wichtigen Ausbauschritten, Sensorwechseln und Softwareupdates der Station in Niederhelfenschwil."
+           data-en="A quick timeline covering key upgrades, sensor swaps, and software improvements for the Niederhelfenschwil station.">
+          Eine Zeitleiste mit wichtigen Ausbauschritten, Sensorwechseln und Softwareupdates der Station in Niederhelfenschwil.
+        </p>
+      </div>
+      <div id="stationTimeline" class="weather-timeline__track" aria-live="polite"></div>
+    </section>
+
 
     <!-- section mit Hintergrundinformationen über meine Wetterstation: Höhe über Meer 585 m  -->
     <section class="u-align-center u-clearfix u-section-1" id="sec-1b1a">
@@ -297,5 +312,6 @@
         </p>
       </div>
     </footer>
+    <script type="module" src="weather-timeline.js"></script>
   </body>
 </html>

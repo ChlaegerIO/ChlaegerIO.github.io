@@ -1,0 +1,72 @@
+:root {
+  --timeline-font-family: "Roboto", "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --timeline-background: #ffffff;
+  --timeline-border: #e5e7eb;
+  --timeline-muted: #94a3b8;
+  --timeline-primary: #2563eb;
+  --timeline-primary-soft: rgba(37, 99, 235, 0.12);
+  --timeline-card-bg: #f8fafc;
+  --timeline-card-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  --timeline-radius: 16px;
+  --timeline-transition: 200ms ease;
+}
+
+.timeline-root {
+  font-family: var(--timeline-font-family);
+  background: var(--timeline-background);
+  color: #0f172a;
+}
+
+.timeline-root * {
+  box-sizing: border-box;
+}
+
+.timeline-axis-label {
+  font-size: 0.85rem;
+  color: var(--timeline-muted);
+}
+
+.timeline-card {
+  background: var(--timeline-card-bg);
+  border-radius: var(--timeline-radius);
+  box-shadow: var(--timeline-card-shadow);
+  padding: 1.5rem;
+  transition: transform var(--timeline-transition), box-shadow var(--timeline-transition);
+}
+
+.timeline-card:hover,
+.timeline-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+}
+
+.timeline-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+}
+
+.timeline-card time {
+  display: block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--timeline-muted);
+  margin-bottom: 0.75rem;
+}
+
+.timeline-card p {
+  margin: 0;
+  line-height: 1.6;
+  color: #334155;
+}
+
+.timeline-card figure {
+  margin: 1rem 0 0;
+}
+
+.timeline-card img {
+  width: 100%;
+  border-radius: calc(var(--timeline-radius) - 4px);
+  object-fit: cover;
+  display: block;
+}

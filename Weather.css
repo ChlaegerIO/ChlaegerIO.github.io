@@ -49,3 +49,47 @@
     color: #222;
     font-weight: 600;
 }
+
+.weather-timeline {
+    max-width: 1200px;
+    margin: 3rem auto 4rem;
+    padding: 2rem clamp(1rem, 5vw, 3rem);
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(71, 138, 201, 0.08), rgba(37, 99, 235, 0.12));
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+}
+
+.weather-timeline__intro {
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    color: #0f172a;
+}
+
+.weather-timeline__intro h2 {
+    margin-bottom: 0.75rem;
+    font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+}
+
+.weather-timeline__intro p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #1f2937;
+}
+
+.weather-timeline__track {
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .weather-timeline {
+        margin: 2rem 1rem 3rem;
+        padding: 1.5rem;
+    }
+
+    .weather-timeline__intro {
+        text-align: left;
+    }
+}
