@@ -81,16 +81,19 @@ export class TimelineHorizontal {
 
     this.#renderCards();
     this.#renderAxisTicks();
-    this.#highlightSelection();
+    // Prevent auto-scroll on initial render
+    this.#highlightSelection(false);
 
     this.core.on("change", () => {
       this.#renderCards();
       this.#renderAxisTicks();
-      this.#highlightSelection();
+      // Do not scroll on data change (e.g. language switch)
+      this.#highlightSelection(false);
     });
 
     this.core.on("select", () => {
-      this.#highlightSelection();
+      // Scroll when user selects a card
+      this.#highlightSelection(true);
     });
 
     this.resizeObserver = new ResizeObserver(() => this.#renderAxisTicks());
@@ -189,7 +192,8 @@ export class TimelineHorizontal {
     });
   }
 
-  #highlightSelection() {
+  // scrollToCard: true = scroll, false = don't scroll
+  #highlightSelection(scrollToCard = false) {
     const selected = this.core.getSelectedItem();
     if (!selected) return;
 
@@ -207,9 +211,11 @@ export class TimelineHorizontal {
       tick.classList.toggle("is-active", tick.dataset.id === selected.id);
     });
 
-    const activeCard = this.elements.track.querySelector(`.timeline-card[data-id="${selected.id}"]`);
-    if (activeCard) {
-      activeCard.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    if (scrollToCard) {
+      const activeCard = this.elements.track.querySelector(`.timeline-card[data-id="${selected.id}"]`);
+      if (activeCard) {
+        activeCard.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      }
     }
   }
 
