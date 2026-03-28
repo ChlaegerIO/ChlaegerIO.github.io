@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html style="font-size: 16px">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="keywords" content="Wetter, Fotografie, Technik, Niederhelfenschwil" />
+  <meta name="description" content="Wetter, Fotografie und Technik - Die Leidenschaften von Timo Kleger" />
+  <title data-de="Home" data-en="Home">Home</title>
+  <link rel="stylesheet" href="library/ui/styles.css" media="screen" />
+  <link rel="stylesheet" href="library/ui/animations.css" media="screen" />
+  <link rel="stylesheet" href="library/ui/buttons.css" media="screen" />
+  <link rel="stylesheet" href="library/timeline/timeline-core.css" media="screen" />
+  <link rel="stylesheet" href="library/timeline/timeline-vertical.css" media="screen" />
+  <link rel="stylesheet" href="Home_new.css" media="screen" />
+  <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+  <script class="u-script" type="text/javascript" src="language-toggle.js" defer=""></script>
+  <link id="u-theme-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Timo Kleger",
+      "logo": "images/Logo_ohneSchrift.png"
+    }
+  </script>
+  <meta name="theme-color" content="#478ac9" />
+  <meta property="og:title" content="Home - Wetter, Fotografie und Technik" />
+  <meta property="og:type" content="website" />
+</head>
+
+<body class="u-body u-xl-mode">
+  <!-- Header Navigation -->
+  <header class="header-main">
+    <div class="header-content">
+      <img class="logo" src="images/Logo_ohneSchrift.png" alt="Logo" />
+      <nav class="nav-main">
+        <button class="menu-toggle" id="menuToggle">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-container">
+          <ul class="nav-list">
+            <li><a href="Home_new.html" data-de="Home" data-en="Home">Home</a></li>
+            <li><a href="Weather.html" data-de="Wetter" data-en="Weather">Wetter</a></li>
+            <li><a href="Photography.html" data-de="Fotografie" data-en="Photography">Fotografie</a></li>
+            <li><a href="Contact.html" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
+            <li>
+              <button id="languageToggle" class="btn btn-icon btn-ghost language-toggle" onclick="toggleLanguage()">
+                <span class="material-icons">compare_arrows</span>
+                <span class="language-text" id="currentLanguage">Deutsch</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 1. Title Section with Hero Image -->
+  <section class="hero-section">
+    <div class="hero-image-wrapper">
+      <img src="images/Titelbild_home.jpg" alt="Wetter, Fotografie und Technik" class="hero-image" />
+      <div class="hero-overlay">
+        <div class="hero-text">
+          <h1 data-de="Wetter, Fotografie &amp; Technik" data-en="Weather, Photography &amp; Technology">
+            Wetter, Fotografie &amp; Technik
+          </h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Name and Introduction Section -->
+  <section class="intro-section">
+    <div class="intro-container">
+      <div class="intro-content">
+        <h2 data-de="Timo Kleger" data-en="Timo Kleger">Timo Kleger</h2>
+        <p class="intro-subtitle" data-de="Leidenschaften: Atmosphäre, Natur &amp; Technik" 
+           data-en="Passions: Atmosphere, Nature &amp; Technology">
+          Leidenschaften: Atmosphäre, Natur &amp; Technik
+        </p>
+        <p class="intro-description" 
+           data-de="Seit meiner Kindheit bin ich fasziniert von der Dynamik der Atmosphäre und der Natur, welche ich fotografisch festhalte. Mit technischen Innovationen verbinde ich diese Leidenschaften zu spannenden Projekten." 
+           data-en="Since my childhood, I have been fascinated by the dynamics of the atmosphere and nature, which I capture photographically. I combine these passions with technical innovations to create exciting projects.">
+          Seit meiner Kindheit bin ich fasziniert von der Dynamik der Atmosphäre und der Natur, welche ich fotografisch festhalte. Mit technischen Innovationen verbinde ich diese Leidenschaften zu spannenden Projekten.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Weather Station Section -->
+  <section class="station-preview-section">
+    <div class="section-container">
+      <div class="section-title">
+        <h2 data-de="Wetterstation Niederhelfenschwil" data-en="Weather Station Niederhelfenschwil">
+          Wetterstation Niederhelfenschwil
+        </h2>
+      </div>
+      <div class="station-preview-content">
+        <div class="station-info">
+          <p data-de="Eine automatische Wetterstation auf 605 m Höhe, die kontinuierlich Wetterdaten erfasst und überwacht." 
+             data-en="An automated weather station at 605 m altitude, continuously monitoring and recording weather data.">
+            Eine automatische Wetterstation auf 605 m Höhe, die kontinuierlich Wetterdaten erfasst und überwacht.
+          </p>
+          <a href="Weather.html" class="btn btn-primary" data-de="Zu den Wetterdaten" data-en="View Weather Data">
+            Zu den Wetterdaten
+          </a>
+        </div>
+        <div class="station-image">
+          <img src="images/Wetterstation1.jpg" alt="Wetterstation" class="rounded-image" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Photography Gallery Section -->
+  <section class="gallery-section">
+    <div class="section-container">
+      <div class="section-title">
+        <h2 data-de="Fotografie - Bildgalerie" data-en="Photography - Image Gallery">
+          Fotografie - Bildgalerie
+        </h2>
+        <p data-de="Eine Auswahl meiner schönsten Fotografien" data-en="A selection of my most beautiful photographs">
+          Eine Auswahl meiner schönsten Fotografien
+        </p>
+      </div>
+      <div class="gallery-grid" id="homeGallery">
+        <div class="gallery-item">
+          <img src="images/Gallerie/1.jpg" alt="Gallery 1" class="gallery-image rounded-image" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/Gallerie/23.jpg" alt="Gallery 2" class="gallery-image rounded-image" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/Gallerie/5.jpg" alt="Gallery 3" class="gallery-image rounded-image" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/Gallerie/21.jpg" alt="Gallery 4" class="gallery-image rounded-image" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/Gallerie/9.jpg" alt="Gallery 5" class="gallery-image rounded-image" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/Gallerie/18.jpg" alt="Gallery 6" class="gallery-image rounded-image" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/Gallerie/8.jpg" alt="Gallery 7" class="gallery-image rounded-image" />
+        </div>
+      </div>
+      <div class="gallery-footer">
+        <a href="Photography.html" class="btn btn-secondary" data-de="Zur vollständigen Galerie" data-en="View Full Gallery">
+          Zur vollständigen Galerie
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Blog/Projects Timeline Section -->
+  <section class="projects-timeline-section">
+    <div class="section-container">
+      <div class="section-title">
+        <h2 data-de="Projekte &amp; Blog" data-en="Projects &amp; Blog">
+          Projekte &amp; Blog
+        </h2>
+        <p data-de="Eine Zeitleiste meiner spannendsten Projekte und Beiträge" data-en="A timeline of my most exciting projects and posts">
+          Eine Zeitleiste meiner spannendsten Projekte und Beiträge
+        </p>
+      </div>
+      <div class="timeline-wrapper">
+        <div class="timeline-vertical" id="projectsTimeline" role="region" aria-label="Projects timeline">
+          <article class="timeline-card timeline-vertical-card is-active">
+            <div class="timeline-card-inner">
+              <time class="timeline-date" datetime="2026-03-28">28. Maerz 2026</time>
+              <h3 class="timeline-card-title">Blog Uebersicht</h3>
+              <p class="timeline-card-description">Alle Beitraege zu Wetterstation, Fotografie und Technik an einem Ort.</p>
+              <a href="blog/blog.html" class="timeline-card-link btn btn-small">Zum Blog</a>
+            </div>
+          </article>
+          <article class="timeline-card timeline-vertical-card">
+            <div class="timeline-card-inner">
+              <time class="timeline-date" datetime="2013-12-07">7. Dezember 2013</time>
+              <h3 class="timeline-card-title">Installation meiner Wetterstation</h3>
+              <p class="timeline-card-description">Mein erster Blogbeitrag zur Planung, Montage und Inbetriebnahme der Wetterstation.</p>
+              <a href="blog/post-20131207-weatherstation-installation.html" class="timeline-card-link btn btn-small">Zum Blogbeitrag</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. About Me Section -->
+  <section class="about-section">
+    <div class="section-container">
+      <div class="section-title">
+        <h2 data-de="Über mich" data-en="About Me">Über mich</h2>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <h3 data-de="Meine Leidenschaften" data-en="My Passions">Meine Leidenschaften</h3>
+          <p data-de="Ich bin von Natur aus neugierig und liebe es, neue Technologien zu erkunden. Die Kombination aus Meteorologie, Fotografie und Softwareentwicklung ermöglicht mir, meine Kreativität und mein technisches Verständnis vollständig auszuschöpfen." 
+             data-en="I am naturally curious and love exploring new technologies. The combination of meteorology, photography, and software development allows me to fully express my creativity and technical understanding.">
+            Ich bin von Natur aus neugierig und liebe es, neue Technologien zu erkunden. Die Kombination aus Meteorologie, Fotografie und Softwareentwicklung ermöglicht mir, meine Kreativität und mein technisches Verständnis vollständig auszuschöpfen.
+          </p>
+          <h3 data-de="Meine Fähigkeiten" data-en="My Skills">Meine Fähigkeiten</h3>
+          <ul>
+            <li data-de="Webentwicklung" data-en="Web Development">Webentwicklung</li>
+            <li data-de="Meteorologie &amp; Wetterdatenanalyse" data-en="Meteorology &amp; Weather Data Analysis">Meteorologie &amp; Wetterdatenanalyse</li>
+            <li data-de="Fotografie &amp; Bildbearbeitung" data-en="Photography &amp; Image Processing">Fotografie &amp; Bildbearbeitung</li>
+            <li data-de="Technische Projektmanagement" data-en="Technical Project Management">Technische Projektmanagement</li>
+          </ul>
+          <a href="Contact.html" class="btn btn-secondary" data-de="Kontakt aufnehmen" data-en="Get in Touch">
+            Kontakt aufnehmen
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-main">
+    <div class="footer-content">
+      <p data-de="© 2025 Timo Kleger. Alle Rechte vorbehalten." data-en="© 2025 Timo Kleger. All rights reserved.">
+        © 2025 Timo Kleger. Alle Rechte vorbehalten.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module">
+
+    // Blog timeline data (used in section "Projekte & Blog")
+    const blogTimelineData = [
+      {
+        id: 'blog-weatherstation-installation',
+        date: '2013-12-07',
+        title: 'Installation meiner Wetterstation',
+        description: 'Mein erster Blogbeitrag zur Planung, Montage und Inbetriebnahme der Wetterstation.',
+        link: 'blog/post-20260328-weatherstation-installation.html',
+        linkLabel: 'Zum Blogbeitrag'
+      },
+      {
+        id: 'blog-overview',
+        date: '2026-03-28',
+        title: 'Blog Uebersicht',
+        description: 'Alle Beitraege zu Wetterstation, Fotografie und Technik an einem Ort.',
+        link: 'blog/blog.html',
+        linkLabel: 'Zum Blog'
+      }
+    ];
+
+    // Create timeline
+    const timelineContainer = document.getElementById('projectsTimeline');
+
+    if (timelineContainer) {
+      import('./library/timeline/timeline-vertical.js')
+        .then(({ TimelineVertical }) => {
+          new TimelineVertical(timelineContainer, {
+            items: blogTimelineData,
+            locale: 'de-CH',
+            sortDirection: 'desc'
+          });
+        })
+        .catch(() => {
+          // Keep fallback HTML cards visible when module loading fails.
+        });
+    }
+
+    // Menu toggle for mobile
+    const menuToggle = document.getElementById('menuToggle');
+    const navContainer = document.querySelector('.nav-container');
+    
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        navContainer.classList.toggle('active');
+      });
+    }
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('.nav-list a').forEach(link => {
+      link.addEventListener('click', () => {
+        navContainer.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>

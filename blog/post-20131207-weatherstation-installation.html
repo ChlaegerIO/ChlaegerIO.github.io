@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Installation meiner Wetterstation</title>
+  <link rel="stylesheet" href="../library/ui/styles.css" media="screen" />
+  <style>
+    :root {
+      --accent: #478ac9;
+      --text: #0f172a;
+      --muted: #64748b;
+      --line: #e2e8f0;
+      --surface: #f8fbff;
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Roboto, "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #ffffff 0%, #f6fafe 100%);
+      line-height: 1.65;
+    }
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 2rem 1rem 4rem;
+    }
+
+    .topnav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .topnav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      overflow: hidden;
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+    }
+
+    .hero img {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-content {
+      padding: 1.5rem;
+    }
+
+    h1 {
+      margin: 0 0 0.6rem;
+      line-height: 1.2;
+      font-size: clamp(1.8rem, 3.6vw, 2.7rem);
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .card {
+      margin-top: 1.2rem;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1.1rem;
+      background: #ffffff;
+    }
+
+    h2 {
+      margin: 0 0 0.75rem;
+      font-size: 1.35rem;
+    }
+
+    .steps {
+      margin: 0;
+      padding-left: 1.25rem;
+    }
+
+    .steps li { margin-bottom: 0.65rem; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="topnav">
+      <a href="../Home_new.html">Zurueck zur Startseite</a>
+      <a href="blog.html">Alle Blogbeitraege</a>
+    </div>
+
+    <article class="hero">
+      <img src="../images/Wetterstation1.jpg" alt="Installation der Wetterstation" />
+      <div class="hero-content">
+        <h1>Installation meiner Wetterstation</h1>
+        <p class="meta">07.12.2013 · Kategorie: Wetterstation · Autor: Timo Kleger</p>
+        <p>
+          Mit diesem Projekt wollte ich die Wetterlage in Niederhelfenschwil praezise und kontinuierlich messen.
+          Der Aufbau war mein erster grosser Schritt in Richtung eigener Messinfrastruktur.
+        </p>
+
+        <section class="card">
+          <h2>Ziel der Installation</h2>
+          <p>
+            Die Station soll Temperatur, Luftfeuchtigkeit, Wind, Niederschlag und Luftdruck erfassen und die Daten
+            fuer Auswertungen sowie den direkten Vergleich mit offiziellen Messstationen bereitstellen.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Wichtige Installationsschritte</h2>
+          <ol class="steps">
+            <li>Standortanalyse fuer freie Anstroemung und gute Niederschlagsmessung.</li>
+            <li>Mechanische Montage von Mast, Halterung und Wetterschutzkomponenten.</li>
+            <li>Kalibrierung und Positionierung der Sensoren auf realistische Messhoehen.</li>
+            <li>Verkabelung, Stromversorgung und Netzwerk-Anbindung fuer den Dauerbetrieb.</li>
+            <li>Erste Datenerfassung, Plausibilitaetscheck und Monitoring-Setup.</li>
+          </ol>
+        </section>
+
+        <section class="card">
+          <h2>Ausblick</h2>
+          <p>
+            Als naechstes folgen Software-Erweiterungen fuer bessere Visualisierungen und ein noch genaueres
+            Extremwetter-Tracking. Dieser Beitrag bildet den Startpunkt der gesamten Wetterstations-Reihe.
+          </p>
+        </section>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

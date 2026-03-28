@@ -8,6 +8,8 @@ This folder contains a modular timeline system made for ChlaegerIO. It consists 
 - `timeline-core.css`: global theme tokens and shared card styling.
 - `timeline-horizontal.js`: renderer that stacks interactive cards over a horizontal axis.
 - `timeline-horizontal.css`: layout and animation rules for the horizontal experience.
+- `timeline-vertical.js`: renderer for an alternating vertical project/blog timeline.
+- `timeline-vertical.css`: layout and responsive rules for the vertical timeline.
 
 ## Quick start
 
