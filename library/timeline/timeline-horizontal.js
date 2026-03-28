@@ -17,6 +17,7 @@ export class TimelineHorizontal {
       cardMaxWidth: 480,
       gap: 32,
       navigation: true,
+      cardDateFormatter: (item, core) => core.formatDate(item.date),
       axisLabelFormatter: (item, core) => core.formatDate(item.date, { year: "numeric" }),
     };
 
@@ -96,7 +97,9 @@ export class TimelineHorizontal {
       this.#highlightSelection(true);
     });
 
-    this.resizeObserver = new ResizeObserver(() => this.#renderAxisTicks());
+    this.resizeObserver = new ResizeObserver(() => {
+      this.#renderAxisTicks();
+    });
     this.resizeObserver.observe(this.container);
   }
 
@@ -105,6 +108,7 @@ export class TimelineHorizontal {
     const fragment = document.createDocumentFragment();
 
     this.core.getItems().forEach((item, index) => {
+      const cardDate = this.options.cardDateFormatter(item, this.core);
       const article = document.createElement("article");
       article.className = "timeline-card";
       article.dataset.id = item.id;
@@ -112,10 +116,10 @@ export class TimelineHorizontal {
       article.setAttribute("role", "group");
       article.setAttribute(
         "aria-label",
-        `${item.title || "Timeline entry"} - ${this.core.formatDate(item.date)}`
+        `${item.title || "Timeline entry"} - ${cardDate}`
       );
       article.innerHTML = `
-        <time>${this.core.formatDate(item.date)}</time>
+        <time>${cardDate}</time>
         <h3>${item.title || "Untitled"}</h3>
         <p>${item.description || ""}</p>
         ${item.media ? this.#renderMedia(item.media) : ""}
@@ -178,6 +182,8 @@ export class TimelineHorizontal {
 
     this.elements.axisTrack.innerHTML = "";
     const total = range.span || 1;
+    const fragment = document.createDocumentFragment();
+    const ticksByPosition = new Map();
 
     items.forEach((item) => {
       const tick = document.createElement("button");
@@ -188,7 +194,75 @@ export class TimelineHorizontal {
       tick.dataset.id = item.id;
       tick.textContent = this.options.axisLabelFormatter(item, this.core);
       tick.addEventListener("click", () => this.core.selectItem(item.id));
-      this.elements.axisTrack.appendChild(tick);
+      fragment.appendChild(tick);
+
+      const positionKey = position.toFixed(4);
+      if (!ticksByPosition.has(positionKey)) {
+        ticksByPosition.set(positionKey, []);
+      }
+      ticksByPosition.get(positionKey).push(tick);
+    });
+
+    // Spread labels that share the exact same timeline position so more can remain visible.
+    ticksByPosition.forEach((ticksAtSamePosition) => {
+      if (ticksAtSamePosition.length <= 1) return;
+      const step = 25;
+      const center = (ticksAtSamePosition.length - 1) / 2;
+      ticksAtSamePosition.forEach((tick, index) => {
+        const offset = (index - center) * step;
+        tick.style.setProperty("--timeline-tick-offset", `${offset}px`);
+      });
+    });
+
+    this.elements.axisTrack.appendChild(fragment);
+
+    // Use requestAnimationFrame to ensure elements are rendered before checking collisions
+    requestAnimationFrame(() => {
+      this.#resolveTickLabelCollisions();
+    });
+  }
+
+  #resolveTickLabelCollisions() {
+    const ticks = Array.from(this.elements.axisTrack.querySelectorAll(".timeline-axis-tick"));
+    
+    // Show all by default
+    ticks.forEach((tick) => {
+      tick.style.visibility = "visible";
+      tick.style.opacity = "1";
+      tick.style.pointerEvents = "auto";
+    });
+
+    if (ticks.length <= 1) return;
+
+    // Get bounding rectangles for collision detection
+    const tickRects = ticks.map((tick) => ({
+      tick,
+      rect: tick.getBoundingClientRect(),
+    }));
+
+    const hiddenTicks = new Set();
+
+    // This greedy approach: if label[i] overlaps label[i+1], hide label[i+1]
+    for (let i = 0; i < tickRects.length - 1; i++) {
+      if (hiddenTicks.has(tickRects[i].tick)) continue;
+
+      const rect1 = tickRects[i].rect;
+      const rect2 = tickRects[i + 1].rect;
+
+      // Only check horizontal overlap - this is a timeline axis
+      const horizontalOverlap = rect1.right > rect2.left && rect1.left < rect2.right;
+
+      if (horizontalOverlap) {
+        // Hide the next label to keep earlier ones visible
+        hiddenTicks.add(tickRects[i + 1].tick);
+      }
+    }
+
+    // Apply visibility based on actual collisions
+    hiddenTicks.forEach((tick) => {
+      tick.style.visibility = "hidden";
+      tick.style.opacity = "0";
+      tick.style.pointerEvents = "none";
     });
   }
 

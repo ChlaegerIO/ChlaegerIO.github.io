@@ -10,12 +10,12 @@ const stationTimelineData = [
       de: {
         title: "Erste Wetterdaten",
         description:
-          "Abgeschlossene Montage der Davis Vantage Pro 2 auf dem Dach.",
+          "Abgeschlossene Montage der Davis Vantage Pro 2, Wetterdaten:\n• Alle 10 min\n• Auf 593 m.ü.M.\n• 8.5 m über Boden\n• Messungen neben Dachrand\n• Und 1.5 m über dem Dach",
       },
       en: {
         title: "First weather data",
         description:
-          "Finished mounting of the Davis Vantage Pro 2 on the rooftop.",
+          "Completed installation of the Davis Vantage Pro 2, weather data:\n• Every 10 min\n• At 593 m.a.s.l.\n• 8.5 m above ground\n• Measurements near roof edge\n• And 1.5 m above the roof",
       },
     },
     media: { type: "image", src: "images/Wetterstation1.jpg", alt: "Wetterstation auf dem Dach" },
@@ -26,7 +26,7 @@ const stationTimelineData = [
     content: {
       de: {
         title: "Wartungsarbeiten",
-        description: "Wetterstation wurde vom Dach hinuntergeholt, um den verstopften und gealterten Regensensor zu reinigen.",
+        description: "Die Wetterstation wurde zum reinigen des verstopften Regensensor vom Dach hinuntergeholt.",
       },
       en: {
         title: "Maintenance work",
@@ -37,105 +37,60 @@ const stationTimelineData = [
   },
   {
     id: "unavailable-period-2023-09",
-    date: "2023-09-01",
+    date: "2023",
     content: {
       de: {
         title: "Wetterdaten nicht verfügbar",
-        description: "Vom 1. September 23:10 bis 3. September 23:00 2023 waren keine Wetterdaten verfügbar.",
+        description: "• 01.09 23:10 - 03.09 23:00\n• 06.09 23:10 - 07.09 23:00\n• 15.09 20:10 - 25.09 21:20",
       },
       en: {
         title: "Weather data unavailable",
-        description: "From September 1st 11:10 PM to September 3rd 11:00 PM 2023, no weather data was available.",
-      },
-    },
-    media: { type: "image", src: "images/wetterdaten-nicht-verfügbar.jpg", alt: "Keine Wetterdaten verfügbar" },
-  },
-  {
-    id: "unavailable-period-2023-09-2",
-    date: "2023-09-06",
-    content: {
-      de: {
-        title: "Wetterdaten nicht verfügbar",
-        description: "Vom 6. September 23:10 bis 7. September 23:00 2023 waren keine Wetterdaten verfügbar.",
-      },
-      en: {
-        title: "Weather data unavailable",
-        description: "From September 6th 11:10 PM to September 7th 11:00 PM 2023, no weather data was available.",
-      },
-    },
-    media: { type: "image", src: "images/wetterdaten-nicht-verfügbar.jpg", alt: "Keine Wetterdaten verfügbar" },
-  },
-  {
-    id: "unavailable-period-2023-09-3",
-    date: "2023-09-15",
-    content: {
-      de: {
-        title: "Wetterdaten nicht verfügbar",
-        description: "Vom 15. September 20:10 bis 25. September 21:20 2023 waren keine Wetterdaten verfügbar.",
-      },
-      en: {
-        title: "Weather data unavailable",
-        description: "From September 15th 8:10 PM to September 25th 9:20 PM 2023, no weather data was available.",
+        description: "• 01.09 11:10 PM - 03.09 11:00 PM\n• 06.09 11:10 PM - 07.09 11:00 PM\n• 15.09 08:10 PM - 25.09 09:20 PM",
       },
     },
     media: { type: "image", src: "images/wetterdaten-nicht-verfügbar.jpg", alt: "Keine Wetterdaten verfügbar" },
   },
   {
     id: "unavailable-rain-2024-06",
-    date: "2024-06-25",
+    date: "2024",
     content: {
       de: {
         title: "Regendaten nicht verfügbar",
-        description: "Vom 25. Juni 00:00 bis 15. November 23:50 2024 waren keine Regendaten verfügbar.",
+        description: "• 25.06 00:00 bis 15.11 23:50",
       },
       en: {
         title: "Rain data unavailable",
-        description: "From June 25th 12:00 AM to November 15th 11:50 PM 2024, no rain data was available.",
+        description: "• 25.06 12:00 AM - 15.11 11:50 PM",
       },
     },
     media: { type: "image", src: "images/kein-regen.jpg", alt: "Keine Regendaten verfügbar" },
   },
   {
     id: "unavailable-period-2024-08",
-    date: "2024-08-28",
+    date: "2024",
     content: {
       de: {
         title: "Wetterdaten nicht verfügbar",
-        description: "Vom 28. August 23:10 bis 1. September 01:30 2024 waren keine Wetterdaten verfügbar.",
+        description: "• 28.08 23:10 - 01.09 01:30\n• 24.10 17:40 - 29.10 14:30",
       },
       en: {
         title: "Weather data unavailable",
-        description: "From August 28th 11:10 PM to September 1st 1:30 AM 2024, no weather data was available.",
-      },
-    },
-    media: { type: "image", src: "images/wetterdaten-nicht-verfügbar.jpg", alt: "Keine Wetterdaten verfügbar" },
-  },
-  {
-    id: "unavailable-period-2024-10",
-    date: "2024-10-24",
-    content: {
-      de: {
-        title: "Wetterdaten nicht verfügbar",
-        description: "Vom 24. Oktober 17:40 bis 29. Oktober 14:30 2024 waren keine Wetterdaten verfügbar.",
-      },
-      en: {
-        title: "Weather data unavailable",
-        description: "From October 24th 5:40 PM to October 29th 2:30 PM 2024, no weather data was available.",
+        description: "• 28.08 11:10 PM - 01.09 01:30 AM\n• 24.10 05:40 PM - 29.10 02:30 PM",
       },
     },
     media: { type: "image", src: "images/wetterdaten-nicht-verfügbar.jpg", alt: "Keine Wetterdaten verfügbar" },
   },
   {
     id: "inprecise-rain-2025-06",
-    date: "2025-06-01",
+    date: "2025",
     content: {
       de: {
         title: "Ungenaue Regendaten",
-        description: "Vom Sommer 2025 bis 13. Dezember 2025 waren keine genauen Regendaten verfügbar. Die Daten waren zum Teil viel zu hoch und zum Teil nicht vorhanden.",
+        description: "Die Daten waren zum Teil viel zu hoch oder nicht vorhanden.\n• Sommer - 13.12",
       },
       en: {
         title: "Inaccurate rain data",
-        description: "From summer 2025 to December 13th 2025, no accurate rain data was available. The data was sometimes much too high and sometimes not available at all.",
+        description: "The data was sometimes far too high or missing.\n• Summer - 13.12",
       },
     },
     media: { type: "image", src: "images/kein-regen.jpg", alt: "Keine Regendaten verfügbar" },
@@ -146,11 +101,11 @@ const stationTimelineData = [
     content: {
       de: {
         title: "Verlegung Wetterstation",
-        description: "Die Wetterstation (Regen und Temperatur) wurde im August vom Dach in den Garten verlegt auf 2 Meter Messhöhe. Der Wind blieb unverändert auf dem Dach.",
+        description: "Die Wetterstation (Regen und Temperatur) wurde am 20. August vom Dach in den Garten verlegt\nWetterdaten:\n• Neu: Messhöhe allgemein 2 m\n• Alt: Messhöhe Wind 8.5 m",
       },
       en: {
         title: "Relocation of weather station",
-        description: "The weather station (rain and temperature) was relocated from the roof to the garden in August, at a height of 2 meters. The wind measurements remained unchanged on the roof.",
+        description: "The weather station (rain and temperature) was moved from the roof to the garden on 20. August\nWeather data:\n• New: Measurement general 2 m\n• Old: Measurement wind 8.5 m",
       },
     },
     media: { type: "image", src: "images/wartung-2022.jpeg", alt: "Verlegung der Wetterstation" },
@@ -161,13 +116,11 @@ const stationTimelineData = [
     content: {
       de: {
         title: "Neuer Regensensor eingebaut",
-        description:
-          "Austausch des defekten Regensensors gegen ein neues genaueres und hoffentlich weniger fehleranfälliges Modell.",
+        description: "Austausch des defekten Regensensors mit einem genaueren und weniger fehlerhaftem Modell.",
       },
       en: {
         title: "New rain sensor installed",
-        description:
-          "Replaced the faulty rain sensor with a new, more accurate, and hopefully less error-prone model.",
+        description: "Replacement of the faulty rain sensor with a more accurate and less error-prone model.",
       },
     },
     media: { type: "image", src: "images/neuer-regensensor-2025.jpeg", alt: "Panorama mit Windmast" },
@@ -196,6 +149,66 @@ const buildLocalizedItems = (language) => {
 
 const languageToLocale = (language) => (language === "en" ? "en-GB" : "de-CH");
 
+const parsePartialTimelineDate = (value) => {
+  if (value instanceof Date) {
+    return value;
+  }
+
+  if (typeof value !== "string") {
+    const parsed = new Date(value);
+    if (Number.isNaN(parsed.getTime())) {
+      throw new Error(`Unable to parse date value: ${value}`);
+    }
+    return parsed;
+  }
+
+  const trimmed = value.trim();
+  const yearMatch = trimmed.match(/^(\d{4})$/);
+  if (yearMatch) {
+    const year = Number.parseInt(yearMatch[1], 10);
+    return new Date(year, 0, 1);
+  }
+
+  const monthMatch = trimmed.match(/^(\d{4})-(\d{2})$/);
+  if (monthMatch) {
+    const year = Number.parseInt(monthMatch[1], 10);
+    const monthIndex = Number.parseInt(monthMatch[2], 10) - 1;
+    return new Date(year, monthIndex, 1);
+  }
+
+  const dayMatch = trimmed.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (dayMatch) {
+    const year = Number.parseInt(dayMatch[1], 10);
+    const monthIndex = Number.parseInt(dayMatch[2], 10) - 1;
+    const day = Number.parseInt(dayMatch[3], 10);
+    return new Date(year, monthIndex, day);
+  }
+
+  const parsed = new Date(trimmed);
+  if (Number.isNaN(parsed.getTime())) {
+    throw new Error(`Unable to parse date value: ${value}`);
+  }
+  return parsed;
+};
+
+const formatTimelineDateByPrecision = (item, core) => {
+  const rawDate = item?.raw?.date;
+  if (typeof rawDate !== "string") {
+    return core.formatDate(item.date);
+  }
+
+  const trimmed = rawDate.trim();
+  if (/^\d{4}$/.test(trimmed)) {
+    return trimmed;
+  }
+
+  if (/^\d{4}-\d{2}$/.test(trimmed)) {
+    return core.formatDate(item.date, { month: "long", year: "numeric" });
+  }
+
+  return core.formatDate(item.date);
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   const mountNode = document.getElementById("stationTimeline");
   if (!mountNode) return;
@@ -205,6 +218,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const timeline = new TimelineHorizontal(mountNode, {
     items: buildLocalizedItems(currentLanguage),
     locale: languageToLocale(currentLanguage),
+    dateParser: parsePartialTimelineDate,
+    cardDateFormatter: formatTimelineDateByPrecision,
+    axisLabelFormatter: formatTimelineDateByPrecision,
   });
 
   const updateLanguage = () => {

@@ -79,13 +79,17 @@
 .timeline-horizontal .timeline-axis-tick {
   position: absolute;
   top: calc(100% + 16px);
-  transform: translate(-50%, 0);
-  padding: 0.25rem 0.5rem;
+  transform: translateX(calc(-50% + var(--timeline-tick-offset, 0px)));
+  padding: 0.5rem 0.25rem;
   font-size: 0.85rem;
   color: var(--timeline-muted);
   background: transparent;
   border: none;
   cursor: pointer;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  white-space: nowrap;
+  min-height: 40px;
 }
 
 .timeline-horizontal .timeline-axis-tick::before {

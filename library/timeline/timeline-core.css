@@ -58,6 +58,8 @@
   margin: 0;
   line-height: 1.6;
   color: #334155;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 .timeline-card figure {
