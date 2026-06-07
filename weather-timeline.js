@@ -1,5 +1,8 @@
 import { TimelineHorizontal } from "./library/timeline/timeline-horizontal.js";
 
+// Make sure the component is available globally
+window.TimelineHorizontal = TimelineHorizontal;
+
 const SUPPORTED_LANGUAGES = ["de", "en"];
 
 const stationTimelineData = [

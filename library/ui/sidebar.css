@@ -45,17 +45,17 @@
 
 .sidebar-name {
   font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--color-ink);
+  font-weight: 700;
+  color: #0f172a;
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
 }
 
 .sidebar-subtitle {
   font-size: 0.85rem;
-  color: var(--color-ink-muted);
+  color: #478ac9;
   text-align: center;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .sidebar-divider {
@@ -82,9 +82,9 @@
 
 .sidebar-links a {
   text-decoration: none;
-  color: var(--color-ink);
+  color: #333;
   font-size: 0.9rem;
-  font-weight: 400;
+  font-weight: 500;
   transition: color 200ms ease;
   display: flex;
   align-items: center;
@@ -92,7 +92,7 @@
 }
 
 .sidebar-links a:hover {
-  color: var(--color-accent);
+  color: #478ac9;
 }
 
 .sidebar-icon {
