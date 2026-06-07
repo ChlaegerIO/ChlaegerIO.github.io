@@ -62,9 +62,7 @@ function renderSidebar(basePath) {
           <li>
             <a href="https://stock.adobe.com/de/contributor/210079993/Kleger%20photography" target="_blank" rel="noopener noreferrer" title="Adobe Stock">
               <span class="sidebar-icon">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 0C5.371 0 0 5.373 0 12s5.371 12 12 12 12-5.373 12-12S18.629 0 12 0zm4.891 15.891h-2.458v-4.034a1.41 1.41 0 0 0-1.417-1.417h-2.859v5.451H7.698V8.109h2.459v1.134h.034c.322-.611.966-1.415 1.98-1.415 2.101 0 3.92 1.32 3.92 4.23v3.833zM6.891 6.974a1.416 1.416 0 1 1 0-2.832 1.416 1.416 0 0 1 0 2.832zm1.324 8.917H5.567V8.109h2.648v7.782z"/>
-                </svg>
+                <img src="${basePath}images/Adobe-Stock-Logo-Vector.jpg" alt="Adobe Stock" style="width: 100%; height: 100%; object-fit: contain;" />
               </span>
               <span>Adobe Stock</span>
             </a>
