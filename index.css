@@ -80,13 +80,10 @@ body {
 .hobbies-title,
 .weather-title,
 .timeline-title {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: #0f172a;
-  margin-bottom: 1.5rem;
-  border-bottom: 3px solid var(--color-accent, #478ac9);
-  padding-bottom: 0.5rem;
-  display: inline-block;
+  margin-bottom: 1rem;
 }
 
 /* ============================================
