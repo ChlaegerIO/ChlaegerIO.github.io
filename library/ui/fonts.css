@@ -1,0 +1,278 @@
+/* ============================================
+   Shared Typography & Font Styles
+   ============================================ */
+
+/* ============================================
+   Global Font Setup
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #333333;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+/* ============================================
+   Page Layout Base
+   ============================================ */
+
+.page-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.content-column {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   Title Styles (h1 / Page Title)
+   ============================================ */
+
+h1,
+.page-title,
+.gallery-title,
+.blog-title,
+.cv-page-title {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+h1 span,
+.page-title span,
+.gallery-title span {
+  color: #478ac9;
+}
+
+/* ============================================
+   Subtitle Styles (h2 / Section Heading)
+   ============================================ */
+
+h2,
+.section-title,
+.cv-section-heading {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.cv-section-heading {
+  border-bottom: 3px solid #478ac9;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+/* ============================================
+   Sub-Subtitle Styles (h3)
+   ============================================ */
+
+h3,
+.subsection-title,
+.cv-entry-title,
+.cv-skills-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+
+/* ============================================
+   Text Styles - Normal
+   ============================================ */
+
+p,
+.text,
+.normal-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+
+/* ============================================
+   Text Styles - Muted / Secondary
+   ============================================ */
+
+.text-muted,
+.text-secondary,
+.gallery-description,
+.blog-intro,
+.text-gray {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555555;
+}
+
+.small-text-muted {
+  font-size: 0.9rem;
+  color: #888888;
+  font-weight: 400;
+}
+
+/* ============================================
+   Links - Gray with Blue Underline
+   ============================================ */
+
+a,
+.link-btn,
+.text-link {
+  color: #478ac9;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid #478ac9;
+  transition: color 200ms ease, border-color 200ms ease;
+}
+
+a:hover,
+.link-btn:hover,
+.text-link:hover {
+  color: #2563eb;
+  border-color: #2563eb;
+}
+
+/* ============================================
+   Links - Gray text with blue underline
+   ============================================ */
+
+.link-gray,
+.sidebar-links a {
+  color: #333333;
+  text-decoration: none;
+  font-weight: 500;
+  opacity: 0.65;
+  transition: color 200ms ease, opacity 200ms ease;
+}
+
+.link-gray:hover,
+.sidebar-links a:hover {
+  color: #478ac9;
+  opacity: 1;
+}
+
+/* ============================================
+   Links - Blue with underline (Bold)
+   ============================================ */
+
+.link-blue-bold,
+.link-accent {
+  color: #478ac9;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid #478ac9;
+}
+
+.link-blue-bold:hover,
+.link-accent:hover {
+  color: #2563eb;
+  border-color: #2563eb;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+
+.footer-main {
+  background: #333333;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.footer-content p {
+  margin: 0;
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   Animation
+   ============================================ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .page-wrapper {
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-wrapper {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  h1,
+  .page-title,
+  .gallery-title,
+  .blog-title,
+  .cv-page-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-wrapper {
+    padding: 0.5rem;
+  }
+
+  .content-column {
+    max-width: 100%;
+  }
+
+  h1,
+  .page-title,
+  .gallery-title,
+  .blog-title,
+  .cv-page-title {
+    font-size: 1.4rem;
+  }
+
+  .footer-main {
+    padding: 1.5rem 1rem;
+  }
+}

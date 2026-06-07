@@ -15,7 +15,7 @@ function renderSidebar(basePath) {
       <div class="sidebar-desktop">
         <img src="${photoPath}" alt="Timo Kleger" class="sidebar-photo" />
         <h2 class="sidebar-name">Timo Kleger</h2>
-        <p class="sidebar-subtitle" data-de="Elektroingenieur" data-en="Electrical Engineer">Elektroingenieur</p>
+        <p class="sidebar-subtitle" data-de="Softwareentwickler" data-en="Software Engineer">Softwareentwickler</p>
         <div class="sidebar-divider"></div>
 
         <ul class="sidebar-links">
