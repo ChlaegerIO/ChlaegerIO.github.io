@@ -21,7 +21,7 @@ const stationTimelineData = [
           "Completed installation of the Davis Vantage Pro 2, weather data:\n• Every 10 min\n• At 593 m.a.s.l.\n• 8.5 m above ground\n• Measurements near roof edge\n• And 1.5 m above the roof",
       },
     },
-    media: { type: "image", src: "images/Wetterstation1.jpg", alt: "Wetterstation auf dem Dach" },
+    media: { type: "image", src: "../../images/Wetterstation1.jpg", alt: "Wetterstation auf dem Dach" },
   },
   {
     id: "maintanance-work-2022",
@@ -36,7 +36,7 @@ const stationTimelineData = [
         description: "The weather station was taken down from the roof to clean the clogged and aged rain sensor.",
       },
     },
-    media: { type: "image", src: "images/wartung-2022.jpeg", alt: "Wetterstation in Wartung" },
+    media: { type: "image", src: "../../images/wartung-2022.jpeg", alt: "Wetterstation in Wartung" },
   },
   {
     id: "unavailable-period-2023-09",
@@ -51,7 +51,7 @@ const stationTimelineData = [
         description: "• 01.09 11:10 PM - 03.09 11:00 PM\n• 06.09 11:10 PM - 07.09 11:00 PM\n• 15.09 08:10 PM - 25.09 09:20 PM",
       },
     },
-    media: { type: "image", src: "images/wetterdaten-nicht-verfügbar.jpg", alt: "Keine Wetterdaten verfügbar" },
+    media: { type: "image", src: "../../images/wetterdaten-nicht-verfügbar.jpg", alt: "Keine Wetterdaten verfügbar" },
   },
   {
     id: "unavailable-rain-2024-06",
@@ -66,7 +66,7 @@ const stationTimelineData = [
         description: "• 25.06 12:00 AM - 15.11 11:50 PM",
       },
     },
-    media: { type: "image", src: "images/kein-regen.jpg", alt: "Keine Regendaten verfügbar" },
+    media: { type: "image", src: "../../images/kein-regen.jpg", alt: "Keine Regendaten verfügbar" },
   },
   {
     id: "unavailable-period-2024-08",
@@ -81,7 +81,7 @@ const stationTimelineData = [
         description: "• 28.08 11:10 PM - 01.09 01:30 AM\n• 24.10 05:40 PM - 29.10 02:30 PM",
       },
     },
-    media: { type: "image", src: "images/wetterdaten-nicht-verfügbar.jpg", alt: "Keine Wetterdaten verfügbar" },
+    media: { type: "image", src: "../../images/wetterdaten-nicht-verfügbar.jpg", alt: "Keine Wetterdaten verfügbar" },
   },
   {
     id: "inprecise-rain-2025-06",
@@ -96,7 +96,7 @@ const stationTimelineData = [
         description: "The data was sometimes far too high or missing.\n• Summer - 13.12",
       },
     },
-    media: { type: "image", src: "images/kein-regen.jpg", alt: "Keine Regendaten verfügbar" },
+    media: { type: "image", src: "../../images/kein-regen.jpg", alt: "Keine Regendaten verfügbar" },
   },
   {
     id: "move-weather-station",
@@ -111,7 +111,7 @@ const stationTimelineData = [
         description: "The weather station (rain and temperature) was moved from the roof to the garden on 20. August\nWeather data:\n• New: Measurement general 2 m\n• Old: Measurement wind 8.5 m",
       },
     },
-    media: { type: "image", src: "images/wartung-2022.jpeg", alt: "Verlegung der Wetterstation" },
+    media: { type: "image", src: "../../images/wartung-2022.jpeg", alt: "Verlegung der Wetterstation" },
   },
   {
     id: "rain-sensor-upgrade",
@@ -126,7 +126,7 @@ const stationTimelineData = [
         description: "Replacement of the faulty rain sensor with a more accurate and less error-prone model.",
       },
     },
-    media: { type: "image", src: "images/neuer-regensensor-2025.jpeg", alt: "Panorama mit Windmast" },
+    media: { type: "image", src: "../../images/neuer-regensensor-2025.jpeg", alt: "Panorama mit Windmast" },
   }
 ];
 
