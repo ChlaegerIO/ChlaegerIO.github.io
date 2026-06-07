@@ -36,12 +36,13 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// Close on overlay click (but not image click)
+// Close on overlay click or image click
 document.addEventListener('click', (e) => {
   const lightbox = document.getElementById('lightbox');
   if (!lightbox) return;
 
-  if (e.target === lightbox && lightbox.classList.contains('is-open')) {
+  const lightboxImage = document.getElementById('lightboxImage');
+  if ((e.target === lightbox || e.target === lightboxImage) && lightbox.classList.contains('is-open')) {
     closeLightbox();
   }
 });
