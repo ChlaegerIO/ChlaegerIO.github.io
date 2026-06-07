@@ -36,8 +36,8 @@
           <h2 class="cv-section-heading" data-de="Ausbildung" data-en="Education">Ausbildung</h2>
 
           <div class="cv-entry">
-            <div class="cv-entry-icon">
-              <span class="material-icons">school</span>
+            <div class="cv-entry-icon cv-entry-logo">
+              <img src="../../images/eth-logo-png-transparent.png" alt="ETH Logo" />
             </div>
             <div class="cv-entry-content">
               <div class="cv-entry-header">
@@ -55,8 +55,8 @@
           </div>
 
           <div class="cv-entry">
-            <div class="cv-entry-icon">
-              <span class="material-icons">school</span>
+            <div class="cv-entry-icon cv-entry-logo">
+              <img src="../../images/eth-logo-png-transparent.png" alt="ETH Logo" />
             </div>
             <div class="cv-entry-content">
               <div class="cv-entry-header">
@@ -73,8 +73,8 @@
           </div>
 
           <div class="cv-entry">
-            <div class="cv-entry-icon">
-              <span class="material-icons">school</span>
+            <div class="cv-entry-icon cv-entry-logo">
+              <img src="../../images/kantiwil.png" alt="ICS/ACS Logo" />
             </div>
             <div class="cv-entry-content">
               <div class="cv-entry-header">
@@ -97,8 +97,8 @@
           <h2 class="cv-section-heading" data-de="Berufserfahrung" data-en="Work Experience">Berufserfahrung</h2>
 
           <div class="cv-entry">
-            <div class="cv-entry-icon">
-              <span class="material-icons">work</span>
+            <div class="cv-entry-icon cv-entry-logo">
+              <img src="../../images/ica-acs-logo.jpg" alt="ICS/ACS Logo" />
             </div>
             <div class="cv-entry-content">
               <div class="cv-entry-header">
@@ -115,8 +115,8 @@
           </div>
 
           <div class="cv-entry">
-            <div class="cv-entry-icon">
-              <span class="material-icons">engineering</span>
+            <div class="cv-entry-icon cv-entry-logo">
+              <img src="../../images/swisca-logo.png" alt="Swisca Logo" />
             </div>
             <div class="cv-entry-content">
               <div class="cv-entry-header">
@@ -134,8 +134,8 @@
           </div>
 
           <div class="cv-entry">
-            <div class="cv-entry-icon">
-              <span class="material-icons">school</span>
+            <div class="cv-entry-icon cv-entry-logo">
+              <img src="../../images/eth-logo-png-transparent.png" alt="ETH Logo" />
             </div>
             <div class="cv-entry-content">
               <div class="cv-entry-header">
@@ -152,8 +152,8 @@
           </div>
 
           <div class="cv-entry">
-            <div class="cv-entry-icon">
-              <span class="material-icons">engineering</span>
+            <div class="cv-entry-icon cv-entry-logo">
+              <img src="../../images/cellsius-logo.png" alt="e-Sling Logo" />
             </div>
             <div class="cv-entry-content">
               <div class="cv-entry-header">
@@ -232,8 +232,10 @@
     document.addEventListener('DOMContentLoaded', () => {
       renderNav('cv', '../../');
       renderSidebar('../../');
+
       if (typeof applyLanguage === 'function') {
-        applyLanguage(localStorage.getItem('language') || 'de');
+        const savedLang = localStorage.getItem('language') || 'de';
+        applyLanguage(savedLang);
       }
     });
   </script>
