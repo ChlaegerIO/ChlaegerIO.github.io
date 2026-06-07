@@ -11,6 +11,7 @@ function renderNav(activePage, basePath) {
   const homeLink = basePath + 'index.html';
   const weatherLink = basePath + 'pages/weather/weather.html';
   const photoLink = basePath + 'pages/photography/photography.html';
+  const cvLink = basePath + 'pages/cv/cv.html';
 
   // Helper to set active class
   const isActive = (page) => activePage === page ? 'active' : '';
@@ -28,6 +29,7 @@ function renderNav(activePage, basePath) {
           <div class="nav-container">
             <ul class="nav-list">
               <li><a href="${homeLink}" class="nav-link ${isActive('home')}" data-de="Timo Kleger" data-en="Timo Kleger">Timo Kleger</a></li>
+              <li><a href="${cvLink}" class="nav-link ${isActive('cv')}" data-de="CV" data-en="CV">CV</a></li>
               <li><a href="${weatherLink}" class="nav-link ${isActive('weather')}" data-de="Wetter" data-en="Weather">Wetter</a></li>
               <li><a href="${photoLink}" class="nav-link ${isActive('photography')}" data-de="Fotografie" data-en="Photography">Fotografie</a></li>
               <li>
