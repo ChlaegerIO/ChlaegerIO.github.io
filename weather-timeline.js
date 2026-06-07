@@ -104,7 +104,7 @@ const stationTimelineData = [
     content: {
       de: {
         title: "Verlegung Wetterstation",
-        description: "Die Wetterstation (Regen und Temperatur) wurde am 20. August vom Dach in den Garten verlegt\nWetterdaten:\n• Neu: Messhöhe allgemein 2 m\n• Alt: Messhöhe Wind 8.5 m",
+        description: "Die Wetterstation (ausser Wind) wurde am 20. August in den Garten verlegt\nWetterdaten:\n• Neu: 585 m.ü.M., auf 2m\n• Wind: 593 m.ü.M., auf 8.5 m",
       },
       en: {
         title: "Relocation of weather station",
