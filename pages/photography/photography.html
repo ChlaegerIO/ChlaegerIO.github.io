@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html style="font-size: 16px">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="keywords" content="Fotografie, Landschaftsfotografie, Natur, Bilder" />
+  <meta name="description" content="Fotografie-Galerie von Timo Kleger - Landschafts- und Naturaufnahmen" />
+  <title data-de="Fotografie" data-en="Photography">Fotografie</title>
+
+  <link rel="stylesheet" href="../../library/ui/styles.css" media="screen" />
+  <link rel="stylesheet" href="../../library/ui/animations.css" media="screen" />
+  <link rel="stylesheet" href="../../library/ui/buttons.css" media="screen" />
+  <link rel="stylesheet" href="../../library/ui/sidebar.css" media="screen" />
+  <link rel="stylesheet" href="../../library/ui/lightbox.css" media="screen" />
+  <link rel="stylesheet" href="photography.css" media="screen" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" />
+
+  <meta name="theme-color" content="#478ac9" />
+  <meta property="og:title" content="Photography" />
+  <meta property="og:type" content="website" />
+</head>
+
+<body class="u-body u-xl-mode">
+  <!-- Navigation placeholder (filled by nav.js) -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Main page wrapper -->
+  <div class="page-wrapper">
+    <!-- Sidebar placeholder (filled by sidebar.js) -->
+    <div id="sidebar-placeholder"></div>
+
+    <!-- Main content -->
+    <main class="page-content">
+      <div class="content-column">
+
+        <!-- Gallery Title -->
+        <section class="gallery-header">
+          <h1 class="gallery-title" data-de="Meine <span>Galerie</span>" data-en="My <span>Gallery</span>">
+            Meine <span>Galerie</span>
+          </h1>
+          <p class="gallery-description"
+             data-de="Die Fotografie ist eine Leidenschaft von mir. Ich liebe es, die Schönheit der Natur und farbenfrohe Landschaften festzuhalten. Ob Sonnenschein, Nebel oder einen schönen Sonnenuntergang, die Natur bietet immer wieder faszinierend neue Motive."
+             data-en="Photography is one of my passions. I love capturing the beauty of nature and colorful landscapes. Whether sunshine, fog, or a glowing sunset, nature always offers fascinating new subjects.">
+            Die Fotografie ist eine Leidenschaft von mir. Ich liebe es, die Schönheit der Natur und farbenfrohe Landschaften festzuhalten. Ob Sonnenschein, Nebel oder einen schönen Sonnenuntergang, die Natur bietet immer wieder faszinierend neue Motive.
+          </p>
+          <p class="gallery-links">
+            <span data-de="Weitere Bilder können über meine" data-en="Additional images can be purchased via my">Weitere Bilder können über meine</span>
+            <a href="https://stock.adobe.com/de/contributor/210079993/Kleger%20photography" target="_blank" rel="noopener noreferrer" class="link-btn">Adobe Stock</a>
+            <span data-de="Seite gekauft oder auf meiner" data-en="page or viewed on my">Seite gekauft oder auf meiner</span>
+            <a href="https://www.instagram.com/tk_naturegallery/" target="_blank" rel="noopener noreferrer" class="link-btn">Instagram-Seite</a>
+            <span data-de="angeschaut werden." data-en="page.">angeschaut werden.</span>
+          </p>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="gallery-grid" id="galleryGrid">
+          <div class="gallery-column">
+            <div class="gallery-item">
+              <img src="../../images/Gallerie/1.jpg" alt="Spitzmeilen aus der Luft" class="gallery-image" onclick="openLightbox(this.src, this.alt)" />
+              <div class="zoom-overlay">
+                <span class="material-icons zoom-icon">zoom_in</span>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="../../images/Gallerie/2.jpg" alt="Gletscher im Hochland von Norwegen" class="gallery-image" onclick="openLightbox(this.src, this.alt)" />
+              <div class="zoom-overlay">
+                <span class="material-icons zoom-icon">zoom_in</span>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="../../images/Gallerie/16.jpg" alt="Trolltunga" class="gallery-image" onclick="openLightbox(this.src, this.alt)" />
+              <div class="zoom-overlay">
+                <span class="material-icons zoom-icon">zoom_in</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-column">
+            <div class="gallery-item">
+              <img src="../../images/Gallerie/5.jpg" alt="Sonnenuntergangsstimmung in Breiborg" class="gallery-image" onclick="openLightbox(this.src, this.alt)" />
+              <div class="zoom-overlay">
+                <span class="material-icons zoom-icon">zoom_in</span>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="../../images/Gallerie/6.jpg" alt="Prekestolen (Predigtstuhul)" class="gallery-image" onclick="openLightbox(this.src, this.alt)" />
+              <div class="zoom-overlay">
+                <span class="material-icons zoom-icon">zoom_in</span>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="../../images/Gallerie/7.jpg" alt="Spitzmeilen" class="gallery-image" onclick="openLightbox(this.src, this.alt)" />
+              <div class="zoom-overlay">
+                <span class="material-icons zoom-icon">zoom_in</span>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="../../images/Gallerie/4.jpg" alt="Seerauchen bei Sonnenaufgang" class="gallery-image" onclick="openLightbox(this.src, this.alt)" />
+              <div class="zoom-overlay">
+                <span class="material-icons zoom-icon">zoom_in</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-column">
+            <div class="gallery-item">
+              <img src="../../images/Gallerie/8.jpg" alt="Atlantische Küste in Norwegen bei Sonnenaufgang" class="gallery-image" onclick="openLightbox(this.src, this.alt)" />
+              <div class="zoom-overlay">
+                <span class="material-icons zoom-icon">zoom_in</span>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="../../images/Gallerie/3.jpg" alt="Klippen eines Fjordes am Kjerakbolten" class="gallery-image" onclick="openLightbox(this.src, this.alt)" />
+              <div class="zoom-overlay">
+                <span class="material-icons zoom-icon">zoom_in</span>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="../../images/Gallerie/9.jpg" alt="Hochebene in den schweizer Bergen" class="gallery-image" onclick="openLightbox(this.src, this.alt)" />
+              <div class="zoom-overlay">
+                <span class="material-icons zoom-icon">zoom_in</span>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="../../images/Gallerie/10.jpg" alt="Kleiner Bergbach" class="gallery-image" onclick="openLightbox(this.src, this.alt)" />
+              <div class="zoom-overlay">
+                <span class="material-icons zoom-icon">zoom_in</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Custom Lightbox -->
+  <div id="lightbox" class="lightbox-overlay" role="dialog" aria-modal="true">
+    <button class="lightbox-close" aria-label="Close" onclick="closeLightbox()">&times;</button>
+    <img id="lightboxImage" class="lightbox-image" src="" alt="" />
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-main">
+    <div class="footer-content">
+      <p data-de="Alle Bilder sind Eigentum von Timo Kleger und dürfen nicht ohne meine Erlaubnis verwendet werden."
+         data-en="All images are the property of Timo Kleger and may not be used without my permission.">
+        Alle Bilder sind Eigentum von Timo Kleger und dürfen nicht ohne meine Erlaubnis verwendet werden.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../../components/nav.js" defer></script>
+  <script src="../../components/sidebar.js" defer></script>
+  <script src="../../language-toggle.js" defer></script>
+  <script src="photography.js" defer></script>
+
+  <script>
+    // Initialize nav and sidebar on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      renderNav('photography', '../../');
+      renderSidebar('../../');
+
+      if (typeof applyLanguage === 'function') {
+        const savedLang = localStorage.getItem('language') || 'de';
+        applyLanguage(savedLang);
+      }
+    });
+  </script>
+</body>
+</html>
