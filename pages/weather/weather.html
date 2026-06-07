@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html style="font-size: 16px">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="keywords" content="Wetter, Wetterstation, Niederhelfenschwil" />
+  <meta name="description" content="Wetterstation Niederhelfenschwil - Aktuelle Wetterdaten und Messungen" />
+  <title data-de="Wetter" data-en="Weather">Wetter</title>
+
+  <link rel="stylesheet" href="../../library/ui/styles.css" media="screen" />
+  <link rel="stylesheet" href="../../library/ui/animations.css" media="screen" />
+  <link rel="stylesheet" href="../../library/ui/buttons.css" media="screen" />
+  <link rel="stylesheet" href="../../library/ui/sidebar.css" media="screen" />
+  <link rel="stylesheet" href="../../library/timeline/timeline-core.css" media="screen" />
+  <link rel="stylesheet" href="../../library/timeline/timeline-horizontal.css" media="screen" />
+  <link rel="stylesheet" href="weather.css" media="screen" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" />
+
+  <meta name="theme-color" content="#478ac9" />
+  <meta property="og:title" content="Weather" />
+  <meta property="og:type" content="website" />
+</head>
+
+<body class="u-body u-xl-mode">
+  <!-- Navigation placeholder (filled by nav.js) -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Main page wrapper -->
+  <div class="page-wrapper">
+    <!-- Sidebar placeholder (filled by sidebar.js) -->
+    <div id="sidebar-placeholder"></div>
+
+    <!-- Main content -->
+    <main class="page-content">
+      <div class="content-column">
+
+        <!-- Title Section -->
+        <section class="weather-title-section">
+          <h1 class="weather-title" data-de="Wetter <span>Niederhelfenschwil</span>" data-en="Weather <span>Niederhelfenschwil</span>">
+            Wetter <span>Niederhelfenschwil</span>
+          </h1>
+        </section>
+
+        <!-- Period Selector -->
+        <form class="period-selector" onsubmit="return changePeriod(this)">
+          <label class="period-option" for="day_form">
+            <input type="radio" id="day_form" name="period" value="day" />
+            <span data-de="Tag" data-en="Day">Tag</span>
+          </label>
+          <label class="period-option" for="week_form">
+            <input type="radio" id="week_form" name="period" value="week" checked />
+            <span data-de="Woche" data-en="Week">Woche</span>
+          </label>
+          <label class="period-option" for="month_form">
+            <input type="radio" id="month_form" name="period" value="month" />
+            <span data-de="Monat" data-en="Month">Monat</span>
+          </label>
+          <label class="period-option" for="year_form">
+            <input type="radio" id="year_form" name="period" value="year" />
+            <span data-de="Jahr" data-en="Year">Jahr</span>
+          </label>
+          <input
+            type="submit"
+            class="btn btn-ghost period-apply"
+            value="Übernehmen"
+            data-value-de="Übernehmen"
+            data-value-en="Apply"
+          />
+        </form>
+
+        <!-- Current Measurements -->
+        <section class="measurements-section">
+          <h2 class="section-heading" data-de="Aktuelle Messwerte" data-en="Current Measurements">Aktuelle Messwerte</h2>
+          <div class="grafana-grid">
+            <object class="grafana-iframe" id="current_grafana_temp"
+                data="https://wetter.timokleger.com/d-solo/adk6z49/wetter?orgId=1&refresh=30s&from=now-24h&to=now&timezone=browser&theme=light&panelId=panel-11&__feature.dashboardSceneSolo=true" style="width:100%; max-width:2000px; max-height:100px;" frameborder="0"></object>
+            <object class="grafana-iframe" id="current_grafana_hum"
+                data="https://wetter.timokleger.com/d-solo/adk6z49/wetter?orgId=1&refresh=30s&from=now-24h&to=now&timezone=browser&theme=light&panelId=panel-13&__feature.dashboardSceneSolo=true" style="width:100%; max-width:2000px; max-height:100px;" frameborder="0"></object>
+            <object class="grafana-iframe" id="current_grafana_wind"
+                data="https://wetter.timokleger.com/d-solo/adk6z49/wetter?orgId=1&refresh=30s&from=now-24h&to=now&timezone=browser&theme=light&panelId=panel-12&__feature.dashboardSceneSolo=true" style="width:100%; max-width:2000px; max-height:100px;" frameborder="0"></object>
+            <object class="grafana-iframe" id="current_grafana_rain"
+                data="https://wetter.timokleger.com/d-solo/adk6z49/wetter?orgId=1&refresh=30s&from=now-24h&to=now&timezone=browser&theme=light&panelId=panel-15&__feature.dashboardSceneSolo=true" style="width:100%; max-width:2000px; max-height:100px;" frameborder="0"></object>
+          </div>
+        </section>
+
+        <!-- Historical Measurements -->
+        <section class="measurements-section">
+          <h2 class="section-heading" data-de="Historische Messwerte" data-en="Historical Measurements">Historische Messwerte</h2>
+          <div class="grafana-graphs">
+            <object class="grafana-iframe" id="temperatur_grafana"
+                data="https://wetter.timokleger.com/d-solo/adk6z49/wetter?orgId=1&refresh=30s&from=now-7d&to=now&timezone=browser&theme=light&panelId=panel-1&__feature.dashboardSceneSolo=true" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></object>
+            <object class="grafana-iframe" id="wind_grafana"
+                data="https://wetter.timokleger.com/d-solo/adk6z49/wetter?orgId=1&refresh=30s&from=now-7d&to=now&timezone=browser&theme=light&panelId=panel-7&__feature.dashboardSceneSolo=true" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></object>
+            <object class="grafana-iframe" id="rain_grafana"
+                data="https://wetter.timokleger.com/d-solo/adk6z49/wetter?orgId=1&refresh=30s&from=now-7d&to=now&timezone=browser&theme=light&panelId=panel-3&__feature.dashboardSceneSolo=true" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></object>
+            <object class="grafana-iframe" id="pressure_grafana"
+                data="https://wetter.timokleger.com/d-solo/adk6z49/wetter?orgId=1&refresh=30s&from=now-7d&to=now&timezone=browser&theme=light&panelId=panel-2&__feature.dashboardSceneSolo=true" style="width:100%; max-width:2000px; height:500px;" frameborder="0"></object>
+          </div>
+        </section>
+
+        <!-- Weather Station Timeline -->
+        <section class="timeline-section">
+          <div class="weather-timeline__intro">
+            <h2 class="section-heading" data-de="Meilensteine der Wetterstation" data-en="Weather Station Milestones">
+              Meilensteine der Wetterstation
+            </h2>
+            <p data-de="Eine Zeitleiste mit wichtigen Ausbauschritten, Sensorwechseln und Softwareupdates der Station in Niederhelfenschwil."
+               data-en="A quick timeline covering key upgrades, sensor swaps, and software improvements for the Niederhelfenschwil station.">
+              Eine Zeitleiste mit wichtigen Ausbauschritten, Sensorwechseln und Softwareupdates der Station in Niederhelfenschwil.
+            </p>
+          </div>
+          <div id="stationTimeline" class="weather-timeline__track" aria-live="polite"></div>
+        </section>
+
+        <!-- Station Setup Information -->
+        <section class="station-info-section">
+          <h2 class="section-heading" data-de="Hintergrundinformationen zur Wetterstation" data-en="Background Information About The Weather Station">
+            Hintergrundinformationen zur Wetterstation
+          </h2>
+
+          <div class="station-setup-grid">
+            <article class="station-setup-card station-setup-card--old">
+              <h3 data-de="Altes Setup" data-en="Old Setup">Altes Setup</h3>
+              <ul>
+                <li data-de="Messstandort auf dem Dach" data-en="Measurement location on the roof">Messstandort auf dem Dach</li>
+                <li data-de="Gesamthoehe 8.5 m über Boden" data-en="Total height 8.5 m above ground">Gesamthoehe 8.5 m über Boden</li>
+                <li data-de="Station stand 1.5 m über dem Dachrand" data-en="Station stood 1.5 m above the roof edge">Station stand 1.5 m über dem Dachrand</li>
+                <li data-de="Temperaturfühler auf der dachabgewandten Seite" data-en="Temperature sensor mounted on the roof-facing-away side">Temperaturfühler auf der dachabgewandten Seite</li>
+                <li data-de="Datenaktualisierung alle 10 Minuten" data-en="Data updated every 10 minutes">Datenaktualisierung alle 10 Minuten</li>
+              </ul>
+            </article>
+
+            <article class="station-setup-card station-setup-card--new">
+              <h3 data-de="Neues Setup" data-en="New Setup">Neues Setup</h3>
+              <ul>
+                <li data-de="Regen und Temperatur Messung im Garten" data-en="Rain and temperature measurement in the garden">Regen und Temperatur Messung im Garten</li>
+                <li data-de="Neue allgemeine Messhoehe 2 m" data-en="New general measurement height 2 m">Neue allgemeine Messhoehe 2 m</li>
+                <li data-de="Windmessung weiterhin auf 8.5 m über Boden" data-en="Wind measurement remains 8.5 m above ground">Windmessung weiterhin auf 8.5 m über Boden</li>
+                <li data-de="Bessere Vergleichbarkeit mit genormten Wetterstationen" data-en="Better comparability with standardized weather stations">Bessere Vergleichbarkeit mit genormten Wetterstationen</li>
+                <li data-de="Datenaktualisierung alle 10 Minuten" data-en="Data updated every 10 minutes">Datenaktualisierung alle 10 Minuten</li>
+              </ul>
+            </article>
+          </div>
+
+          <figure class="station-setup-figure">
+            <div class="station-setup-images">
+              <div class="station-setup-image-item">
+                <img class="station-image" src="../../images/Wetterstation1.jpg" alt="Altes Setup der Wetterstation" />
+              </div>
+              <div class="station-setup-image-item">
+                <img class="station-image" src="../../images/newWeatherStationLocation.jpeg" alt="Neues Setup der Wetterstation" />
+              </div>
+            </div>
+          </figure>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-main">
+    <div class="footer-content">
+      <p data-de="Alle Bilder sind Eigentum von Timo Kleger und dürfen nicht ohne meine Erlaubnis verwendet werden."
+         data-en="All images are the property of Timo Kleger and may not be used without my permission.">
+        Alle Bilder sind Eigentum von Timo Kleger und dürfen nicht ohne meine Erlaubnis verwendet werden.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../../components/nav.js" defer></script>
+  <script src="../../components/sidebar.js" defer></script>
+  <script src="../../language-toggle.js" defer></script>
+  <script src="../../weather.js" defer></script>
+  <script src="../../weather-timeline.js" defer></script>
+
+  <script>
+    // Initialize nav and sidebar on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      renderNav('weather', '../../');
+      renderSidebar('../../');
+
+      if (typeof applyLanguage === 'function') {
+        const savedLang = localStorage.getItem('language') || 'de';
+        applyLanguage(savedLang);
+      }
+    });
+  </script>
+</body>
+</html>

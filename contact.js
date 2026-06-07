@@ -1,1 +1,0 @@
-// Removed unused contact form script placeholder.
