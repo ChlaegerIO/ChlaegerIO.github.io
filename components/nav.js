@@ -18,7 +18,9 @@ function renderNav(activePage, basePath) {
   nav.innerHTML = `
     <header class="header-main">
       <div class="header-content">
-        <img class="logo" src="${basePath}images/Logo_ohneSchrift.png" alt="Timo Kleger Logo" />
+        <div class="header-left">
+          <img class="logo" src="${basePath}images/Logo_ohneSchrift.png" alt="Timo Kleger Logo" />
+        </div>
         <nav class="nav-main">
           <button class="menu-toggle" id="menuToggle" aria-label="Menu">
             <span></span><span></span><span></span>
@@ -80,11 +82,17 @@ if (!document.querySelector('style[data-nav-css]')) {
 
     .header-content {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
       padding: 1rem 2rem;
-      max-width: 1400px;
-      margin: 0 auto;
+      max-width: none;
+      margin: 0;
+      gap: 2rem;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
     }
 
     .logo {
@@ -95,6 +103,7 @@ if (!document.querySelector('style[data-nav-css]')) {
     .nav-main {
       display: flex;
       align-items: center;
+      margin-left: auto;
     }
 
     .menu-toggle {
