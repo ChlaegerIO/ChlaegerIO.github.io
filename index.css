@@ -246,95 +246,28 @@ body {
 
 .timeline-wrapper {
   margin-top: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  /* Cap the timeline at one viewport; scroll within if it grows taller */
+  max-height: 80vh;
+  overflow-y: auto;
+  /* Room so the left bar/dots and card shadows aren't clipped by the scrollbar */
+  padding: 0.25rem 0.75rem 0.25rem 0.25rem;
 }
 
-.timeline-vertical {
-  position: relative;
-  padding: 2rem 0;
+/* Slim, themed scrollbar for the timeline */
+.timeline-wrapper::-webkit-scrollbar {
+  width: 8px;
 }
 
-.timeline-vertical::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 3px;
-  height: 100%;
-  background: var(--color-accent, #478ac9);
-  border-radius: 2px;
+.timeline-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(71, 138, 201, 0.35);
+  border-radius: 4px;
 }
 
-.timeline-vertical-card {
-  position: relative;
-  width: 100%;
-  margin-bottom: 2rem;
-  margin-left: 2rem;
-  padding: 1.5rem;
-  background: white;
-  border: 1px solid #e0e0e0;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
-  transition: transform 200ms ease, box-shadow 200ms ease;
-}
-
-.timeline-vertical-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.1);
-}
-
-.timeline-vertical-card::after {
-  content: '';
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: white;
-  border: 3px solid var(--color-accent, #478ac9);
-  top: 2rem;
-  left: -2.3rem;
-}
-
-.timeline-card-inner {
-  position: relative;
-  z-index: 1;
-}
-
-.timeline-date {
-  display: block;
-  font-size: 0.9rem;
-  color: var(--color-accent, #478ac9);
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.timeline-card-title {
-  font-size: 1.3rem;
-  margin: 0.5rem 0;
-  color: var(--color-ink, #333333);
-}
-
-.timeline-card-description {
-  color: var(--color-ink-muted, #5f5f5f);
-  margin: 0.75rem 0;
-  font-size: 0.95rem;
-}
-
-.timeline-card-link {
-  display: inline-block;
-  margin-top: 0.75rem;
-  padding: 0.5rem 1rem;
-  background: var(--color-accent, #478ac9);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 200ms ease;
-}
-
-.timeline-card-link:hover {
-  background: #2563eb;
+.timeline-wrapper::-webkit-scrollbar-thumb:hover {
+  background: rgba(71, 138, 201, 0.6);
 }
 
 /* ============================================
@@ -366,11 +299,6 @@ body {
 
   .content-column {
     max-width: 100%;
-  }
-
-  .timeline-vertical-card {
-    width: 100%;
-    margin-left: 2rem;
   }
 }
 
@@ -414,11 +342,6 @@ body {
 
   .focus-list li {
     font-size: 1rem;
-  }
-
-  .timeline-vertical-card {
-    width: 100%;
-    margin-left: 2rem;
   }
 }
 
@@ -474,20 +397,6 @@ body {
   .btn {
     padding: 0.6rem 1rem;
     font-size: 0.9rem;
-  }
-
-  .timeline-vertical-card {
-    width: 100%;
-    padding: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .timeline-vertical-card::after {
-    display: none;
-  }
-
-  .timeline-vertical::before {
-    display: none;
   }
 
   .photo-card {

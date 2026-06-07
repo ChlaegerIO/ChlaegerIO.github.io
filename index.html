@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="library/ui/animations.css" media="screen" />
   <link rel="stylesheet" href="library/ui/buttons.css" media="screen" />
   <link rel="stylesheet" href="library/ui/sidebar.css" media="screen" />
+  <link rel="stylesheet" href="library/timeline/timeline-core.css" media="screen" />
+  <link rel="stylesheet" href="library/timeline/timeline-vertical.css" media="screen" />
   <link rel="stylesheet" href="index.css" media="screen" />
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
@@ -94,9 +96,9 @@
             Wetterstation Niederhelfenschwil
           </h3>
           <p class="weather-intro"
-             data-de="Eine automatische Wetterstation auf 605 m Höhe mit kontinuierlicher Datenerfassung und Überwachung."
-             data-en="An automated weather station at 605 m altitude with continuous data monitoring and recording.">
-            Eine automatische Wetterstation auf 605 m Höhe mit kontinuierlicher Datenerfassung und Überwachung.
+             data-de="Eine automatische Wetterstation auf 585 m Höhe mit kontinuierlicher Datenerfassung und Überwachung."
+             data-en="An automated weather station at 585 m altitude with continuous data monitoring and recording.">
+            Eine automatische Wetterstation auf 585 m Höhe mit kontinuierlicher Datenerfassung und Überwachung.
           </p>
           <a href="pages/weather/weather.html" class="btn btn-primary"
              data-de="Zu den Wetterdaten" data-en="View Weather Data">
@@ -131,9 +133,13 @@
   <script src="components/nav.js" defer></script>
   <script src="components/sidebar.js" defer></script>
   <script src="language-toggle.js" defer></script>
-  <script src="library/timeline/timeline-vertical.js" defer></script>
 
-  <script type="module" defer>
+  <script type="module">
+    // timeline-vertical.js is an ES module: it must be imported here, not loaded
+    // as a classic <script> tag (that throws a syntax error on import/export and
+    // never defines TimelineVertical).
+    import { TimelineVertical } from './library/timeline/timeline-vertical.js';
+
     // Initialize nav and sidebar
     document.addEventListener('DOMContentLoaded', () => {
       renderNav('home', '');
@@ -142,37 +148,17 @@
       // Timeline data
       const blogTimelineData = [
         {
-          id: 'blog-overview',
-          date: '2026-03-28',
-          title: 'Blog Übersicht',
-          titleEN: 'Blog Overview',
-          description: 'Alle Beiträge zu Wetterstation, Fotografie und Technik an einem Ort.',
-          descriptionEN: 'All posts about weather station, photography, and technology in one place.',
-          link: 'pages/blog/blog.html',
-          linkLabel: 'Zum Blog',
-          linkLabelEN: 'Go to Blog'
-        },
-        {
-          id: 'blog-photography-update',
-          date: '2024-06-15',
-          title: 'Neue Fotografie-Sammlung: Alpenlandschaften',
-          titleEN: 'New Photography Collection: Alpine Landscapes',
-          description: 'Eine neue Serie von Fotografien aus den Schweizer Bergen und Naturschutzgebieten.',
-          descriptionEN: 'A new series of photographs from Swiss mountains and nature reserves.',
-          link: 'pages/blog/blog.html',
-          linkLabel: 'Mehr lesen',
-          linkLabelEN: 'Read More'
-        },
-        {
-          id: 'blog-tech-improvements',
-          date: '2023-11-20',
-          title: 'Verbesserte Datenverarbeitung der Wetterstation',
-          titleEN: 'Enhanced Weather Station Data Processing',
-          description: 'Technische Verbesserungen bei der Echtzeitdatenerfassung und Visualisierung.',
-          descriptionEN: 'Technical improvements in real-time data collection and visualization.',
-          link: 'pages/blog/blog.html',
-          linkLabel: 'Mehr lesen',
-          linkLabelEN: 'Read More'
+          id: 'seasonscapes-paper',
+          date: '2026-06-07',
+          title: 'SeasonScapes Paper veröffentlicht',
+          titleEN: 'SeasonScapes Paper Published',
+          description: 'Learning Large-scale Re-lightable 3D Landscapes with Seasonal Variation from Sparse Webcams - Ein neues Paper über 3D-Rekonstruktion von Berglandschaften mit saisonalen Variationen.',
+          descriptionEN: 'Learning Large-scale Re-lightable 3D Landscapes with Seasonal Variation from Sparse Webcams - A new paper on 3D reconstruction of mountain landscapes with seasonal variations.',
+          image: 'images/seasonscapes/seasonscapes-teaser.jpg',
+          imageAlt: 'SeasonScapes teaser: seasonal novel-view rendering and dataset overview',
+          link: 'pages/blog/post-20260607-seasonscapes.html',
+          linkLabel: 'Zum Artikel',
+          linkLabelEN: 'Read Article'
         },
         {
           id: 'blog-weatherstation-installation',
@@ -187,9 +173,9 @@
         }
       ];
 
-      // Create timeline if the component is available
+      // Create timeline (TimelineVertical is now imported at the top of this module)
       const timelineContainer = document.getElementById('projectsTimeline');
-      if (timelineContainer && typeof TimelineVertical !== 'undefined') {
+      if (timelineContainer) {
         new TimelineVertical(timelineContainer, {
           items: blogTimelineData,
           locale: 'de-CH',

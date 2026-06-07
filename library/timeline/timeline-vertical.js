@@ -69,8 +69,15 @@ export class TimelineVertical {
       const title = item.title || "";
       const dateLabel = this.options.cardDateFormatter(item, this.core);
 
+      const image = item.raw.image || item.metadata?.image || "";
+      const imageAlt = item.raw.imageAlt || item.metadata?.imageAlt || title;
+      const mediaHtml = image
+        ? `<div class="timeline-card-media"><img src="${image}" alt="${imageAlt}" loading="lazy" /></div>`
+        : "";
+
       card.innerHTML = `
         <div class="timeline-card-inner">
+          ${mediaHtml}
           <time class="timeline-date" datetime="${item.date.toISOString()}">${dateLabel}</time>
           <h3 class="timeline-card-title">${title}</h3>
           <p class="timeline-card-description">${description}</p>
