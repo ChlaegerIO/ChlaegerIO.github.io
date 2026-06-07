@@ -69,6 +69,13 @@ body {
   display: inline-block;
 }
 
+.page-title {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+}
+
 .section-intro {
   font-size: 1rem;
   line-height: 1.8;
@@ -77,13 +84,16 @@ body {
 }
 
 .focus-title,
-.hobbies-title,
 .weather-title,
 .timeline-title {
   font-size: 1.1rem;
   font-weight: 600;
   color: #0f172a;
   margin-bottom: 1rem;
+}
+
+.hobbies-section {
+  margin-bottom: 2rem;
 }
 
 /* ============================================
@@ -131,17 +141,26 @@ body {
 }
 
 /* ============================================
-   Photo Card
+   Photo Card & Section
    ============================================ */
+
+.photo-section {
+  padding: 0 1rem;
+  margin-bottom: 3rem;
+}
+
+.photo-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
 
 .photo-card {
   border-radius: 20px;
   box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
-  max-width: 600px;
   width: 100%;
   height: auto;
   display: block;
-  margin: 0 auto;
   object-fit: cover;
   transition: transform 300ms ease, box-shadow 300ms ease;
 }
@@ -149,6 +168,29 @@ body {
 .photo-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 30px 60px rgba(15, 23, 42, 0.15);
+}
+
+.photo-link-text {
+  position: absolute;
+  right: 2rem;
+  top: 10%;
+  font-size: 1.2rem;
+  z-index: 10;
+}
+
+.photo-link {
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid #0f172a;
+  padding: 1rem 2rem;
+  display: inline-block;
+  transition: all 200ms ease;
+}
+
+.photo-link:hover {
+  color: #478ac9;
+  border-color: #478ac9;
 }
 
 /* ============================================
@@ -350,7 +392,6 @@ body {
   }
 
   .focus-title,
-  .hobbies-title,
   .weather-title,
   .timeline-title {
     font-size: 1.2rem;
@@ -360,6 +401,15 @@ body {
   .hobbies-text,
   .weather-intro {
     font-size: 0.95rem;
+  }
+
+  .photo-link-text {
+    right: 1.5rem;
+  }
+
+  .photo-link {
+    padding: 0.8rem;
+    font-size: 1rem;
   }
 
   .focus-list li {
@@ -395,7 +445,6 @@ body {
   }
 
   .focus-title,
-  .hobbies-title,
   .weather-title,
   .timeline-title {
     font-size: 1.1rem;
@@ -410,6 +459,16 @@ body {
   .focus-list li {
     font-size: 0.95rem;
     padding-left: 2rem;
+  }
+
+  .photo-link-text {
+    right: 1rem;
+  }
+
+  .photo-link {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    border: 1.5px solid #0f172a;
   }
 
   .btn {
