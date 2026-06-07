@@ -29,9 +29,9 @@ function renderNav(activePage, basePath) {
           <div class="nav-container">
             <ul class="nav-list">
               <li><a href="${homeLink}" class="nav-link ${isActive('home')}" data-de="Timo Kleger" data-en="Timo Kleger">Timo Kleger</a></li>
-              <li><a href="${cvLink}" class="nav-link ${isActive('cv')}" data-de="CV" data-en="CV">CV</a></li>
               <li><a href="${weatherLink}" class="nav-link ${isActive('weather')}" data-de="Wetter" data-en="Weather">Wetter</a></li>
               <li><a href="${photoLink}" class="nav-link ${isActive('photography')}" data-de="Fotografie" data-en="Photography">Fotografie</a></li>
+              <li><a href="${cvLink}" class="nav-link ${isActive('cv')}" data-de="CV" data-en="CV">CV</a></li>
               <li>
                 <button id="languageToggle" class="btn btn-icon btn-ghost language-toggle" onclick="toggleLanguage()" title="Language / Sprache">
                   <span class="material-icons language-icon">compare_arrows</span>
