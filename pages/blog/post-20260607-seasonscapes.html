@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html style="font-size: 16px">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="keywords" content="SeasonScapes, 3D Reconstruction, Computer Vision, Machine Learning, Neural Rendering" />
+  <meta name="description" content="SeasonScapes: Learning Large-scale Re-lightable 3D Landscapes with Seasonal Variation from Sparse Webcams" />
+  <title data-de="SeasonScapes Paper" data-en="SeasonScapes Paper">SeasonScapes</title>
+
+  <link rel="stylesheet" href="../../library/ui/fonts.css" media="screen" />
+  <link rel="stylesheet" href="../../library/ui/styles.css" media="screen" />
+  <link rel="stylesheet" href="../../library/ui/animations.css" media="screen" />
+  <link rel="stylesheet" href="../../library/ui/buttons.css" media="screen" />
+  <link rel="stylesheet" href="../../library/ui/sidebar.css" media="screen" />
+  <link rel="stylesheet" href="blog.css" media="screen" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" />
+  <link rel="icon" type="image/png" href="../../images/Logo_ohneSchrift.png" />
+
+  <meta name="theme-color" content="#478ac9" />
+  <meta property="og:title" content="SeasonScapes: Learning Large-scale Re-lightable 3D Landscapes" />
+  <meta property="og:type" content="article" />
+</head>
+
+<body class="u-body u-xl-mode">
+  <!-- Navigation placeholder (filled by nav.js) -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Main page wrapper -->
+  <div class="page-wrapper">
+    <!-- Sidebar placeholder (filled by sidebar.js) -->
+    <div id="sidebar-placeholder"></div>
+
+    <!-- Main content -->
+    <main class="page-content">
+      <div class="content-column">
+
+        <!-- Blog Header -->
+        <section class="blog-header">
+          <h1 class="blog-title" data-de="SeasonScapes Paper" data-en="SeasonScapes Paper">SeasonScapes Paper</h1>
+          <p class="blog-intro"
+             data-de="Lernen großflächiger neu-beleuchter 3D-Landschaften mit saisonalen Variationen aus spärlichen Webcam-Bildern"
+             data-en="Learning Large-scale Re-lightable 3D Landscapes with Seasonal Variation from Sparse Webcams">
+            Lernen großflächiger neu-beleuchter 3D-Landschaften mit saisonalen Variationen aus spärlichen Webcam-Bildern
+          </p>
+        </section>
+
+        <!-- Blog Content -->
+        <article class="blog-content">
+          <figure class="blog-figure">
+            <img src="../../images/seasonscapes/seasonscapes-teaser.jpg"
+                 alt="SeasonScapes Teaser: saisonale Novel-View-Darstellung und Dataset-Überblick" />
+            <figcaption data-de="Saisonale Novel-View- und Beleuchtungsdarstellung (Frühling bis Aurora) sowie ein Überblick über das SeasonScapes-Dataset: 32 Standorte, 85'419 Bilder, 13 Zeitpunkte über ein Jahr, 50 × 60 km."
+                        data-en="Seasonal novel-view and illumination rendering (spring to aurora) alongside an overview of the SeasonScapes dataset: 32 locations, 85,419 images, 13 timestamps over a year, 50 × 60 km.">
+              Saisonale Novel-View- und Beleuchtungsdarstellung (Frühling bis Aurora) sowie ein Überblick über das SeasonScapes-Dataset: 32 Standorte, 85'419 Bilder, 13 Zeitpunkte über ein Jahr, 50 × 60 km.
+            </figcaption>
+          </figure>
+
+          <h2 data-de="Überblick" data-en="Overview">Überblick</h2>
+          <p data-de="SeasonScapes ist ein ehrgeiziges Projekt zur Erfassung und Rekonstruktion großflächiger Berglandschaften über mehrere Jahreszeiten hinweg. Mit über 85.000 Webcam-Bildern von 32 verschiedenen Standorten über ein ganzes Jahr verteilt, zeigt dieses Projekt, wie moderne Computer Vision und Machine Learning Techniken eingesetzt werden können, um die Schönheit und Dynamik der Natur zu erfassen und zu rekonstruieren." data-en="SeasonScapes is an ambitious project for capturing and reconstructing large-scale mountain landscapes across multiple seasons. With over 85,000 webcam images from 32 different locations distributed across a full year, this project demonstrates how modern computer vision and machine learning techniques can be used to capture and reconstruct the beauty and dynamics of nature.">
+            SeasonScapes ist ein ehrgeiziges Projekt zur Erfassung und Rekonstruktion großflächiger Berglandschaften über mehrere Jahreszeiten hinweg. Mit über 85.000 Webcam-Bildern von 32 verschiedenen Standorten über ein ganzes Jahr verteilt, zeigt dieses Projekt, wie moderne Computer Vision und Machine Learning Techniken eingesetzt werden können, um die Schönheit und Dynamik der Natur zu erfassen und zu rekonstruieren.
+          </p>
+
+          <h2 data-de="Hauptmerkmale" data-en="Key Features">Hauptmerkmale</h2>
+
+          <h3 data-de="1. SeasonScapes Dataset" data-en="1. SeasonScapes Dataset">1. SeasonScapes Dataset</h3>
+          <p data-de="Das Herzstück dieses Projekts ist ein umfangreiches Dataset mit Schweizer Berglandschaften. Es umfasst über 50 km × 60 km Gelände und 85.000 Bilder von 32 verschiedenen Webcam-Standorten, aufgenommen über 13 Zeitstempel im Laufe eines Jahres. Dies ermöglicht es, saisonale Variationen und zeitliche Veränderungen zu erfassen." data-en="At the heart of this project is a comprehensive dataset of Swiss mountain landscapes. It covers over 50 km × 60 km of terrain and 85,000 images from 32 different webcam locations, captured over 13 timestamps throughout a year. This enables capturing seasonal variations and temporal changes.">
+            Das Herzstück dieses Projekts ist ein umfangreiches Dataset mit Schweizer Berglandschaften. Es umfasst über 50 km × 60 km Gelände und 85.000 Bilder von 32 verschiedenen Webcam-Standorten, aufgenommen über 13 Zeitstempel im Laufe eines Jahres. Dies ermöglicht es, saisonale Variationen und zeitliche Veränderungen zu erfassen.
+          </p>
+
+          <h3 data-de="2. Saisonale 3D-Rekonstruktion" data-en="2. Seasonal 3D Reconstruction">2. Saisonale 3D-Rekonstruktion</h3>
+          <p data-de="Der Algorithmus projiziert zeitgestempelte Bilder auf 3D-Netze, um temporalbewusste Landschaften zu konstruieren. Diese Methode erfasst nicht nur die räumliche Geometrie, sondern auch die Veränderungen der Landschaft über die Jahreszeiten hinweg - von grünen Sommerlandschaften bis zu schneebedeckten Winterszenen." data-en="The algorithm projects time-stamped images onto 3D meshes to construct temporally-aware landscapes. This method captures not only spatial geometry but also changes in the landscape across seasons - from green summer landscapes to snow-covered winter scenes.">
+            Der Algorithmus projiziert zeitgestempelte Bilder auf 3D-Netze, um temporalbewusste Landschaften zu konstruieren. Diese Methode erfasst nicht nur die räumliche Geometrie, sondern auch die Veränderungen der Landschaft über die Jahreszeiten hinweg - von grünen Sommerlandschaften bis zu schneebedeckten Winterszenen.
+          </p>
+
+          <figure class="blog-figure">
+            <img src="../../images/seasonscapes/seasonscapes-pipeline.jpg"
+                 alt="SeasonScapes Pipeline: Pose-Optimierung, Vorverarbeitung, Mesh-Painting und Gaussian-Training" />
+            <figcaption data-de="Überblick über die Pipeline: Pose-Optimierung, Vorverarbeitung, diffusionsbasiertes Mesh-Painting und Gaussian-Training."
+                        data-en="Overview of the pipeline: pose optimization, preprocessing, diffusion-based mesh painting, and Gaussian training.">
+              Überblick über die Pipeline: Pose-Optimierung, Vorverarbeitung, diffusionsbasiertes Mesh-Painting und Gaussian-Training.
+            </figcaption>
+          </figure>
+
+          <h3 data-de="3. Diffusion-basiertes Inpainting" data-en="3. Diffusion-based Inpainting">3. Diffusion-basiertes Inpainting</h3>
+          <p data-de="Bedingte Diffusionsmodelle werden eingesetzt, um fehlende Bereiche in den Bildern zu ergänzen. Dies ist besonders wichtig, da Verdeckungen durch andere Objekte oder Bereiche außerhalb des Sichtfeldes entstehen können. Die KI-gestützte Inpainting-Methode füllt diese Lücken intelligent auf, basierend auf den umgebenden Kontextinformationen." data-en="Conditional diffusion models are used to complete missing areas in images. This is particularly important since occlusions can occur from other objects or areas outside the field of view. The AI-powered inpainting method intelligently fills these gaps based on surrounding context information.">
+            Bedingte Diffusionsmodelle werden eingesetzt, um fehlende Bereiche in den Bildern zu ergänzen. Dies ist besonders wichtig, da Verdeckungen durch andere Objekte oder Bereiche außerhalb des Sichtfeldes entstehen können. Die KI-gestützte Inpainting-Methode füllt diese Lücken intelligent auf, basierend auf den umgebenden Kontextinformationen.
+          </p>
+
+          <figure class="blog-figure">
+            <img src="../../images/seasonscapes/seasonscapes-inpainting.jpg"
+                 alt="Diffusionsbasiertes UV-Inpainting mit ControlNet aus Tiefen- und RGB-Rendering" />
+            <figcaption data-de="Diffusionsbasiertes UV-Inpainting: Aus Tiefen- und RGB-Rendering sowie einer Inpainting-Maske ergänzt ein ControlNet die UV-Textur des 3D-Netzes."
+                        data-en="Diffusion-based UV inpainting: from depth and RGB renderings plus an inpainting mask, a ControlNet completes the UV texture of the 3D mesh.">
+              Diffusionsbasiertes UV-Inpainting: Aus Tiefen- und RGB-Rendering sowie einer Inpainting-Maske ergänzt ein ControlNet die UV-Textur des 3D-Netzes.
+            </figcaption>
+          </figure>
+
+          <h3 data-de="4. Neu-beleuchtbare Modelle" data-en="4. Re-lightable Models">4. Neu-beleuchtbare Modelle</h3>
+          <p data-de="Die rekonstruierten 3D-Netze sind mit physikalisch-basiertem Rendering kompatibel, was bedeutet, dass die Landschaften unter verschiedenen Lichtverhältnissen visualisiert werden können. Dies eröffnet neue Möglichkeiten für Anwendungen wie VR, Film und Visualisierung." data-en="The reconstructed 3D meshes are compatible with physically-based rendering, which means the landscapes can be visualized under different lighting conditions. This opens new possibilities for applications like VR, film, and visualization.">
+            Die rekonstruierten 3D-Netze sind mit physikalisch-basiertem Rendering kompatibel, was bedeutet, dass die Landschaften unter verschiedenen Lichtverhältnissen visualisiert werden können. Dies eröffnet neue Möglichkeiten für Anwendungen wie VR, Film und Visualisierung.
+          </p>
+
+          <figure class="blog-figure">
+            <img src="../../images/seasonscapes/seasonscapes-result.jpg"
+                 alt="Gerendertes Ergebnis: rekonstruierte Berglandschaft aus neuer Perspektive" />
+            <figcaption data-de="Gerendertes Ergebnis: eine rekonstruierte Berglandschaft, dargestellt aus einer neuen, frei wählbaren Perspektive."
+                        data-en="Rendered result: a reconstructed mountain landscape shown from a new, freely chosen viewpoint.">
+              Gerendertes Ergebnis: eine rekonstruierte Berglandschaft, dargestellt aus einer neuen, frei wählbaren Perspektive.
+            </figcaption>
+          </figure>
+
+          <h2 data-de="Technische Highlights" data-en="Technical Highlights">Technische Highlights</h2>
+          <ul>
+            <li data-de="Multi-View Fotogrammetrie mit spärlichen Webcam-Aufnahmen" data-en="Multi-view photogrammetry with sparse webcam captures">Multi-View Fotogrammetrie mit spärlichen Webcam-Aufnahmen</li>
+            <li data-de="Saisonale Variation und temporale Konsistenz" data-en="Seasonal variation and temporal consistency">Saisonale Variation und temporale Konsistenz</li>
+            <li data-de="Generative Modelle für Bildvervollständigung" data-en="Generative models for image completion">Generative Modelle für Bildvervollständigung</li>
+            <li data-de="Physikalisch-basiertes Rendering für realistische Visualisierung" data-en="Physics-based rendering for realistic visualization">Physikalisch-basiertes Rendering für realistische Visualisierung</li>
+          </ul>
+
+          <h2 data-de="Anwendungen" data-en="Applications">Anwendungen</h2>
+          <p data-de="Dieses Projekt hat zahlreiche potenzielle Anwendungen:" data-en="This project has numerous potential applications:">
+            Dieses Projekt hat zahlreiche potenzielle Anwendungen:
+          </p>
+          <ul>
+            <li data-de="Digitale Archivierung von Naturlandschaften" data-en="Digital archiving of natural landscapes">Digitale Archivierung von Naturlandschaften</li>
+            <li data-de="Klimaforschung und Überwachung von Umweltveränderungen" data-en="Climate research and monitoring environmental changes">Klimaforschung und Überwachung von Umweltveränderungen</li>
+            <li data-de="Immersive VR- und Augmented Reality-Anwendungen" data-en="Immersive VR and augmented reality applications">Immersive VR- und Augmented Reality-Anwendungen</li>
+            <li data-de="Film und Entertainment Industry" data-en="Film and entertainment industry">Film und Entertainment Industry</li>
+            <li data-de="Architektur- und Tourismusplanung" data-en="Architecture and tourism planning">Architektur- und Tourismusplanung</li>
+          </ul>
+
+          <h2 data-de="Fazit" data-en="Conclusion">Fazit</h2>
+          <p data-de="SeasonScapes demonstriert die Kraft der Kombination von klassischer Computergrafik mit modernen Deep Learning Techniken. Durch die Nutzung von großflächigen Webcam-Daten und innovativen Methoden zur Bildvervollständigung ist es möglich, beeindruckende 3D-Rekonstruktionen von natürlichen Landschaften zu erstellen, die nicht nur räumlich genau sind, sondern auch die zeitlichen Variationen erfassen." data-en="SeasonScapes demonstrates the power of combining classical computer graphics with modern deep learning techniques. By leveraging large-scale webcam data and innovative image completion methods, it's possible to create impressive 3D reconstructions of natural landscapes that are not only spatially accurate but also capture temporal variations.">
+            SeasonScapes demonstriert die Kraft der Kombination von klassischer Computergrafik mit modernen Deep Learning Techniken. Durch die Nutzung von großflächigen Webcam-Daten und innovativen Methoden zur Bildvervollständigung ist es möglich, beeindruckende 3D-Rekonstruktionen von natürlichen Landschaften zu erstellen, die nicht nur räumlich genau sind, sondern auch die zeitlichen Variationen erfassen.
+          </p>
+
+          <p data-de="Das Paper ist auf arXiv verfügbar und stellt einen wichtigen Beitrag zur Schnitttstelle von Computer Vision, 3D-Rekonstruktion und generativen Modellen dar." data-en="The paper is available on arXiv and represents an important contribution to the intersection of computer vision, 3D reconstruction, and generative models.">
+            Das Paper ist auf arXiv verfügbar und stellt einen wichtigen Beitrag zur Schnitttstelle von Computer Vision, 3D-Rekonstruktion und generativen Modellen dar.
+          </p>
+
+          <div class="blog-links">
+            <a href="https://arxiv.org/abs/2605.09039" target="_blank" rel="noopener noreferrer" class="btn btn-primary"
+               data-de="Paper auf arXiv" data-en="Read on arXiv">
+              Paper auf arXiv
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-main">
+    <div class="footer-content">
+      <p data-de="© 2025 Timo Kleger. Alle Rechte vorbehalten." data-en="© 2025 Timo Kleger. All rights reserved.">
+        © 2025 Timo Kleger. Alle Rechte vorbehalten.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../../components/nav.js" defer></script>
+  <script src="../../components/sidebar.js" defer></script>
+  <script src="../../language-toggle.js" defer></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderNav('blog', '../../');
+      renderSidebar('../../');
+
+      if (typeof applyLanguage === 'function') {
+        const savedLang = localStorage.getItem('language') || 'de';
+        applyLanguage(savedLang);
+      }
+    });
+  </script>
+</body>
+</html>

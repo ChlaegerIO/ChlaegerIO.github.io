@@ -1,37 +1,40 @@
 .timeline-vertical {
   position: relative;
-  padding: 2rem 0;
+  /* Left rail that holds the vertical bar + dots */
+  padding: 0.25rem 0 0.25rem 2.5rem;
 }
 
+/* Vertical bar on the LEFT, spanning the full (scrollable) content height */
 .timeline-vertical::before {
   content: "";
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 8px;
+  top: 0;
+  bottom: 0;
   width: 3px;
-  height: 100%;
   background: linear-gradient(180deg, var(--timeline-primary), rgba(37, 99, 235, 0.1));
   border-radius: 2px;
 }
 
+/* Cards: full width to the right of the bar, compact */
 .timeline-vertical .timeline-vertical-card {
   position: relative;
-  width: 45%;
-  margin-bottom: 3rem;
+  width: 100%;
+  margin: 0 0 1rem 0;
+  /* Override the roomy core padding for a more compact card */
+  padding: 0.85rem 1rem;
+  background: #ffffff;
   border: 1px solid var(--timeline-border);
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
   cursor: pointer;
 }
 
-.timeline-vertical .timeline-vertical-card:nth-child(odd) {
-  margin-left: 0;
-  margin-right: auto;
+.timeline-vertical .timeline-vertical-card:last-child {
+  margin-bottom: 0;
 }
 
-.timeline-vertical .timeline-vertical-card:nth-child(even) {
-  margin-left: auto;
-  margin-right: 0;
-}
-
+/* Timeline dot, centered on the left bar */
 .timeline-vertical .timeline-vertical-card::after {
   content: "";
   position: absolute;
@@ -41,53 +44,67 @@
   background: var(--timeline-primary);
   border: 3px solid #ffffff;
   box-shadow: 0 0 0 3px var(--timeline-primary-soft);
-  top: 2rem;
-  right: -70px;
+  top: 1rem;
+  left: -32px;
 }
 
-.timeline-vertical .timeline-vertical-card:nth-child(even)::after {
-  left: -70px;
-  right: auto;
+.timeline-vertical .timeline-vertical-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1);
 }
 
 .timeline-vertical .timeline-vertical-card.is-active {
   border-color: var(--timeline-primary);
-  box-shadow: 0 16px 40px rgba(37, 99, 235, 0.18);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.18);
+}
+
+/* Optional banner image (teaser) */
+.timeline-vertical .timeline-card-media {
+  margin-bottom: 0.6rem;
+}
+
+.timeline-vertical .timeline-card-media img {
+  display: block;
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .timeline-vertical .timeline-date {
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: var(--timeline-primary);
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
 }
 
 .timeline-vertical .timeline-card-title {
-  margin: 0.5rem 0;
+  margin: 0.1rem 0 0.35rem;
+  font-size: 1.05rem;
+  line-height: 1.3;
 }
 
 .timeline-vertical .timeline-card-description {
-  margin: 0.75rem 0;
+  margin: 0 0 0.6rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .timeline-vertical .timeline-card-link {
-  margin-top: 0.75rem;
+  margin-top: 0.25rem;
 }
 
 @media (max-width: 768px) {
-  .timeline-vertical::before {
-    left: calc(50% - 40px);
-  }
-
-  .timeline-vertical .timeline-vertical-card {
-    width: 75%;
-    margin-left: 0 !important;
-    margin-right: auto !important;
+  .timeline-vertical {
+    padding-left: 2.25rem;
   }
 
   .timeline-vertical .timeline-vertical-card::after {
-    left: -58px;
-    right: auto;
+    left: -30px;
+  }
+
+  .timeline-vertical .timeline-card-media img {
+    height: 110px;
   }
 }
