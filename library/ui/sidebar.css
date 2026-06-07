@@ -37,6 +37,7 @@
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
   transition: transform 200ms ease;
+  margin-bottom: 0.5rem;
 }
 
 .sidebar-photo:hover {
@@ -85,14 +86,16 @@
   color: #333;
   font-size: 0.9rem;
   font-weight: 500;
-  transition: color 200ms ease;
+  transition: color 200ms ease, opacity 200ms ease;
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.6rem;
+  opacity: 0.65;
 }
 
 .sidebar-links a:hover {
   color: #478ac9;
+  opacity: 1;
 }
 
 .sidebar-icon {

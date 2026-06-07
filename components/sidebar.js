@@ -24,9 +24,9 @@ function renderSidebar(basePath) {
             <span data-de="St. Gallen, Schweiz" data-en="St. Gallen, Switzerland">St. Gallen, Schweiz</span>
           </li>
           <li>
-            <a href="mailto:klegertimo@gmail.com" title="Email">
+            <a href="mailto:timokleger@hotmail.com" title="Email">
               <span class="sidebar-icon material-icons material-icons-sidebar">email</span>
-              <span>klegertimo@gmail.com</span>
+              <span>Email</span>
             </a>
           </li>
           <li>
@@ -63,7 +63,7 @@ function renderSidebar(basePath) {
             <a href="https://stock.adobe.com/de/contributor/210079993/Kleger%20photography" target="_blank" rel="noopener noreferrer" title="Adobe Stock">
               <span class="sidebar-icon">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                  <path d="M12 0C5.371 0 0 5.373 0 12s5.371 12 12 12 12-5.373 12-12S18.629 0 12 0zm4.891 15.891h-2.458v-4.034a1.41 1.41 0 0 0-1.417-1.417h-2.859v5.451H7.698V8.109h2.459v1.134h.034c.322-.611.966-1.415 1.98-1.415 2.101 0 3.92 1.32 3.92 4.23v3.833zM6.891 6.974a1.416 1.416 0 1 1 0-2.832 1.416 1.416 0 0 1 0 2.832zm1.324 8.917H5.567V8.109h2.648v7.782z"/>
                 </svg>
               </span>
               <span>Adobe Stock</span>
