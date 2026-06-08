@@ -59,12 +59,12 @@
           </figure>
 
           <h2 data-de="Abstract" data-en="Abstract">Abstract</h2>
-          <p data-de="SeasonScapes ist ein ehrgeiziges Projekt zur Erfassung und Rekonstruktion großflächiger Berglandschaften über mehrere Jahreszeiten hinweg. Mit über 85.000 Webcam-Bildern von 32 verschiedenen Standorten über ein ganzes Jahr verteilt, zeigt dieses Projekt, wie moderne Computer Vision und Machine Learning Techniken eingesetzt werden können, um die Schönheit und Dynamik der Natur zu erfassen und zu rekonstruieren." 
-          data-en="We introduce SeasonScapes framework and a the SeasonScapes dataset: Swiss Sparse-view Mountain Scenes with Seasonal Changes that covers over 50 km x 60 km, composed of more than 85,000 webcam images captured from 32 different locations across 13 timestamps throughout a full year. By projecting these timestamp-specific images onto a 3D mesh, we construct seasonal 3D landscapes that reflect natural appearance changes over time. To address occlusions and missing data, we leverage conditional diffusion models for image-guided inpainting directly on the mesh. The resulting completed meshes can be further relighted using standard physically-based renderer.">
-            SeasonScapes ist ein ehrgeiziges Projekt zur Erfassung und Rekonstruktion großflächiger Berglandschaften über mehrere Jahreszeiten hinweg. Mit über 85.000 Webcam-Bildern von 32 verschiedenen Standorten über ein ganzes Jahr verteilt, zeigt dieses Projekt, wie moderne Computer Vision und Machine Learning Techniken eingesetzt werden können, um die Schönheit und Dynamik der Natur zu erfassen und zu rekonstruieren.
+          <p data-de="Wir stellen das SeasonScapes-Framework und den SeasonScapes-Datensatz vor: Swiss Sparse-view Mountain Scenes with Seasonal Changes, der über 50 km × 60 km abdeckt und aus mehr als 85'000 Webcam-Bildern von 32 verschiedenen Standorten über 13 Zeitpunkte eines ganzen Jahres besteht. Durch die Projektion dieser zeitpunktspezifischen Bilder auf ein 3D-Mesh konstruieren wir saisonale 3D-Landschaften, die natürliche Erscheinungsveränderungen über die Zeit widerspiegeln. Um Verdeckungen und fehlende Daten zu behandeln, nutzen wir konditionierte Diffusionsmodelle für bildgeführtes Inpainting direkt auf dem Mesh. Die fertiggestellten Meshes lassen sich anschliessend mit einem standardmässigen physikalisch basierten Renderer neu beleuchten."
+          data-en="We introduce the SeasonScapes framework and the SeasonScapes dataset: Swiss Sparse-view Mountain Scenes with Seasonal Changes, which covers over 50 km × 60 km and is composed of more than 85,000 webcam images captured from 32 different locations across 13 timestamps throughout a full year. By projecting these timestamp-specific images onto a 3D mesh, we construct seasonal 3D landscapes that reflect natural appearance changes over time. To address occlusions and missing data, we leverage conditional diffusion models for image-guided inpainting directly on the mesh. The resulting completed meshes can be further relighted using a standard physically-based renderer.">
+            Wir stellen das SeasonScapes-Framework und den SeasonScapes-Datensatz vor: Swiss Sparse-view Mountain Scenes with Seasonal Changes, der über 50 km × 60 km abdeckt und aus mehr als 85'000 Webcam-Bildern von 32 verschiedenen Standorten über 13 Zeitpunkte eines ganzen Jahres besteht. Durch die Projektion dieser zeitpunktspezifischen Bilder auf ein 3D-Mesh konstruieren wir saisonale 3D-Landschaften, die natürliche Erscheinungsveränderungen über die Zeit widerspiegeln. Um Verdeckungen und fehlende Daten zu behandeln, nutzen wir konditionierte Diffusionsmodelle für bildgeführtes Inpainting direkt auf dem Mesh. Die fertiggestellten Meshes lassen sich anschliessend mit einem standardmässigen physikalisch basierten Renderer neu beleuchten.
           </p>
 
-          <h2 data-de="Hauptmerkmale" data-en="Key Features">Hauptmerkmale</h2>
+          <h2 data-de="Zusammenfassung" data-en="Key Features">Hauptmerkmale</h2>
 
           <h3 data-de="1. SeasonScapes Dataset" data-en="1. SeasonScapes Dataset">1. SeasonScapes Dataset</h3>
           <p data-de="Das Herzstück dieses Projekts ist ein umfangreiches Dataset mit Schweizer Berglandschaften. Es umfasst über 50 km × 60 km Gelände und 85.000 Bilder von 32 verschiedenen Webcam-Standorten, aufgenommen über 13 Zeitstempel im Laufe eines Jahres. Dies ermöglicht es, saisonale Variationen und zeitliche Veränderungen zu erfassen." data-en="At the heart of this project is a comprehensive dataset of Swiss mountain landscapes. It covers over 50 km × 60 km of terrain and 85,000 images from 32 different webcam locations, captured over 13 timestamps throughout a year. This enables capturing seasonal variations and temporal changes.">
@@ -72,7 +72,8 @@
           </p>
 
           <h3 data-de="2. Saisonale 3D-Rekonstruktion" data-en="2. Seasonal 3D Reconstruction">2. Saisonale 3D-Rekonstruktion</h3>
-          <p data-de="Der Algorithmus projiziert zeitgestempelte Bilder auf 3D-Netze, um temporalbewusste Landschaften zu konstruieren. Diese Methode erfasst nicht nur die räumliche Geometrie, sondern auch die Veränderungen der Landschaft über die Jahreszeiten hinweg - von grünen Sommerlandschaften bis zu schneebedeckten Winterszenen." data-en="The algorithm projects time-stamped images onto 3D meshes to construct temporally-aware landscapes. This method captures not only spatial geometry but also changes in the landscape across seasons - from green summer landscapes to snow-covered winter scenes.">
+          <p data-de="Der Algorithmus projiziert zeitgestempelte Bilder auf 3D-Netze, um temporalbewusste Landschaften zu konstruieren. Diese Methode erfasst nicht nur die räumliche Geometrie, sondern auch die Veränderungen der Landschaft über die Jahreszeiten hinweg - von grünen Sommerlandschaften bis zu schneebedeckten Winterszenen." 
+          data-en="The algorithm projects time-stamped images onto 3D meshes to construct temporally-aware landscapes. This method captures not only spatial geometry but also changes in the landscape across seasons - from green summer landscapes to snow-covered winter scenes.">
             Der Algorithmus projiziert zeitgestempelte Bilder auf 3D-Netze, um temporalbewusste Landschaften zu konstruieren. Diese Methode erfasst nicht nur die räumliche Geometrie, sondern auch die Veränderungen der Landschaft über die Jahreszeiten hinweg - von grünen Sommerlandschaften bis zu schneebedeckten Winterszenen.
           </p>
 
@@ -86,7 +87,8 @@
           </figure>
 
           <h3 data-de="3. Diffusion-basiertes Inpainting" data-en="3. Diffusion-based Inpainting">3. Diffusion-basiertes Inpainting</h3>
-          <p data-de="Bedingte Diffusionsmodelle werden eingesetzt, um fehlende Bereiche in den Bildern zu ergänzen. Dies ist besonders wichtig, da Verdeckungen durch andere Objekte oder Bereiche außerhalb des Sichtfeldes entstehen können. Die KI-gestützte Inpainting-Methode füllt diese Lücken intelligent auf, basierend auf den umgebenden Kontextinformationen." data-en="Conditional diffusion models are used to complete missing areas in images. This is particularly important since occlusions can occur from other objects or areas outside the field of view. The AI-powered inpainting method intelligently fills these gaps based on surrounding context information.">
+          <p data-de="Bedingte Diffusionsmodelle werden eingesetzt, um fehlende Bereiche in den Bildern zu ergänzen. Dies ist besonders wichtig, da Verdeckungen durch andere Objekte oder Bereiche außerhalb des Sichtfeldes entstehen können. Die KI-gestützte Inpainting-Methode füllt diese Lücken intelligent auf, basierend auf den umgebenden Kontextinformationen." 
+          data-en="Conditional diffusion models are used to complete missing areas in images. This is particularly important since occlusions can occur from other objects or areas outside the field of view. The AI-powered inpainting method intelligently fills these gaps based on surrounding context information.">
             Bedingte Diffusionsmodelle werden eingesetzt, um fehlende Bereiche in den Bildern zu ergänzen. Dies ist besonders wichtig, da Verdeckungen durch andere Objekte oder Bereiche außerhalb des Sichtfeldes entstehen können. Die KI-gestützte Inpainting-Methode füllt diese Lücken intelligent auf, basierend auf den umgebenden Kontextinformationen.
           </p>
 
@@ -99,28 +101,84 @@
             </figcaption>
           </figure>
 
-          <h3 data-de="4. Neu-beleuchtbare Modelle" data-en="4. Re-lightable Models">4. Neu-beleuchtbare Modelle</h3>
-          <p data-de="Die rekonstruierten 3D-Netze sind mit physikalisch-basiertem Rendering kompatibel, was bedeutet, dass die Landschaften unter verschiedenen Lichtverhältnissen visualisiert werden können. Dies eröffnet neue Möglichkeiten für Anwendungen wie VR, Film und Visualisierung." data-en="The reconstructed 3D meshes are compatible with physically-based rendering, which means the landscapes can be visualized under different lighting conditions. This opens new possibilities for applications like VR, film, and visualization.">
-            Die rekonstruierten 3D-Netze sind mit physikalisch-basiertem Rendering kompatibel, was bedeutet, dass die Landschaften unter verschiedenen Lichtverhältnissen visualisiert werden können. Dies eröffnet neue Möglichkeiten für Anwendungen wie VR, Film und Visualisierung.
+          <h2 data-de="Algorithmus" data-en="Algorithm">Algorithmus</h2>
+          <p data-de="Das Training besteht aus zwei Phasen: einer <i>Paint</i>-Phase, die gültige Flächen des 3D-Netzes aus den Webcam-Aufnahmen texturiert, und einer <i>Inpaint</i>-Phase, die fehlende Bereiche mithilfe eines bedingten Diffusionsmodells direkt auf dem Netz ergänzt."
+             data-en="Training proceeds in two phases: a <i>paint</i> phase that textures valid mesh faces from the webcam captures, and an <i>inpaint</i> phase that completes missing regions with a conditional diffusion model directly on the mesh.">
+            Das Training besteht aus zwei Phasen: einer <i>Paint</i>-Phase, die gültige Flächen des 3D-Netzes aus den Webcam-Aufnahmen texturiert, und einer <i>Inpaint</i>-Phase, die fehlende Bereiche mithilfe eines bedingten Diffusionsmodells direkt auf dem Netz ergänzt.
           </p>
 
+          <figure class="algorithm-block" role="figure" aria-label="Algorithm 1: SeasonScapes Training">
+            <div class="algorithm-title">
+              <span class="algo-num"><span data-de="Algorithmus 1" data-en="Algorithm 1">Algorithmus 1</span></span>SeasonScapes Training
+            </div>
+            <div class="algorithm-body">
+              <div class="algo-line"><span class="algo-no"></span><span class="algo-code"><span class="algo-kw">Require:</span></span></div>
+              <div class="algo-line"><span class="algo-no"></span><span class="algo-code indent-1">Inputs:</span></div>
+              <div class="algo-line"><span class="algo-no"></span><span class="algo-code indent-2">• Webcam images <var>I</var><sub>w</sub> and pose <var>p</var><sub>w</sub></span></div>
+              <div class="algo-line"><span class="algo-no"></span><span class="algo-code indent-2">• Uncolored 3D mesh <var>M</var><sub>0</sub> with UV texture <var>T</var><sub>0</sub></span></div>
+              <div class="algo-line"><span class="algo-no"></span><span class="algo-code indent-2">• Inpainting path with poses {<var>p</var><sub>t</sub>}<sub>t=1</sub><sup>N</sup></span></div>
+              <div class="algo-line"><span class="algo-no"></span><span class="algo-code indent-2">• Diffusion parameters <var>F</var><sub>θ<sub>d</sub></sub>, <var>F</var><sub>θ<sub>c</sub></sub>, <var>F</var><sub>θ<sub>a</sub></sub></span></div>
+              <div class="algo-line"><span class="algo-no"></span><span class="algo-code indent-2">• Text, IP-Image guidance <var>g</var></span></div>
+              <div class="algo-line"><span class="algo-no"></span><span class="algo-code"><span class="algo-kw">Ensure:</span> Estimate the UV texture <var>T</var></span></div>
+              <div class="algo-line"><span class="algo-no">1:</span><span class="algo-code"><b>for</b> <var>t</var> = 1 <b>to</b> <var>W</var> <b>do</b></span></div>
+              <div class="algo-line"><span class="algo-no">2:</span><span class="algo-code indent-1"><span class="algo-comment">▷ Paint</span></span></div>
+              <div class="algo-line"><span class="algo-no">3:</span><span class="algo-code indent-1">Render valid face indices: <var>f</var><sub>t</sub><sup>(idx)</sup> ← <var>R</var>(<var>M</var>, <var>p</var><sub>t</sub>)</span></div>
+              <div class="algo-line"><span class="algo-no">4:</span><span class="algo-code indent-1">Texture: <var>T</var><sub>t</sub> ← <var>T</var>(<var>M</var><sub>t−1</sub>, <var>f</var><sub>t</sub><sup>(idx)</sup>, <var>m</var><sub>t−1</sub><sup>UV</sup>)</span></div>
+              <div class="algo-line"><span class="algo-no">5:</span><span class="algo-code"><var>T</var><sub>t</sub> ← <var>T</var><sub>W</sub>, <var>M</var><sub>0</sub> ← <var>M</var><sub>W</sub></span></div>
+              <div class="algo-line"><span class="algo-no">6:</span><span class="algo-code"><b>for</b> <var>t</var> = 1 <b>to</b> <var>N</var> <b>do</b></span></div>
+              <div class="algo-line"><span class="algo-no">7:</span><span class="algo-code indent-1"><span class="algo-comment">▷ Inpaint</span></span></div>
+              <div class="algo-line"><span class="algo-no">8:</span><span class="algo-code indent-1">Render depth, face indices: <var>d</var><sub>t</sub>, <var>f</var><sub>t</sub><sup>(idx)</sup> ← <var>R</var>(<var>M</var><sub>t−1</sub>, <var>p</var><sub>t</sub>)</span></div>
+              <div class="algo-line"><span class="algo-no">9:</span><span class="algo-code indent-1">Render RGB: <var>x&#x0303;</var><sub>t</sub> ← <var>R</var>(<var>M</var><sub>t−1</sub>, <var>p</var><sub>t</sub>)</span></div>
+              <div class="algo-line"><span class="algo-no">10:</span><span class="algo-code indent-1">Mask RGB: <var>m&#x0303;</var><sub>t</sub> ← Mask(<var>x&#x0303;</var><sub>t</sub>)</span></div>
+              <div class="algo-line"><span class="algo-no">11:</span><span class="algo-code indent-1">Inpaint: <var>x</var><sub>t</sub> ← <var>F</var><sub>θ</sub>(<var>x&#x0303;</var><sub>t</sub>, <var>m&#x0303;</var><sub>t</sub>, <var>g</var>, <var>d</var><sub>t</sub>; θ<sub>t</sub>, θ<sub>d</sub>, θ<sub>c</sub>)</span></div>
+              <div class="algo-line"><span class="algo-no">12:</span><span class="algo-code indent-1">Texture: <var>T</var><sub>t</sub> ← <var>T</var>(<var>M</var><sub>t−1</sub>, <var>x</var><sub>t</sub>, <var>f</var><sub>t</sub><sup>(idx)</sup>, <var>m</var><sub>t−1</sub><sup>UV</sup>)</span></div>
+              <div class="algo-line"><span class="algo-no">13:</span><span class="algo-code"><b>return</b> <var>T</var><sub>I</sub></span></div>
+            </div>
+          </figure>
+
+          <h2 data-de="Ergebnisse" data-en="Results">Ergebnisse</h2>
+          <p data-de="Wir evaluieren die Rekonstruktionsqualität für drei Schweizer Regionen anhand der Standardmetriken LPIPS, PSNR und SSIM. Die Zahl in Klammern gibt die Anzahl der Evaluationsansichten je Region an."
+             data-en="We evaluate the reconstruction quality for three Swiss regions using the standard metrics LPIPS, PSNR, and SSIM. The number in parentheses denotes the number of evaluation views per region.">
+            Wir evaluieren die Rekonstruktionsqualität für drei Schweizer Regionen anhand der Standardmetriken LPIPS, PSNR und SSIM. Die Zahl in Klammern gibt die Anzahl der Evaluationsansichten je Region an.
+          </p>
+
+          <div class="latex-table-wrap">
+            <table class="latex-table">
+              <thead>
+                <tr>
+                  <th data-de="Region" data-en="Region">Region</th>
+                  <th>LPIPS&#x2193;</th>
+                  <th>PSNR&#x2191;</th>
+                  <th>SSIM&#x2191;</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Grindelwald (54)</td><td>0.159</td><td>20.56</td><td>0.86</td></tr>
+                <tr><td>Jungfrau (674)</td><td>0.191</td><td>18.58</td><td>0.831</td></tr>
+                <tr><td>Bern high (168)</td><td>0.216</td><td>19.20</td><td>0.804</td></tr>
+              </tbody>
+            </table>
+            <div class="latex-caption"
+                 data-de="Tabelle 1. Quantitative Ergebnisse je Region (Anzahl Evaluationsansichten in Klammern). &#x2193; tiefer ist besser, &#x2191; höher ist besser."
+                 data-en="Table 1. Quantitative results per region (number of evaluation views in parentheses). &#x2193; lower is better, &#x2191; higher is better.">
+              Tabelle 1. Quantitative Ergebnisse je Region (Anzahl Evaluationsansichten in Klammern). &#x2193; tiefer ist besser, &#x2191; höher ist besser.
+            </div>
+          </div>
+
           <figure class="blog-figure">
-            <img src="../../images/seasonscapes/seasonscapes-result.jpg"
-                 alt="Gerendertes Ergebnis: rekonstruierte Berglandschaft aus neuer Perspektive" />
-            <figcaption data-de="Gerendertes Ergebnis: eine rekonstruierte Berglandschaft, dargestellt aus einer neuen, frei wählbaren Perspektive."
-                        data-en="Rendered result: a reconstructed mountain landscape shown from a new, freely chosen viewpoint.">
-              Gerendertes Ergebnis: eine rekonstruierte Berglandschaft, dargestellt aus einer neuen, frei wählbaren Perspektive.
+            <img src="../../images/seasonscapes/google_earth_cmp.png"
+                 alt="Qualitativer Vergleich zwischen SeasonScapes und Google Earth" />
+            <figcaption data-de="Qualitativer Vergleich mit Google Earth. (a) Google Earth, (b) SeasonScapes-Rendering im Sommer (1.9.2024, 12 Uhr), (c) SeasonScapes im Winter (18.12.2025, 10 Uhr). SeasonScapes liefert ein fotorealistischeres Rendering und kann zudem zeitliche Veränderungen darstellen."
+                        data-en="Qualitative comparison with Google Earth. (a) Google Earth, (b) our SeasonScapes rendering in summer (1.9.2024 at 12 PM), (c) our SeasonScapes in winter (18.12.2025 at 10 AM). SeasonScapes shows more photorealistic rendering and the ability to vary over time.">
+              Qualitativer Vergleich mit Google Earth. (a) Google Earth, (b) SeasonScapes-Rendering im Sommer (1.9.2024, 12 Uhr), (c) SeasonScapes im Winter (18.12.2025, 10 Uhr). SeasonScapes liefert ein fotorealistischeres Rendering und kann zudem zeitliche Veränderungen darstellen.
             </figcaption>
           </figure>
 
-          <h2 data-de="Technische Highlights" data-en="Technical Highlights">Technische Highlights</h2>
-          <ul>
-            <li data-de="Multi-View Fotogrammetrie mit spärlichen Webcam-Aufnahmen" data-en="Multi-view photogrammetry with sparse webcam captures">Multi-View Fotogrammetrie mit spärlichen Webcam-Aufnahmen</li>
-            <li data-de="Saisonale Variation und temporale Konsistenz" data-en="Seasonal variation and temporal consistency">Saisonale Variation und temporale Konsistenz</li>
-            <li data-de="Generative Modelle für Bildvervollständigung" data-en="Generative models for image completion">Generative Modelle für Bildvervollständigung</li>
-            <li data-de="Physikalisch-basiertes Rendering für realistische Visualisierung" data-en="Physics-based rendering for realistic visualization">Physikalisch-basiertes Rendering für realistische Visualisierung</li>
-          </ul>
-
+          <h2 data-de="Fazit" data-en="Conclusion">Fazit</h2>
+          <p data-de="SeasonScapes demonstriert die Kraft der Kombination von klassischer Computergrafik mit modernen Deep Learning Techniken. Durch die Nutzung von großflächigen Webcam-Daten und innovativen Methoden zur Bildvervollständigung ist es möglich, beeindruckende 3D-Rekonstruktionen von natürlichen Landschaften zu erstellen, die nicht nur räumlich genau sind, sondern auch die zeitlichen Variationen erfassen." data-en="SeasonScapes demonstrates the power of combining classical computer graphics with modern deep learning techniques. By leveraging large-scale webcam data and innovative image completion methods, it's possible to create impressive 3D reconstructions of natural landscapes that are not only spatially accurate but also capture temporal variations.">
+            SeasonScapes demonstriert die Kraft der Kombination von klassischer Computergrafik mit modernen Deep Learning Techniken. Durch die Nutzung von großflächigen Webcam-Daten und innovativen Methoden zur Bildvervollständigung ist es möglich, beeindruckende 3D-Rekonstruktionen von natürlichen Landschaften zu erstellen, die nicht nur räumlich genau sind, sondern auch die zeitlichen Variationen erfassen.
+          </p>
+          
           <h2 data-de="Anwendungen" data-en="Applications">Anwendungen</h2>
           <p data-de="Dieses Projekt hat zahlreiche potenzielle Anwendungen:" data-en="This project has numerous potential applications:">
             Dieses Projekt hat zahlreiche potenzielle Anwendungen:
@@ -132,11 +190,6 @@
             <li data-de="Film und Entertainment Industry" data-en="Film and entertainment industry">Film und Entertainment Industry</li>
             <li data-de="Architektur- und Tourismusplanung" data-en="Architecture and tourism planning">Architektur- und Tourismusplanung</li>
           </ul>
-
-          <h2 data-de="Fazit" data-en="Conclusion">Fazit</h2>
-          <p data-de="SeasonScapes demonstriert die Kraft der Kombination von klassischer Computergrafik mit modernen Deep Learning Techniken. Durch die Nutzung von großflächigen Webcam-Daten und innovativen Methoden zur Bildvervollständigung ist es möglich, beeindruckende 3D-Rekonstruktionen von natürlichen Landschaften zu erstellen, die nicht nur räumlich genau sind, sondern auch die zeitlichen Variationen erfassen." data-en="SeasonScapes demonstrates the power of combining classical computer graphics with modern deep learning techniques. By leveraging large-scale webcam data and innovative image completion methods, it's possible to create impressive 3D reconstructions of natural landscapes that are not only spatially accurate but also capture temporal variations.">
-            SeasonScapes demonstriert die Kraft der Kombination von klassischer Computergrafik mit modernen Deep Learning Techniken. Durch die Nutzung von großflächigen Webcam-Daten und innovativen Methoden zur Bildvervollständigung ist es möglich, beeindruckende 3D-Rekonstruktionen von natürlichen Landschaften zu erstellen, die nicht nur räumlich genau sind, sondern auch die zeitlichen Variationen erfassen.
-          </p>
 
           <p data-de="Das Paper ist auf arXiv verfügbar und stellt einen wichtigen Beitrag zur Schnitttstelle von Computer Vision, 3D-Rekonstruktion und generativen Modellen dar." data-en="The paper is available on arXiv and represents an important contribution to the intersection of computer vision, 3D reconstruction, and generative models.">
             Das Paper ist auf arXiv verfügbar und stellt einen wichtigen Beitrag zur Schnitttstelle von Computer Vision, 3D-Rekonstruktion und generativen Modellen dar.
@@ -157,8 +210,9 @@
   <!-- Footer -->
   <footer class="footer-main">
     <div class="footer-content">
-      <p data-de="© 2025 Timo Kleger. Alle Rechte vorbehalten." data-en="© 2025 Timo Kleger. All rights reserved.">
-        © 2025 Timo Kleger. Alle Rechte vorbehalten.
+      <p>
+        © <span id="footer-year">2026</span>
+        <span data-de="Timo Kleger. Alle Rechte vorbehalten." data-en="Timo Kleger. All rights reserved.">Timo Kleger. Alle Rechte vorbehalten.</span>
       </p>
     </div>
   </footer>
