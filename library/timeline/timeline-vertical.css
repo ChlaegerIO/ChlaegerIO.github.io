@@ -58,9 +58,25 @@
   box-shadow: 0 12px 30px rgba(37, 99, 235, 0.18);
 }
 
-/* Optional banner image (teaser) */
+/* Card layout: image (+ link) on the left, text on the right */
+.timeline-vertical .timeline-card-inner {
+  display: flex;
+  gap: 1.1rem;
+  align-items: flex-start;
+}
+
+.timeline-vertical .timeline-card-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* Left media column (teaser image + "learn more" link) */
 .timeline-vertical .timeline-card-media {
-  margin-bottom: 0.6rem;
+  flex: 0 0 200px;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
 }
 
 .timeline-vertical .timeline-card-media img {
@@ -83,16 +99,44 @@
   margin: 0.1rem 0 0.35rem;
   font-size: 1.05rem;
   line-height: 1.3;
+  font-weight: 700;
+}
+
+.timeline-vertical .timeline-card-authors {
+  margin: 0 0 0.45rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--color-ink-muted, #5f5f5f);
 }
 
 .timeline-vertical .timeline-card-description {
-  margin: 0 0 0.6rem;
+  margin: 0 0 0.2rem;
   font-size: 0.9rem;
   line-height: 1.5;
 }
 
+/* Compact "learn more" link, kept small so it doesn't crowd the image */
 .timeline-vertical .timeline-card-link {
-  margin-top: 0.25rem;
+  align-self: flex-start;
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--timeline-primary);
+  border: 1px solid var(--timeline-primary);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.timeline-vertical .timeline-card-link:hover {
+  background: var(--timeline-primary);
+  color: #ffffff;
+}
+
+/* Items without an image: link sits under the text body */
+.timeline-vertical .timeline-card-body > .timeline-card-link {
+  margin-top: 0.4rem;
 }
 
 @media (max-width: 768px) {
@@ -104,7 +148,18 @@
     left: -30px;
   }
 
+  /* Stack image above text on narrow screens */
+  .timeline-vertical .timeline-card-inner {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .timeline-vertical .timeline-card-media {
+    flex-basis: auto;
+    max-width: none;
+  }
+
   .timeline-vertical .timeline-card-media img {
-    height: 110px;
+    height: 160px;
   }
 }

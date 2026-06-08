@@ -20,7 +20,13 @@ document.addEventListener('DOMContentLoaded', function() {
     if (savedLanguage && (savedLanguage === 'de' || savedLanguage === 'en')) {
         currentLanguage = savedLanguage;
     }
-    
+
+    // Keep the footer copyright year in sync with the current year
+    const footerYear = document.getElementById('footer-year');
+    if (footerYear) {
+        footerYear.textContent = new Date().getFullYear();
+    }
+
     // Apply the current language
     applyLanguage(currentLanguage);
 });
