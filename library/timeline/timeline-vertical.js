@@ -83,6 +83,7 @@ export class TimelineVertical {
       const linkLabelDe = item.raw.linkLabel || item.metadata?.linkLabel || this.options.linkLabel;
       const linkLabelEn = item.raw.linkLabelEN || item.metadata?.linkLabelEN || this.options.linkLabelEN;
       const authors = item.raw.authors || item.metadata?.authors || "";
+      const tag = item.raw.tag || item.metadata?.tag || "";
 
       const image = item.raw.image || item.metadata?.image || "";
       const imageAlt = item.raw.imageAlt || item.metadata?.imageAlt || titleDe;
@@ -102,11 +103,16 @@ export class TimelineVertical {
         ? `<p class="timeline-card-authors">${esc(authors)}</p>`
         : "";
 
+      const tagHtml = tag
+        ? `<div class="timeline-card-tags"><span class="timeline-card-tag">${esc(tag)}</span></div>`
+        : "";
+
       card.innerHTML = `
         <div class="timeline-card-inner">
           ${mediaHtml}
           <div class="timeline-card-body">
             <time class="timeline-date" datetime="${item.date.toISOString()}">${dateLabel}</time>
+            ${tagHtml}
             <h3 class="timeline-card-title" data-de="${esc(titleDe)}" data-en="${esc(titleEn)}">${esc(titleDe)}</h3>
             ${authorsHtml}
             <p class="timeline-card-description" data-de="${esc(descDe)}" data-en="${esc(descEn)}">${esc(descDe)}</p>

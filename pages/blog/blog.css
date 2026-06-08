@@ -63,9 +63,16 @@
 
 .post-meta {
   display: flex;
+  align-items: center;
   gap: 0.75rem;
   margin-bottom: 1.5rem;
   flex-wrap: wrap;
+}
+
+/* Inside the meta row the date sits inline next to the tag, so drop its
+   block-level bottom margin (used only in the card listing). */
+.post-meta .post-date {
+  margin-bottom: 0;
 }
 
 .post-tag {
@@ -191,8 +198,8 @@
 }
 
 .btn-primary:hover {
-  background: #478ac9;
-  color: #ffffff;
+  background: #f8fbff;
+  color: #478ac9;
   border-color: #478ac9;
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
   transform: translateY(-2px);

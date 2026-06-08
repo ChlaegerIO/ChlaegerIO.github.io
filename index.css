@@ -212,12 +212,15 @@ body {
 }
 
 .btn-primary {
-  background: var(--color-accent, #478ac9);
-  color: white;
+  background: #ffffff;
+  color: var(--color-accent, #478ac9);
+  border: 2px solid var(--color-accent, #478ac9);
 }
 
 .btn-primary:hover {
-  background: #2563eb;
+  background: #f8fbff;
+  color: var(--color-accent, #478ac9);
+  border-color: var(--color-accent, #478ac9);
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
   transform: translateY(-2px);
 }

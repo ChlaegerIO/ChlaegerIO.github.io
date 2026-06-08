@@ -54,6 +54,24 @@
   margin-bottom: 0.75rem;
 }
 
+.timeline-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.timeline-card-tag {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  background: var(--timeline-primary-soft);
+  color: var(--timeline-primary);
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
 .timeline-card p {
   margin: 0;
   line-height: 1.6;
