@@ -28,7 +28,7 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 2rem;
-  max-width: 1200px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -39,7 +39,7 @@ body {
 }
 
 .content-column {
-  max-width: 760px;
+  max-width: 900px;
   margin: 0 auto;
 }
 

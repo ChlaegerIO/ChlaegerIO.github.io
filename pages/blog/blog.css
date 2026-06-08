@@ -185,12 +185,15 @@
 }
 
 .btn-primary {
-  background: #478ac9;
-  color: white;
+  background: #ffffff;
+  color: #478ac9;
+  border: 2px solid #478ac9;
 }
 
 .btn-primary:hover {
-  background: #2563eb;
+  background: #478ac9;
+  color: #ffffff;
+  border-color: #478ac9;
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
   transform: translateY(-2px);
 }
@@ -213,6 +216,117 @@
 }
 
 /* ============================================
+   Algorithm Block (LaTeX algorithm2e style)
+   ============================================ */
+
+.algorithm-block {
+  margin: 2rem 0;
+  padding: 0;
+  background: #ffffff;
+  border-top: 2px solid #0f172a;
+  border-bottom: 2px solid #0f172a;
+  font-family: 'Latin Modern Roman', 'Cambria', 'Georgia', 'Times New Roman', serif;
+  color: #0f172a;
+  overflow-x: auto;
+}
+
+.algorithm-title {
+  border-bottom: 1px solid #0f172a;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  font-size: 0.98rem;
+}
+
+.algorithm-title .algo-num {
+  margin-right: 0.5rem;
+}
+
+.algorithm-body {
+  padding: 0.75rem 1rem 1rem;
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.algorithm-body .algo-line {
+  display: flex;
+  gap: 0.6rem;
+  white-space: nowrap;
+}
+
+.algorithm-body .algo-no {
+  flex: 0 0 1.6rem;
+  text-align: right;
+  color: #64748b;
+  font-variant-numeric: tabular-nums;
+  user-select: none;
+}
+
+.algorithm-body .algo-code {
+  flex: 1 1 auto;
+  white-space: normal;
+}
+
+/* Indentation levels inside the algorithm body */
+.algorithm-body .indent-1 { padding-left: 1.4rem; }
+.algorithm-body .indent-2 { padding-left: 2.8rem; }
+
+.algorithm-body .algo-kw { font-variant: small-caps; font-weight: 700; }
+.algorithm-body .algo-comment { color: #2563eb; font-style: italic; }
+.algorithm-body var { font-style: italic; }
+
+/* ============================================
+   Results Table (LaTeX booktabs style)
+   ============================================ */
+
+.latex-table-wrap {
+  margin: 2rem 0;
+  overflow-x: auto;
+}
+
+.latex-table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-family: 'Latin Modern Roman', 'Cambria', 'Georgia', 'Times New Roman', serif;
+  color: #0f172a;
+  font-size: 0.95rem;
+}
+
+/* booktabs: thick top/bottom rules, single rule under the header, no verticals */
+.latex-table thead th {
+  border-top: 2px solid #0f172a;
+  border-bottom: 1px solid #0f172a;
+  padding: 0.45rem 1.4rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+.latex-table thead th:first-child {
+  text-align: left;
+}
+
+.latex-table tbody td {
+  padding: 0.4rem 1.4rem;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.latex-table tbody td:first-child {
+  text-align: left;
+}
+
+.latex-table tbody tr:last-child td {
+  border-bottom: 2px solid #0f172a;
+}
+
+.latex-caption {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: #64748b;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ============================================
    Blog Footer
    ============================================ */
 
@@ -220,6 +334,12 @@
   text-align: center;
   padding: 2rem 0;
   border-top: 1px solid #e2e8f0;
+}
+
+/* Keep footer copyright legible on the dark background (overrides the global
+   `p { color: #333 }` rule that would otherwise render it dark-on-dark). */
+.footer-content p {
+  color: #ffffff;
 }
 
 
