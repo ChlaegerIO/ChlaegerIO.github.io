@@ -40,10 +40,11 @@
         <section class="blog-header">
           <h1 class="blog-title" data-de="SeasonScapes Paper" data-en="SeasonScapes Paper">SeasonScapes Paper</h1>
           <p class="blog-intro"
-             data-de="Lernen großflächiger neu-beleuchter 3D-Landschaften mit saisonalen Variationen aus spärlichen Webcam-Bildern"
-             data-en="Learning Large-scale Re-lightable 3D Landscapes with Seasonal Variation from Sparse Webcams">
-            Lernen großflächiger neu-beleuchter 3D-Landschaften mit saisonalen Variationen aus spärlichen Webcam-Bildern
+             data-de="Das Paper mit dem Namen <i>SeasonScapes: Learning Large-scale Re-lightable 3D Landscapes with Seasonal Variation from Sparse Webcams</i> kann aus Satellitenbildern und Webcambildern 3D Landschaften generieren, welche zeitlich variable erscheinen."
+             data-en="The paper titled <i>SeasonScapes: Learning Large-scale Re-lightable 3D Landscapes with Seasonal Variation from Sparse Webcams</i> can generate 3D landscapes from satellite imagery and webcam images that appear temporally variable.">
+            3D-Landschaften mit saisonalen Variationen aus spärlichen Webcam-Bildern
           </p>
+          <p><b>Timo Kleger</b>, Qi Ma, Deheng Zhang, Luc Van Gool, Danda Pani Paudel</p>
         </section>
 
         <!-- Blog Content -->
@@ -53,12 +54,13 @@
                  alt="SeasonScapes Teaser: saisonale Novel-View-Darstellung und Dataset-Überblick" />
             <figcaption data-de="Saisonale Novel-View- und Beleuchtungsdarstellung (Frühling bis Aurora) sowie ein Überblick über das SeasonScapes-Dataset: 32 Standorte, 85'419 Bilder, 13 Zeitpunkte über ein Jahr, 50 × 60 km."
                         data-en="Seasonal novel-view and illumination rendering (spring to aurora) alongside an overview of the SeasonScapes dataset: 32 locations, 85,419 images, 13 timestamps over a year, 50 × 60 km.">
-              Saisonale Novel-View- und Beleuchtungsdarstellung (Frühling bis Aurora) sowie ein Überblick über das SeasonScapes-Dataset: 32 Standorte, 85'419 Bilder, 13 Zeitpunkte über ein Jahr, 50 × 60 km.
+              Saisonales 3D Rendering in verschiedenen Jahreszeiten sowie ein Überblick über das SeasonScapes-Dataset: 32 Standorte, 85'419 Bilder, 13 Zeitpunkte über ein Jahr, 50 × 60 km.
             </figcaption>
           </figure>
 
-          <h2 data-de="Überblick" data-en="Overview">Überblick</h2>
-          <p data-de="SeasonScapes ist ein ehrgeiziges Projekt zur Erfassung und Rekonstruktion großflächiger Berglandschaften über mehrere Jahreszeiten hinweg. Mit über 85.000 Webcam-Bildern von 32 verschiedenen Standorten über ein ganzes Jahr verteilt, zeigt dieses Projekt, wie moderne Computer Vision und Machine Learning Techniken eingesetzt werden können, um die Schönheit und Dynamik der Natur zu erfassen und zu rekonstruieren." data-en="SeasonScapes is an ambitious project for capturing and reconstructing large-scale mountain landscapes across multiple seasons. With over 85,000 webcam images from 32 different locations distributed across a full year, this project demonstrates how modern computer vision and machine learning techniques can be used to capture and reconstruct the beauty and dynamics of nature.">
+          <h2 data-de="Abstract" data-en="Abstract">Abstract</h2>
+          <p data-de="SeasonScapes ist ein ehrgeiziges Projekt zur Erfassung und Rekonstruktion großflächiger Berglandschaften über mehrere Jahreszeiten hinweg. Mit über 85.000 Webcam-Bildern von 32 verschiedenen Standorten über ein ganzes Jahr verteilt, zeigt dieses Projekt, wie moderne Computer Vision und Machine Learning Techniken eingesetzt werden können, um die Schönheit und Dynamik der Natur zu erfassen und zu rekonstruieren." 
+          data-en="We introduce SeasonScapes framework and a the SeasonScapes dataset: Swiss Sparse-view Mountain Scenes with Seasonal Changes that covers over 50 km x 60 km, composed of more than 85,000 webcam images captured from 32 different locations across 13 timestamps throughout a full year. By projecting these timestamp-specific images onto a 3D mesh, we construct seasonal 3D landscapes that reflect natural appearance changes over time. To address occlusions and missing data, we leverage conditional diffusion models for image-guided inpainting directly on the mesh. The resulting completed meshes can be further relighted using standard physically-based renderer.">
             SeasonScapes ist ein ehrgeiziges Projekt zur Erfassung und Rekonstruktion großflächiger Berglandschaften über mehrere Jahreszeiten hinweg. Mit über 85.000 Webcam-Bildern von 32 verschiedenen Standorten über ein ganzes Jahr verteilt, zeigt dieses Projekt, wie moderne Computer Vision und Machine Learning Techniken eingesetzt werden können, um die Schönheit und Dynamik der Natur zu erfassen und zu rekonstruieren.
           </p>
 
@@ -75,7 +77,7 @@
           </p>
 
           <figure class="blog-figure">
-            <img src="../../images/seasonscapes/seasonscapes-pipeline.jpg"
+            <img src="../../images/seasonscapes/seasonscapes-pipeline.png"
                  alt="SeasonScapes Pipeline: Pose-Optimierung, Vorverarbeitung, Mesh-Painting und Gaussian-Training" />
             <figcaption data-de="Überblick über die Pipeline: Pose-Optimierung, Vorverarbeitung, diffusionsbasiertes Mesh-Painting und Gaussian-Training."
                         data-en="Overview of the pipeline: pose optimization, preprocessing, diffusion-based mesh painting, and Gaussian training.">
@@ -89,7 +91,7 @@
           </p>
 
           <figure class="blog-figure">
-            <img src="../../images/seasonscapes/seasonscapes-inpainting.jpg"
+            <img src="../../images/seasonscapes/seasonscapes-inpainting.png"
                  alt="Diffusionsbasiertes UV-Inpainting mit ControlNet aus Tiefen- und RGB-Rendering" />
             <figcaption data-de="Diffusionsbasiertes UV-Inpainting: Aus Tiefen- und RGB-Rendering sowie einer Inpainting-Maske ergänzt ein ControlNet die UV-Textur des 3D-Netzes."
                         data-en="Diffusion-based UV inpainting: from depth and RGB renderings plus an inpainting mask, a ControlNet completes the UV texture of the 3D mesh.">

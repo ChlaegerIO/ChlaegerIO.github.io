@@ -52,9 +52,11 @@
         <section class="section-block">
           <h2 class="page-title" data-de="Über mich" data-en="About Me">Über mich</h2>
           <p class="section-intro"
-             data-de="Ich bin ein Softwareentwickler bei <a href='https://www.acs-solution.ch/' target='_blank' rel='noopener noreferrer' class='link-btn'>ICS / ACS</a>. Ich habe mein BSc und MSc an der ETH Zürich erhalten. Ich habe mich in Machine Learning vertieft und die Masterarbeit im Bereich 3D Vision gemacht."
-             data-en="I am a software developer at <a href='https://www.acs-solution.ch/' target='_blank' rel='noopener noreferrer' class='link-btn'>ICS / ACS</a>. I obtained my BSc and MSc from ETH Zurich. I specialized in Machine Learning and completed my master's thesis in the field of 3D Vision.">
-            Ich bin ein Softwareentwickler bei <a href="https://www.acs-solution.ch/" target="_blank" rel="noopener noreferrer" class="link-btn">ICS / ACS</a>. Ich habe mein BSc und MSc an der ETH Zürich erhalten. Ich habe mich in Machine Learning vertieft und die Masterarbeit im Bereich 3D Vision gemacht.
+             data-de="Ich bin ein Softwareentwickler bei <a href='https://www.acs-solution.ch/' target='_blank' rel='noopener noreferrer' class='link-btn'>ICS / ACS</a> für Manufacturing Execution System (MES) und Leitsystemen. Mein BSc und MSc habe ich an der ETH Zürich erfolgreich abgeschlossen.
+             Und mich dabei in Machine Learning vertieft. Zum Beispiel mit meiner Masterarbeit im Bereich 3D Computer Vision <i>SeasonScapes: Learning Large-scale Re-lightable 3D Landscapes with Seasonal Variation from Sparse Webcams</i>.
+             Zudem war ich als Fokusstudent beim <a href='https://cellsius.aero/e-sling' target='_blank' rel='noopener noreferrer' class='link-btn'> e-Sling</a>, heute Cellsius, dabei und habe eines der ersten elektrischen Flugzeuge mitentwickelt."
+             data-en="I am a software developer at <a href='https://www.acs-solution.ch/' target='_blank' rel='noopener noreferrer' class='link-btn'>ICS / ACS</a>, working on Manufacturing Execution Systems (MES) and control systems. I successfully completed my BSc and MSc at ETH Zurich, where I specialized in Machine Learning — for example with my master's thesis in the field of 3D Computer Vision, <i>SeasonScapes: Learning Large-scale Re-lightable 3D Landscapes with Seasonal Variation from Sparse Webcams</i>. I was also a focus student at <a href='https://cellsius.aero/e-sling' target='_blank' rel='noopener noreferrer' class='link-btn'>e-Sling</a>, today Cellsius, and helped develop one of the first electric aircraft.">
+            Ich bin ein Softwareentwickler bei <a href="https://www.acs-solution.ch/" target="_blank" rel="noopener noreferrer" class="link-btn">ICS / ACS</a> für Manufacturing Execution System (MES) und Leitsystemen. Mein BSc und MSc habe ich an der ETH Zürich erfolgreich abgeschlossen. Und mich dabei in Machine Learning vertieft. Zum Beispiel mit meiner Masterarbeit im Bereich 3D Computer Vision <i>SeasonScapes: Learning Large-scale Re-lightable 3D Landscapes with Seasonal Variation from Sparse Webcams</i>. Zudem war ich als Fokusstudent beim <a href="https://cellsius.aero/e-sling" target="_blank" rel="noopener noreferrer" class="link-btn">e-Sling</a>, heute Cellsius, dabei und habe eines der ersten elektrischen Flugzeuge mitentwickelt.
           </p>
         </section>
 
@@ -63,7 +65,8 @@
           <h3 class="focus-title" data-de="Schwerpunkte" data-en="Focus Areas">Schwerpunkte</h3>
           <ul class="focus-list">
             <li data-de="Computer Vision" data-en="Computer Vision">Computer Vision</li>
-            <li data-de="3D Generierung & Bearbeitung" data-en="3D Generation & Editing">Controllable 2D / 3D Generation & Editing</li>
+            <li data-de="3D Computer Vision" data-en="3D Computer Vision">3D Computer Vision</li>
+            <li data-de="Big Data" data-en="Big Data">Big Data</li>
             <li data-de="Eingebettete Systeme" data-en="Embedded Systems">Eingebettete Systeme</li>
           </ul>
         </section>
@@ -83,7 +86,7 @@
             <img src="images/index_wide.JPEG" alt="Landschaftsfotografie" class="photo-card" />
             <div class="photo-link-text">
               <a href="pages/photography/photography.html" class="photo-link"
-                 data-de="Mehr Bilder" data-en="Sea Photos">
+                 data-de="Mehr Bilder" data-en="More Photos">
                 Mehr Bilder
               </a>
             </div>
@@ -96,9 +99,9 @@
             Wetterstation Niederhelfenschwil
           </h3>
           <p class="weather-intro"
-             data-de="Eine automatische Wetterstation auf 585 m Höhe mit kontinuierlicher Datenerfassung und Überwachung."
-             data-en="An automated weather station at 585 m altitude with continuous data monitoring and recording.">
-            Eine automatische Wetterstation auf 585 m Höhe mit kontinuierlicher Datenerfassung und Überwachung.
+             data-de="Meine automatisierte Wetterstation auf 585 m Höhe erfasst kontinuierlich das aktuelle Wetter von Niederhelfenschwil."
+             data-en="My automated weather station at 585 m altitude continuously records the current weather in Niederhelfenschwil.">
+            Meine automatisierte Wetterstation auf 585 m Höhe erfasst kontinuierlich das aktuelle Wetter von Niederhelfenschwil.
           </p>
           <a href="pages/weather/weather.html" class="btn btn-primary"
              data-de="Zu den Wetterdaten" data-en="View Weather Data">
@@ -123,8 +126,9 @@
   <!-- Footer -->
   <footer class="footer-main">
     <div class="footer-content">
-      <p data-de="© 2025 Timo Kleger. Alle Rechte vorbehalten." data-en="© 2025 Timo Kleger. All rights reserved.">
-        © 2025 Timo Kleger. Alle Rechte vorbehalten.
+      <p>
+        © <span id="footer-year">2026</span>
+        <span data-de="Timo Kleger. Alle Rechte vorbehalten." data-en="Timo Kleger. All rights reserved.">Timo Kleger. Alle Rechte vorbehalten.</span>
       </p>
     </div>
   </footer>
@@ -150,15 +154,14 @@
         {
           id: 'seasonscapes-paper',
           date: '2026-06-07',
-          title: 'SeasonScapes Paper veröffentlicht',
-          titleEN: 'SeasonScapes Paper Published',
-          description: 'Learning Large-scale Re-lightable 3D Landscapes with Seasonal Variation from Sparse Webcams - Ein neues Paper über 3D-Rekonstruktion von Berglandschaften mit saisonalen Variationen.',
-          descriptionEN: 'Learning Large-scale Re-lightable 3D Landscapes with Seasonal Variation from Sparse Webcams - A new paper on 3D reconstruction of mountain landscapes with seasonal variations.',
-          image: 'images/seasonscapes/seasonscapes-teaser.jpg',
+          title: 'SeasonScapes: Learning Large-scale Re-lightable 3D Landscapes with Seasonal Variation from Sparse Webcams',
+          titleEN: 'SeasonScapes: Learning Large-scale Re-lightable 3D Landscapes with Seasonal Variation from Sparse Webcams',
+          authors: 'Timo Kleger, Qi Ma, Deheng Zhang, Luc Van Gool, Danda Pani Paudel',
+          description: 'SeasonScapes ist ein Datenset und ein Algorithmus, der über 50 km × 60 km Landschaft abdeckt und aus mehr als 85\'000 Webcam-Bildern von 32 verschiedenen Standorten über 13 Zeitpunkte eines ganzen Jahres besteht. Durch die Projektion dieser zeitpunktspezifischen Bilder auf ein 3D-Mesh konstruieren wir saisonale 3D-Landschaften, die natürliche Erscheinungsveränderungen über die Zeit widerspiegeln. Um Verdeckungen und fehlende Daten zu behandeln, nutzen wir konditionierte Diffusion Models für bildgeführtes Inpainting direkt auf dem Mesh. Die fertiggestellten Meshes lassen sich anschliessend mit einem standardmässigen physikalisch basierten Renderer neu beleuchten.',
+          descriptionEN: 'We introduce the SeasonScapes framework and the SeasonScapes dataset: Swiss Sparse-view Mountain Scenes with Seasonal Changes, which covers over 50 km x 60 km and is composed of more than 85,000 webcam images captured from 32 different locations across 13 timestamps throughout a full year. By projecting these timestamp-specific images onto a 3D mesh, we construct seasonal 3D landscapes that reflect natural appearance changes over time. To address occlusions and missing data, we leverage conditional diffusion models for image-guided inpainting directly on the mesh. The resulting completed meshes can be further relighted using a standard physically-based renderer.',
+          image: 'images/seasonscapes/teaserImage.png',
           imageAlt: 'SeasonScapes teaser: seasonal novel-view rendering and dataset overview',
           link: 'pages/blog/post-20260607-seasonscapes.html',
-          linkLabel: 'Zum Artikel',
-          linkLabelEN: 'Read Article'
         },
         {
           id: 'blog-weatherstation-installation',
@@ -166,10 +169,8 @@
           title: 'Installation meiner Wetterstation',
           titleEN: 'Weather Station Installation',
           description: 'Mein erster Blogbeitrag zur Planung, Montage und Inbetriebnahme der Wetterstation.',
-          descriptionEN: 'My first blog post about planning, assembly, and commissioning the weather station.',
+          descriptionEN: 'My first blog post about planning, assembling, and commissioning the weather station.',
           link: 'pages/blog/post-20131207-weatherstation-installation.html',
-          linkLabel: 'Zum Blogbeitrag',
-          linkLabelEN: 'Read Post'
         }
       ];
 
@@ -181,6 +182,13 @@
           locale: 'de-CH',
           sortDirection: 'desc'
         });
+
+        // The timeline is built after language-toggle.js already ran on
+        // DOMContentLoaded, so re-apply the saved language to translate the
+        // freshly created card text (data-de/data-en).
+        if (typeof applyLanguage === 'function') {
+          applyLanguage(localStorage.getItem('language') || 'de');
+        }
       }
     });
   </script>

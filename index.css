@@ -285,6 +285,9 @@ body {
 .footer-content p {
   margin: 0;
   opacity: 0.8;
+  /* Override the global `p { color: #333 }` rule so the copyright text stays
+     legible on the dark footer background. */
+  color: #ffffff;
 }
 
 /* ============================================
